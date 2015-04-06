@@ -138,7 +138,7 @@ Set.prototype.size = function()
  */
 Set.prototype.values = function()
 {
-	var keys = {};
+	var keys = [];
 
 	for (var key in this.items)
 	{
@@ -157,9 +157,27 @@ Set.prototype.values = function()
  * @returns		{object} values from the set
  *
  */
-Set.prototype.union = function()
+Set.prototype.union = function(compareSet)
 {
+	var unionSet = new Set();
 
+	var values = this.values();
+	var length = values.length;
+
+	for (var i = 0; i < length; i++)
+	{
+		unionSet.add(values[i]);
+	}
+
+	values = compareSet.values();
+	length = compareSet.length;
+
+	for (i = 0; i < length; i++)
+	{
+		unionSet.add(values[i]);
+	}
+
+	return unionSet;
 };
 
 /**
@@ -171,9 +189,22 @@ Set.prototype.union = function()
  * @returns		{object} values from the set
  *
  */
-Set.prototype.intersection = function()
+Set.prototype.intersection = function(compareSet)
 {
+	var intersectionSet = new Set();
 
+	var values = this.values();
+	var length = values.length;
+
+	for (var i = 0; i < length; i++)
+	{
+		if (compareSet.has(values[i]))
+		{
+			intersectionSet.add(values[i]);
+		}
+	}
+
+	return intersectionSet;
 };
 
 /**
@@ -185,9 +216,22 @@ Set.prototype.intersection = function()
  * @returns		{object} values from the set
  *
  */
-Set.prototype.difference = function()
+Set.prototype.difference = function(compareSet)
 {
+	var differenceSet = new Set();
 
+	var values = this.values();
+	var length = values.length;
+
+	for (var i = 0; i < length; i++)
+	{
+		if (!compareSet.has(values[i]))
+		{
+			differenceSet.add(values[i]);
+		}
+	}
+
+	return differenceSet;
 };
 
 /**
@@ -199,9 +243,27 @@ Set.prototype.difference = function()
  * @returns	{object} values from the set
  *
  */
-Set.prototype.subset = function()
+Set.prototype.subset = function(compareSet)
 {
+	if (this.size() > compareSet.size())
+	{
+		return false;
+	}
+	else
+	{
+		var values = this.values();
+		var length = values.length;
 
+		for (var i = 0; i < length; i++)
+		{
+			if (!compareSet.has(values[i]))
+			{
+				return false;
+			}
+		}
+
+		return true;
+	}
 };
 
 exports.create = function() {

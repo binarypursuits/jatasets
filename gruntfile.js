@@ -78,11 +78,7 @@ module.exports = function(grunt) {
 		plato : {
 			build : {
 				files : {
-<<<<<<< HEAD
 					'reports' : ['test/**/*_test.js']
-=======
-					'reports' : ['jatasets/**/*.js']
->>>>>>> branch 'master' of https://github.com/brian-bolli/jatasets.git
 				}
 			}
 		},
@@ -90,7 +86,10 @@ module.exports = function(grunt) {
 		browserify: {
 			build: {
 				src: ['jatasets'],
-				dest: './build/jatasets.js'
+				dest: './build/jatasets.js',
+				options: {
+					standalone: 'jatasets'
+				}
 			}
 		},
 
@@ -101,12 +100,12 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+
 		mochaTest: {
 			build: {
 				options: {
 					reporter: 'spec',
-					clearRequireCache: false // Optionally clear the require cache before running tests (defaults to false) 
+					clearRequireCache: false // Optionally clear the require cache before running tests (defaults to false)
 				},
 				src: ['test/**/*_test.js']
 			},
@@ -132,19 +131,14 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-browserify');
 	grunt.loadNpmTasks('grunt-jsdoc');
 	grunt.loadNpmTasks('grunt-plato');
-<<<<<<< HEAD
-	
-	grunt.registerTask('test', ['jshint', 'mochaTest', 'plato']);
-=======
-	grunt.loadNpmTasks('grunt-template-jasmine-istanbul');
 
-	grunt.registerTask('test', ['jshint', 'jasmine', 'plato']);
->>>>>>> branch 'master' of https://github.com/brian-bolli/jatasets.git
-	//grunt.registerTask('prep', ['clean', 'concat']);
-	grunt.registerTask('mocha', ['mochaTest']);
 	grunt.registerTask('prep', ['clean']);
-	grunt.registerTask('bundle', ['browserify']);
+
+	grunt.registerTask('test', ['jshint', 'mochaTest', 'plato']);
+	grunt.registerTask('mocha', ['mochaTest']);
+
+	grunt.registerTask('bundle', ['browserify', 'uglify']);
 	grunt.registerTask('default', ['prep', 'test', 'jsdoc']);
-	grunt.registerTask('build', ['default', 'browserify', 'uglify']);
+	grunt.registerTask('build', ['default', 'bundle']);
 
 };

@@ -49,12 +49,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Total/Average Lines <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code" data-original-title="SLOC" data-container="body"></i></h2>
-<<<<<<< HEAD
-      <p class="stat">456 / 114</p>
+      <p class="stat">536 / 107</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Average Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index" data-container="body"></i></a></h2>
-      <p class="stat">84.74</p>
+      <p class="stat">85.38</p>
     </div>
   </div>
 </div>
@@ -158,154 +157,25 @@
       <li class="col-md-12">
         <div class="row">
           <span class="fade-left fadeout visible-large"></span>
+          <span class="col-md-4 file"><a class="file-link" href="./files/set_test_js/index.html">set_test.js</a></span>
+        <span class="col-md-8 file-chart js-file-chart"
+              data-lint="1"
+              data-sloc="80"
+              data-bugs="0.33"
+              data-complexity="1"
+          ></span>
+        </div>
+      </li>
+      
+      <li class="col-md-12">
+        <div class="row">
+          <span class="fade-left fadeout visible-large"></span>
           <span class="col-md-4 file"><a class="file-link" href="./files/stack_test_js/index.html">stack_test.js</a></span>
         <span class="col-md-8 file-chart js-file-chart"
               data-lint="1"
               data-sloc="123"
               data-bugs="0.88"
               data-complexity="1"
-=======
-      <p class="stat">815 / 135</p>
-    </div>
-    <div class="col-md-6">
-      <h2 class="header">Average Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index" data-container="body"></i></a></h2>
-      <p class="stat">82.50</p>
-    </div>
-  </div>
-</div>
-<div class="container historical">
-  <div class="row">
-    <div class="col-md-6">
-      <div id="chart_historical_sloc" class="chart js-chart"></div>
-    </div>
-    <div class="col-md-6">
-      <div id="chart_historical_maint" class="chart js-chart"></div>
-    </div>
-  </div>
-</div>
-
-
-<div class="container overview">
-  <div class="row">
-    <h2 class="col-md-12">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index" data-container="body"></i></a></h2>
-    <div class="col-md-12"><div id='chart_maintainability' class='chart js-chart'></div></div>
-  </div>
-  <div class="row">
-    <h2 class="col-md-12">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code" data-original-title="SLOC" data-container="body"></i></h2>
-    <div class="col-md-12"><div id='chart_sloc' class='chart js-chart'></div></div>
-  </div>
-  <div class="row">
-    <h2 class="col-md-12">Estimated errors in implementation <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
-    <div class="col-md-12"><div id='chart_bugs' class='chart js-chart'></div></div>
-  </div>
-  
-  <div class="row">
-    <h2 class="col-md-12">Lint errors</h2>
-    <div class="col-md-12"><div id='chart_lint' class='chart js-chart'></div></div>
-  </div>
-  
-</div>
-
-<div class="container">
-  <div class="row">
-    <h1 class="col-md-12">Files</h1>
-  </div>
-
-  <div class="row">
-    <div class="span12 group-header">
-      <div class="btn-group">
-        <button type="button" id="button-complexity" class="btn btn-default complexity">complexity</button>
-        <button type="button" id="button-sloc" class="btn btn-default sloc">sloc</button>
-        <button type="button" id="button-bugs" class="btn btn-default bugs">est errors</button>
-        
-        <button type="button" id="button-lint" class="btn btn-default lint">lint errors</button>
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    &nbsp;
-  </div>
-
-  <div class="row">
-    <ul class="file-list list-unstyled">
-      
-      <li class="col-md-12">
-        <div class="row">
-          <span class="fade-left fadeout visible-large"></span>
-          <span class="col-md-4 file"><a class="file-link" href="./files/dictionary_js/index.html">dictionary.js</a></span>
-        <span class="col-md-8 file-chart js-file-chart"
-              data-lint="2"
-              data-sloc="83"
-              data-bugs="0.38"
-              data-complexity="7"
-          ></span>
-        </div>
-      </li>
-      
-      <li class="col-md-12">
-        <div class="row">
-          <span class="fade-left fadeout visible-large"></span>
-          <span class="col-md-4 file"><a class="file-link" href="./files/index_js/index.html">index.js</a></span>
-        <span class="col-md-8 file-chart js-file-chart"
-              data-lint="11"
-              data-sloc="27"
-              data-bugs="0.13"
-              data-complexity="1"
-          ></span>
-        </div>
-      </li>
-      
-      <li class="col-md-12">
-        <div class="row">
-          <span class="fade-left fadeout visible-large"></span>
-          <span class="col-md-4 file"><a class="file-link" href="./files/list_js/index.html">list.js</a></span>
-        <span class="col-md-8 file-chart js-file-chart"
-              data-lint="2"
-              data-sloc="283"
-              data-bugs="0.81"
-              data-complexity="12"
-          ></span>
-        </div>
-      </li>
-      
-      <li class="col-md-12">
-        <div class="row">
-          <span class="fade-left fadeout visible-large"></span>
-          <span class="col-md-4 file"><a class="file-link" href="./files/queue_js/index.html">queue.js</a></span>
-        <span class="col-md-8 file-chart js-file-chart"
-              data-lint="2"
-              data-sloc="130"
-              data-bugs="0.38"
-              data-complexity="7"
-          ></span>
-        </div>
-      </li>
-      
-      <li class="col-md-12">
-        <div class="row">
-          <span class="fade-left fadeout visible-large"></span>
-          <span class="col-md-4 file"><a class="file-link" href="./files/set_js/index.html">set.js</a></span>
-        <span class="col-md-8 file-chart js-file-chart"
-              data-lint="3"
-              data-sloc="201"
-              data-bugs="0.39"
-              data-complexity="5"
-          ></span>
-        </div>
-      </li>
-      
-      <li class="col-md-12">
-        <div class="row">
-          <span class="fade-left fadeout visible-large"></span>
-          <span class="col-md-4 file"><a class="file-link" href="./files/stack_js/index.html">stack.js</a></span>
-        <span class="col-md-8 file-chart js-file-chart"
-              data-lint="2"
-              data-sloc="91"
-              data-bugs="0.20"
-              data-complexity="3"
->>>>>>> branch 'master' of https://github.com/brian-bolli/jatasets.git
           ></span>
         </div>
       </li>

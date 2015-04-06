@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Plato - stack.js</title>
+  <title>Plato - set_test.js</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
@@ -36,7 +36,7 @@
 
 <div class="jumbotron">
   <div class="container">
-    <h1>stack.js</h1>
+    <h1>set_test.js</h1>
   </div>
 </div>
 
@@ -44,11 +44,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
-      <p class="stat">86.04</p>
+      <p class="stat">87.94</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
-      <p class="stat">91</p>
+      <p class="stat">80</p>
     </div>
   </div>
   <div class="row historical">
@@ -62,11 +62,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
-      <p class="stat">19.50</p>
+      <p class="stat">7.36</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
-      <p class="stat">0.20</p>
+      <p class="stat">0.33</p>
     </div>
   </div>
 </div>
@@ -89,103 +89,86 @@
 
 <div class="container">
   <div class="row">
-    <textarea id="file-source" class="col-md-12">/**
- *  @namespace	stack
- */
+    <textarea id="file-source" class="col-md-12">var js = require(&quot;../jatasets&quot;);
+var assert = require(&quot;assert&quot;)
+var setA = js.set();
+var setB = js.set();
 
-/*jshint unused:false */
+describe(&quot;JataSets Set Tests&quot;, function() {
 
-&#039;use strict&#039;;
+	describe(&quot;Test basic manipulation functions&quot;, function() {
 
-var Stack = function() {
+		it(&quot;Set length should equal 0&quot;, function() {
+			assert.equal(0, setA.size());
+		});
 
-	/** @property	{integer} top -  */
-	this.top = 0;
+		it(&quot;Add a number into set&quot;, function() {
+			assert.equal(true, setA.add(1));
+		});
 
-	/** @property	{Array} dataStore - an array of elements comprising a stack  */
-	this.dataStore = [];
+		it(&quot;Set length should equal 1&quot;, function() {
+			assert.equal(1, setA.size());
+		});
 
-};
+		//it(&quot;Set values should equal [&#039;1&#039;]&quot;, function() {
+			//assert.equal([&#039;1&#039;], setA.values());
+		//});
 
-/**
- * Method to reset stack.
- *
- * @function	clear
- * @memberof	stack
- *
- */
-Stack.prototype.clear = function()
-{
-	this.top = 0;
-	return true;
-};
+		it(&quot;Add a string to set&quot;, function() {
+			assert.equal(true, setA.add(&quot;I am a string&quot;));
+		});
 
-/**
- * Method to get instance of last element put on stack
- *
- * @function	peek
- * @memberof	stack
- *
- * @returns		{element}
- */
-Stack.prototype.peek = function()
-{
-	return this.dataStore[this.top - 1];
-};
+		it(&quot;Set size should equal 2&quot;, function() {
+			assert.equal(2, setA.size());
+		});
 
-/**
- * Method to remove last element put on stack
- *
- * @function	pop
- * @memberof	stack
- *
- * @returns		{element}
- */
-Stack.prototype.pop = function()
-{
-	return this.dataStore[--this.top];
-};
+		//it(&quot;Set values should equal [&#039;1&#039;, &#039;I am a string&#039;]&quot;, function() {
+			//assert.equal([&#039;1&#039;,&#039;I am a string&#039;], setA.values());
+		//});
 
-/**
- * Method to push new element onto stack
- *
- * @function	push
- * @memberof	stack
- *
- * @param		{mixed} element - The element to push onto stack
- *
- * @returns		{boolean}
- */
-Stack.prototype.push = function(element)
-{
-	if (typeof element !== &quot;undefined&quot;)
-	{
-		this.dataStore[this.top++] = element;
-		return true;
-	}
+		it(&quot;Add a number into set which already exists, should return false&quot;, function() {
+			assert.equal(false, setA.add(1));
+		});
 
-	return false;
-};
+		it(&quot;Set size should still equal 2&quot;, function() {
+			assert.equal(2, setA.size());
+		});
 
-/**
- * Method to get current number of elements in the stack
- *
- * @function	length
- * @memberof	stack
- *
- * @returns		{integer} number of elements in the stack
- */
-Stack.prototype.length = function()
-{
-	return this.top;
-};
+		//it(&quot;Set values should still equal [&#039;1&#039;, &#039;I am a string&#039;]&quot;, function() {
+			//assert.equal([&#039;1&#039;,&#039;I am a string&#039;], setA.values());
+		//})
 
-if (typeof exports !== &quot;undefined&quot;)
-{
-	exports.create = function() {
-		return new Stack();
-	};
-}</textarea>
+		it(&quot;Add another number into set&quot;, function() {
+			assert.equal(true, setA.add(2));
+		});
+
+		it(&quot;Set size should equal 3&quot;, function() {
+			assert.equal(3, setA.size());
+		});
+
+		//it(&quot;Set values should equal [1]&quot;, function() {
+			//assert.equal([&#039;1&#039;,&#039;2&#039;,&#039;I am a string&#039;], setA.values());
+		//});
+
+	});
+
+	describe(&quot;Test Union functionality&quot;, function() {
+
+	});
+
+	describe(&quot;Test Intersection functionality&quot;, function() {
+
+	});
+
+	describe(&quot;Test Difference functionality&quot;, function() {
+
+	});
+
+	describe(&quot;Test Subset functionality&quot;, function() {
+
+	});
+
+});</textarea>
   </div>
 </div>
 
