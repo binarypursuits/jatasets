@@ -121,6 +121,19 @@ module.exports = function(grunt) {
 					reportFormats: ['cobertura','lcovonly','html']
 				}
 			}
+		},
+		
+		jsdox: {
+			generate: {
+			  options: {
+				contentsEnabled: true,
+				contentsTitle: 'JataSets',
+				contentsFile: '/README.md',
+				 pathFilter: /^jatasets/,
+			},	 
+			src: ['./jatasets/**/*.js'],
+			dest: './jdox/'
+			}
 		}
 		
 	});
@@ -136,6 +149,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-mocha-istanbul')
 	grunt.loadNpmTasks('grunt-browserify');
 	grunt.loadNpmTasks('grunt-jsdoc');
+	grunt.loadNpmTasks('grunt-jsdox');
 	grunt.loadNpmTasks('grunt-plato');
 
 	grunt.registerTask('prep', ['clean']);
@@ -143,7 +157,9 @@ module.exports = function(grunt) {
 	grunt.registerTask('test', ['mochaTest', 'mocha_istanbul', 'plato']);
 	grunt.registerTask('bundle', ['browserify', 'uglify']);
 	
+	grunt.registerTask('docs', ['jsdoc', 'jsdox']);
+	
 	grunt.registerTask('default', ['prep', 'validate', 'test']);
-	grunt.registerTask('build', ['default', 'bundle', 'jsdoc']);
+	grunt.registerTask('build', ['default', 'bundle', 'docs']);
 
 };
