@@ -27,8 +27,7 @@ Private method to append an element to the list
 
 ### List.find(element) 
 
-Private method to find an element in the list.  Will either return
-element index if found and false if not found.
+Private method to find an element in the list.  Will either returnelement index if found and false if not found.
 
 **Parameters**
 
@@ -109,8 +108,7 @@ Method to get current this.position in the list
 
 ### List.move(this.position) 
 
-Method to move current this.position in the list to specific this.position
-and validating the this.position provided
+Method to move current this.position in the list to specific this.positionand validating the this.position provided
 
 **Parameters**
 

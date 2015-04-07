@@ -1,5 +1,5 @@
 /**
- *  @namespace	jatasets
+ *  @module		jatasets
  *  @class		Dictionary
  */
 
@@ -8,17 +8,17 @@
 'use strict';
 
 /**
- *  @namespace	jatasets
+ *  @module		jatasets
  *  @class		Dictionary
  */
-var Dictionary = function()
+function Dictionary()
 {
 	/** @property	{Array} dataStore - array comprising the dictionary  */
 	this.dataStore = [];
-	
+
 	/** @property	{integer} total - current total number of items in the dictionary  */
 	this.total = 0;
-};
+}
 
 /**
  * Method to get instance of last element put on stack
@@ -26,10 +26,10 @@ var Dictionary = function()
  * @function	Dictionary.add
  * @memberof	jatasets
  *
- * @param		{string}	key - index value to store value under
- * @param		{mixed}		value - item being stored
+ * @param   {string}  [key] index value to store value under
+ * @param   {mixed}   [value] item being stored
  *
- * @returns		{boolean}
+ * @return {boolean}
  */
 Dictionary.prototype.add = function(key, value)
 {
@@ -49,9 +49,9 @@ Dictionary.prototype.add = function(key, value)
  * @function	Dictionary.remove
  * @memberof	jatasets
  *
- * @param		{string}	key - index of item to be removed
+ * @param   {string}  [key] index of item to be removed
  *
- * @returns		{boolean}
+ * @return  {boolean}
  */
 Dictionary.prototype.remove = function(key)
 {
@@ -71,9 +71,9 @@ Dictionary.prototype.remove = function(key)
  * @function	Dictionary.find
  * @memberof	jatasets
  *
- * @param		{string}	key - index search for in dictionary
+ * @param   {string}  [key] index search for in dictionary
  *
- * @returns		{mixed} return item if successful and false if key is not valid
+ * @return  {mixed}   return item if successful and false if key is not valid
  */
 Dictionary.prototype.find = function(key)
 {
@@ -92,7 +92,7 @@ Dictionary.prototype.find = function(key)
  * @function	Dictionary.showAll
  * @memberof	jatasets
  *
- * @returns		{string}
+ * @return		{string}
  */
 Dictionary.prototype.showAll = function()
 {
@@ -119,7 +119,7 @@ Dictionary.prototype.showAll = function()
  * @function	Dictionary.count
  * @memberof	jatasets
  *
- * @returns		{integer}
+ * @return		{integer}
  */
 Dictionary.prototype.count = function()
 {
@@ -132,7 +132,7 @@ Dictionary.prototype.count = function()
  * @function	Dictionary.clear
  * @memberof	jatasets
  *
- * @returns		{boolean}
+ * @return		{boolean}
  */
 Dictionary.prototype.clear = function()
 {
@@ -145,6 +145,7 @@ Dictionary.prototype.clear = function()
 	return false;
 };
 
+/** @constructs Dictionary*/
 exports.create = function() {
 	return new Dictionary();
 };

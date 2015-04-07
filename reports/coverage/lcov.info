@@ -1,5 +1,5 @@
 TN:
-SF:C:\Users\Brian\git\jatasets\jatasets\index.js
+SF:C:\git\jatasets\jatasets\index.js
 FN:9,(anonymous_1)
 FN:13,(anonymous_2)
 FN:17,(anonymous_3)
@@ -33,18 +33,18 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:C:\Users\Brian\git\jatasets\jatasets\dictionary.js
-FN:14,(anonymous_1)
+SF:C:\git\jatasets\jatasets\dictionary.js
+FN:14,Dictionary
 FN:34,(anonymous_2)
 FN:56,(anonymous_3)
 FN:78,(anonymous_4)
 FN:97,(anonymous_5)
 FN:124,(anonymous_6)
 FN:137,(anonymous_7)
-FN:148,(anonymous_8)
+FN:149,(anonymous_8)
 FNF:8
 FNH:5
-FNDA:1,(anonymous_1)
+FNDA:1,Dictionary
 FNDA:4,(anonymous_2)
 FNDA:4,(anonymous_3)
 FNDA:6,(anonymous_4)
@@ -85,8 +85,8 @@ DA:139,0
 DA:141,0
 DA:142,0
 DA:145,0
-DA:148,1
 DA:149,1
+DA:150,1
 LF:35
 LH:24
 BRDA:36,1,0,3
@@ -103,7 +103,7 @@ BRF:10
 BRH:6
 end_of_record
 TN:
-SF:C:\Users\Brian\git\jatasets\jatasets\queue.js
+SF:C:\git\jatasets\jatasets\queue.js
 FN:14,(anonymous_1)
 FN:35,(anonymous_2)
 FN:57,(anonymous_3)
@@ -172,7 +172,7 @@ BRF:10
 BRH:7
 end_of_record
 TN:
-SF:C:\Users\Brian\git\jatasets\jatasets\list.js
+SF:C:\git\jatasets\jatasets\list.js
 FN:14,(anonymous_1)
 FN:34,(anonymous_2)
 FN:51,(anonymous_3)
@@ -307,7 +307,7 @@ BRF:20
 BRH:15
 end_of_record
 TN:
-SF:C:\Users\Brian\git\jatasets\jatasets\set.js
+SF:C:\git\jatasets\jatasets\set.js
 FN:14,(anonymous_1)
 FN:28,(anonymous_2)
 FN:46,(anonymous_3)
@@ -424,7 +424,7 @@ BRF:14
 BRH:3
 end_of_record
 TN:
-SF:C:\Users\Brian\git\jatasets\jatasets\stack.js
+SF:C:\git\jatasets\jatasets\stack.js
 FN:14,(anonymous_1)
 FN:31,(anonymous_2)
 FN:45,(anonymous_3)

@@ -83,12 +83,14 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+
 		mochaTest: {
 			default: {
 				options: {
 					reporter: 'spec',
-					clearRequireCache: false // Optionally clear the require cache before running tests (defaults to false)
+					clearRequireCache: false // Optionally clear the require
+												// cache before running tests
+												// (defaults to false)
 				},
 				src: ['test/**/*_test.js']
 			},
@@ -101,7 +103,7 @@ module.exports = function(grunt) {
 				src: ['test/**/*_test.js']
 			}
 		},
-		
+
 		mocha: {
 			options: {
 				reporter: 'XUnit'
@@ -109,9 +111,9 @@ module.exports = function(grunt) {
 			src: ['test/**/*_test.js'],
 			dest: 'reports/xunit.out',
 		},
-		
+
 		mocha_istanbul: {
-            coverage: {
+			coverage: {
 				src: './test/**/*_test.js',
 				options: {
 					mask: '*_test.js',
@@ -122,20 +124,20 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+
 		jsdox: {
 			generate: {
-			  options: {
-				contentsEnabled: true,
-				contentsTitle: 'JataSets',
-				contentsFile: '/README.md',
-				 pathFilter: /^jatasets/,
-			},	 
-			src: ['./jatasets/**/*.js'],
-			dest: './jdox/'
+				options: {
+					contentsEnabled: true,
+					contentsTitle: 'JataSets',
+					contentsFile: '/README.md',
+					pathFilter: /^jatasets/,
+				},
+				src: ['./jatasets/**/*.js'],
+				dest: './jdox/'
 			}
 		}
-		
+
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
@@ -156,9 +158,9 @@ module.exports = function(grunt) {
 	grunt.registerTask('validate', ['jshint']); // csslint, html
 	grunt.registerTask('test', ['mochaTest', 'mocha_istanbul', 'plato']);
 	grunt.registerTask('bundle', ['browserify', 'uglify']);
-	
+
 	grunt.registerTask('docs', ['jsdoc', 'jsdox']);
-	
+
 	grunt.registerTask('default', ['prep', 'validate', 'test']);
 	grunt.registerTask('build', ['default', 'bundle', 'docs']);
 

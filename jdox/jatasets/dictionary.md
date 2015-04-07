@@ -49,8 +49,7 @@ Method to retrieve value from dictionary using the key
 
 ### Dictionary.showAll() 
 
-Method to get string representation of values
-in dictionary
+Method to get string representation of valuesin dictionary
 
 **Returns**: `string`
 
@@ -65,6 +64,10 @@ Method to get current number of items in dictionary
 Method to clear all values from dictionary
 
 **Returns**: `boolean`
+
+
+## Class: Dictionary
+
 
 
 
