@@ -58,23 +58,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		jasmine : {
-			src : 'jatasets/**/*.js',
-			options : {
-				specs : ['spec/**/*_spec.js']
-			}//,
-			//coverage : {
-				//src : 'src/**/*.js',
-				//options : {
-					//template : require('grunt-template-jasmine-istanbul'),
-					//templateOptions : {
-						//coverage : 'reports/coverage.json',
-						//report : 'reports/coverage'
-					//}
-				//}
-			//}
-		},
-
 		plato : {
 			build : {
 				files : {
@@ -100,25 +83,46 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-
+		
 		mochaTest: {
-			build: {
+			default: {
 				options: {
 					reporter: 'spec',
 					clearRequireCache: false // Optionally clear the require cache before running tests (defaults to false)
 				},
 				src: ['test/**/*_test.js']
 			},
-			coverage: {
+			build: {
 				options: {
 					reporter: 'html-cov',
 					quiet: true,
-					captureFile: 'coverage.html'
+					captureFile: 'reports/coverage.html'
 				},
 				src: ['test/**/*_test.js']
 			}
+		},
+		
+		mocha: {
+			options: {
+				reporter: 'XUnit'
+			},
+			src: ['test/**/*_test.js'],
+			dest: 'reports/xunit.out',
+		},
+		
+		mocha_istanbul: {
+            coverage: {
+				src: './test/**/*_test.js',
+				options: {
+					mask: '*_test.js',
+					coverageFolder: './reports/coverage',
+					coverage: true,
+					root: './jatasets',
+					reportFormats: ['cobertura','lcovonly','html']
+				}
+			}
 		}
-
+		
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
@@ -127,18 +131,19 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-mocha');
 	grunt.loadNpmTasks('grunt-mocha-test');
+	grunt.loadNpmTasks('grunt-mocha-istanbul')
 	grunt.loadNpmTasks('grunt-browserify');
 	grunt.loadNpmTasks('grunt-jsdoc');
 	grunt.loadNpmTasks('grunt-plato');
 
 	grunt.registerTask('prep', ['clean']);
-
-	grunt.registerTask('test', ['jshint', 'mochaTest', 'plato']);
-	grunt.registerTask('mocha', ['mochaTest']);
-
+	grunt.registerTask('validate', ['jshint']); // csslint, html
+	grunt.registerTask('test', ['mochaTest', 'mocha_istanbul', 'plato']);
 	grunt.registerTask('bundle', ['browserify', 'uglify']);
-	grunt.registerTask('default', ['prep', 'test', 'jsdoc']);
-	grunt.registerTask('build', ['default', 'bundle']);
+	
+	grunt.registerTask('default', ['prep', 'validate', 'test']);
+	grunt.registerTask('build', ['default', 'bundle', 'jsdoc']);
 
 };

@@ -22,6 +22,8 @@
   "author": "Binary Pursuits",
   "license": "MIT",
   "devDependencies": {
+    "assert": "^1.3.0",
+    "dateformat": "^1.0.11",
     "grunt": "^0.4.5",
     "grunt-browserify": "^3.5.1",
     "grunt-contrib-clean": "^0.6.0",
@@ -33,11 +35,12 @@
     "grunt-istanbul": "^0.4.0",
     "grunt-jsdoc": "^0.5.8",
     "grunt-junit": "^0.1.6",
+    "grunt-mocha": "^0.4.12",
+    "grunt-mocha-istanbul": "^2.3.1",
     "grunt-mocha-test": "^0.12.7",
     "grunt-plato": "^1.2.1",
-    "mocha": "^2.2.1",
-    "assert": "^1.3.0",
-    "dateformat": "^1.0.11"
+    "istanbul": "^0.3.13",
+    "mocha": "^2.2.1"
   },
   "dependencies": {
     "requirejs": "^2.1.16"

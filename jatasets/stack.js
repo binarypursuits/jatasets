@@ -94,9 +94,6 @@ Stack.prototype.length = function()
 	return this.top;
 };
 
-if (typeof exports !== "undefined")
-{
-	exports.create = function() {
-		return new Stack();
-	};
-}
+exports.create = function() {
+	return new Stack();
+};
