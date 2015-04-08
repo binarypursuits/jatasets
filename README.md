@@ -26,11 +26,13 @@
   * [list.listSize](#List#listSize)
   * [list.pos](#List#pos)
   * [list.dataStore](#List#dataStore)
+  * [List.this.append(element)](#List.this.append)
+  * [List.this.find(element)](#List.this.find)
   * [list.clear()](#List#clear)
   * [list.toString()](#List#toString)
   * [list.toJson()](#List#toJson)
-  * [list.insert([element], [after])](#List#insert)
-  * [list.remove([element])](#List#remove)
+  * [list.insert(element, after)](#List#insert)
+  * [list.remove(element)](#List#remove)
   * [list.front()](#List#front)
   * [list.end()](#List#end)
   * [list.prev()](#List#prev)
@@ -45,6 +47,12 @@
   * [queue.dataStore](#Queue#dataStore)
   * [queue.total](#Queue#total)
   * [queue.ticket](#Queue#ticket)
+  * [queue.enqueue(element)](#Queue#enqueue)
+  * [queue.dequeue()](#Queue#dequeue)
+  * [queue.front()](#Queue#front)
+  * [queue.back()](#Queue#back)
+  * [queue.empty()](#Queue#empty)
+  * [queue.toString()](#Queue#toString)
 * [class: Set](#Set)
   * [new Set()](#new_Set)
   * [set.items](#Set#items)
@@ -63,16 +71,11 @@
   * [new Stack()](#new_Stack)
   * [stack.top](#Stack#top)
   * [stack.dataStore](#Stack#dataStore)
-
-**Namespaces**
-
-* [jatasets](#jatasets)
-* [jatasets](#jatasets)
-* [jatasets](#jatasets)
-
-**Functions**
-
-* [create()](#create)
+  * [stack.clear()](#Stack#clear)
+  * [stack.peek()](#Stack#peek)
+  * [stack.pop()](#Stack#pop)
+  * [stack.push(element)](#Stack#push)
+  * [stack.length()](#Stack#length)
  
 <a name="module_jatasets"></a>
 #jatasets
@@ -190,11 +193,13 @@ Method to clear all values from dictionary
   * [list.listSize](#List#listSize)
   * [list.pos](#List#pos)
   * [list.dataStore](#List#dataStore)
+  * [List.this.append(element)](#List.this.append)
+  * [List.this.find(element)](#List.this.find)
   * [list.clear()](#List#clear)
   * [list.toString()](#List#toString)
   * [list.toJson()](#List#toJson)
-  * [list.insert([element], [after])](#List#insert)
-  * [list.remove([element])](#List#remove)
+  * [list.insert(element, after)](#List#insert)
+  * [list.remove(element)](#List#remove)
   * [list.front()](#List#front)
   * [list.end()](#List#end)
   * [list.prev()](#List#prev)
@@ -207,75 +212,93 @@ Method to clear all values from dictionary
 
 <a name="new_List"></a>
 ##new List()
-Creates a new Dictionary
+Creates a new List Object
 
 <a name="List#listSize"></a>
 ##list.listSize
 **Properties**
 
-- listSize `integer` - length of current list  
+- listSize `Integer` - Length of current list  
 
 <a name="List#pos"></a>
 ##list.pos
 **Properties**
 
-- pos `integer` - Current this.position in list  
+- pos `Integer` - Current position in list  
 
 <a name="List#dataStore"></a>
 ##list.dataStore
 **Properties**
 
-- dataStore `Array` - an array of elements comprising a list  
+- dataStore `Array` - An array of elements comprising a list  
 
+<a name="List.this.append"></a>
+##List.this.append(element)
+Private method to append an element to the list
+
+**Params**
+
+- element `Mixed` - The element being appended to the list  
+
+**Returns**: `Boolean`  
+<a name="List.this.find"></a>
+##List.this.find(element)
+Private method to find an element in the list.  Will either returnelement index if found and false if not found.
+
+**Params**
+
+- element `Mixed` - The element being appended to the list  
+
+**Returns**: `Boolean`  
 <a name="List#clear"></a>
 ##list.clear()
 Method to reset list.
 
-**Returns**: `boolean`  
+**Returns**: `Boolean`  
 <a name="List#toString"></a>
 ##list.toString()
 Method to retrieve list as comma seperate string
 
-**Returns**: `string` - list as comma serperate string  
+**Returns**: `String` - list as comma serperate string  
 <a name="List#toJson"></a>
 ##list.toJson()
 Method to retrieve list as JSON string
 
-**Returns**: `string`  
+**Returns**: `String`  
 <a name="List#insert"></a>
-##list.insert([element], [after])
+##list.insert(element, after)
 Method to insert element after another element
 
 **Params**
 
-- \[element\] `mixed` - The element you wish to place  
-- \[after\] `mixed` - The element you wish to place after  
+- element `Mixed` - The element you wish to place  
+- after `Mixed` - The element you wish to place after  
 
-**Returns**: `boolean`  
+**Returns**: `Boolean`  
 <a name="List#remove"></a>
-##list.remove([element])
+##list.remove(element)
 Method to remove element from list
 
 **Params**
 
-- \[element\] `mixed` - The element to be removed  
+- element `Mixed` - The element to be removed  
 
-**Returns**: `boolean`  
+**Returns**: `Boolean`  
 <a name="List#front"></a>
 ##list.front()
 Method to move current this.position to the beginning of the list
 
-**Returns**: `integer`  
+**Returns**: `Integer`  
 <a name="List#end"></a>
 ##list.end()
 Method to move current this.position to the end of the list
 
-**Returns**: `integer`  
+**Returns**: `Integer`  
 <a name="List#prev"></a>
 ##list.prev()
 Method to move current this.position in list to previous element
 
-**Returns**: `integer` | `boolean`  
+**Returns**: `Integer` | `Boolean`  
 <a name="List#next"></a>
 ##list.next()
 Method to move current this.position in list to next element
@@ -323,6 +346,12 @@ Method to determine if list contains an element
   * [queue.dataStore](#Queue#dataStore)
   * [queue.total](#Queue#total)
   * [queue.ticket](#Queue#ticket)
+  * [queue.enqueue(element)](#Queue#enqueue)
+  * [queue.dequeue()](#Queue#dequeue)
+  * [queue.front()](#Queue#front)
+  * [queue.back()](#Queue#back)
+  * [queue.empty()](#Queue#empty)
+  * [queue.toString()](#Queue#toString)
 
 <a name="new_Queue"></a>
 ##new Queue()
@@ -332,20 +361,51 @@ Creates a new Queue
 ##queue.dataStore
 **Properties**
 
-- dataStore `Array` - an array of elements comprising a Queue  
+- dataStore `Array` - An array of elements comprising a Queue  
 
 <a name="Queue#total"></a>
 ##queue.total
 **Properties**
 
-- total `integer` - total elements comprising a Queue  
+- total `integer` - Total elements comprising a Queue  
 
 <a name="Queue#ticket"></a>
 ##queue.ticket
 **Properties**
 
-- ticket `integer` - current ticket number to issue  
+- ticket `integer` - Current ticket number to issue  
 
+<a name="Queue#enqueue"></a>
+##queue.enqueue(element)
+Method to Queue an element to the Queue
+
+**Params**
+
+- element `Mixed` - being added to Queue  
+
+**Returns**: `Mixed`  
+<a name="Queue#dequeue"></a>
+##queue.dequeue()
+Method to remove an element from the Queue
+
+**Returns**: `Boolean`  
+<a name="Queue#front"></a>
+##queue.front()
+Method to retrieve element in front of Queue
+
+<a name="Queue#back"></a>
+##queue.back()
+Method to retrieve element in back of Queue
+
+<a name="Queue#empty"></a>
+##queue.empty()
+Method to verify if Queue is empty
+
+<a name="Queue#toString"></a>
+##queue.toString()
+Method to retrieve Queue as string with line breaks
+
+**Returns**: `string`  
 <a name="Set"></a>
 #class: Set
 **Members**
@@ -367,7 +427,7 @@ Creates a new Queue
 
 <a name="new_Set"></a>
 ##new Set()
-Creates a new Set
+Creates a new Set Object
 
 <a name="Set#items"></a>
 ##set.items
@@ -381,41 +441,41 @@ Private utility method to determine if value exists in the set
 
 **Params**
 
-- element `mixed` - The element being appended to the set  
+- element `Mixed` - The element being appended to the set  
 
-**Returns**: `mixed`  
+**Returns**: `Mixed`  
 <a name="Set#add"></a>
 ##set.add(value)
 Method to add value to set
 
 **Params**
 
-- value `mixed` - value being added to the set  
+- value `Mixed` - value being added to the set  
 
-**Returns**: `boolean`  
+**Returns**: `Boolean`  
 <a name="Set#remove"></a>
 ##set.remove(value)
 Method to remove value from set
 
 **Params**
 
-- value `mixed` - value being removed from the set  
+- value `Mixed` - Value being removed from the set  
 
-**Returns**: `boolean`  
+**Returns**: `Boolean`  
 <a name="Set#has"></a>
 ##set.has(value)
 Method to verify if a value is in the set
 
 **Params**
 
-- value `mixed` - value to test if exists in set  
+- value `Mixed` - value to test if exists in set  
 
-**Returns**: `boolean`  
+**Returns**: `Boolean`  
 <a name="Set#clear"></a>
 ##set.clear()
 Method to clear all values from the set
 
-**Returns**: `boolean`  
+**Returns**: `Boolean`  
 <a name="Set#size"></a>
 ##set.size()
 Method to get current size of set
@@ -454,16 +514,21 @@ Method to retrieve all values in the set
   * [new Stack()](#new_Stack)
   * [stack.top](#Stack#top)
   * [stack.dataStore](#Stack#dataStore)
+  * [stack.clear()](#Stack#clear)
+  * [stack.peek()](#Stack#peek)
+  * [stack.pop()](#Stack#pop)
+  * [stack.push(element)](#Stack#push)
+  * [stack.length()](#Stack#length)
 
 <a name="new_Stack"></a>
 ##new Stack()
-Creates a new Stack
+Creates a new Stack Object
 
 <a name="Stack#top"></a>
 ##stack.top
 **Properties**
 
-- top `integer` - -  
+- top `Integer` - last item placed in stack and current first for removal  
 
 <a name="Stack#dataStore"></a>
 ##stack.dataStore
@@ -471,25 +536,32 @@ Creates a new Stack
 
 - dataStore `Array` - an array of elements comprising a stack  
 
-<a name="jatasets"></a>
-#jatasets
-**Members**
+<a name="Stack#clear"></a>
+##stack.clear()
+Method to reset stack.
 
-* [jatasets](#jatasets)
+**Returns**: `Boolean`  
+<a name="Stack#peek"></a>
+##stack.peek()
+Method to get instance of last element put on stack
 
-<a name="jatasets"></a>
-#jatasets
-**Members**
+**Returns**: `Mixed` - last item placed on stack  
+<a name="Stack#pop"></a>
+##stack.pop()
+Method to remove last element put on stack
 
-* [jatasets](#jatasets)
+**Returns**: `Mixed` - removed item from top of stack  
+<a name="Stack#push"></a>
+##stack.push(element)
+Method to push new element onto stack
 
-<a name="jatasets"></a>
-#jatasets
-**Members**
+**Params**
 
-* [jatasets](#jatasets)
+- element `Mixed` - The element to push onto stack  
 
-<a name="create"></a>
-#create()
-creates and return new Dictionary Object
+**Returns**: `Boolean`  
+<a name="Stack#length"></a>
+##stack.length()
+Method to get current number of elements in the stack
 
+**Returns**: `integer` - number of elements in the stack  

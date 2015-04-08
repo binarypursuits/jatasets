@@ -11,7 +11,9 @@ var list = require('./list');
 var set = require('./set');
 var stack = require('./stack');
 
-/** Create new Dictionary dataset object and return. */
+/**
+ * Create new Dictionary dataset object and return. 
+ */
 exports.dictionary = function() {
 	return dictionary.create();
 };

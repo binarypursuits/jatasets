@@ -1,7 +1,3 @@
-/**
- *  @namespace	jatasets
- */
-
 /*jshint unused:false */
 
 'use strict';
@@ -12,24 +8,24 @@
  */
 var Queue = function() {
 
-	/** @property	{Array} dataStore - an array of elements comprising a Queue  */
+	/** @property	{Array} dataStore An array of elements comprising a Queue  */
 	this.dataStore = [];
 
-	/** @property	{integer} total - total elements comprising a Queue  */
+	/** @property	{integer} total Total elements comprising a Queue  */
 	this.total = 0;
 
-	/** @property	{integer} ticket - current ticket number to issue  */
+	/** @property	{integer} ticket Current ticket number to issue  */
 	this.ticket = 0;
 };
 
 /**
  * Method to Queue an element to the Queue
  *
- * @param {mixed} element being added to Queue
+ * @memberof Queue
  *
- * @function	Queue.enqueue
- * @memberof	jatasets
+ * @param {Mixed} element being added to Queue
  *
+ * @return {Mixed}
  */
 Queue.prototype.enqueue = function(element)
 {
@@ -48,10 +44,9 @@ Queue.prototype.enqueue = function(element)
 /**
  * Method to remove an element from the Queue
  *
- * @function	Queue.dequeue
- * @memberof	jatasets
+ * @memberof	Queue
  *
- * @returns		{boolean}
+ * @returns		{Boolean}
  */
 Queue.prototype.dequeue = function()
 {
@@ -67,8 +62,7 @@ Queue.prototype.dequeue = function()
 /**
  * Method to retrieve element in front of Queue
  *
- * @function	Queue.front
- * @memberof	jatasets
+ * @memberof	Queue
  *
  */
 Queue.prototype.front = function()
@@ -86,8 +80,7 @@ Queue.prototype.front = function()
 /**
  * Method to retrieve element in back of Queue
  *
- * @function	Queue.back
- * @memberof	jatasets
+ * @memberof	Queue
  *
  */
 Queue.prototype.back = function()
@@ -98,8 +91,7 @@ Queue.prototype.back = function()
 /**
  * Method to verify if Queue is empty
  *
- * @function	Queue.empty
- * @memberof	jatasets
+ * @memberof	Queue
  *
  */
 Queue.prototype.empty = function()
@@ -115,8 +107,7 @@ Queue.prototype.empty = function()
 /**
  * Method to retrieve Queue as string with line breaks
  *
- * @function	Queue.toString
- * @memberof	jatasets
+ * @memberof	Queue
  *
  * @returns		{string}
  */
@@ -132,9 +123,6 @@ Queue.prototype.toString = function()
 	return string;
 };
 
-if (typeof exports !== "undefined")
-{
-	exports.create = function() {
-		return new Queue();
-	};
-}
+exports.create = function() {
+	return new Queue();
+};

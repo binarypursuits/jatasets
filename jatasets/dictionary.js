@@ -1,7 +1,3 @@
-/**
- *  @namespace	jatasets
- */
-
 /*jshint unused:false */
 
 'use strict';
