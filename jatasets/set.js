@@ -1,7 +1,3 @@
-/**
- *  @namespace	jatasets
- */
-
 /*jshint unused:false */
 
 'use strict';
@@ -18,11 +14,8 @@ var Set = function(){
 	/**
 	 * Private utility method to determine if value exists in the set
 	 *
-	 * @function	Set.exists
-	 * @memberof	jatasets
-	 *
-	 * @param		{mixed} element - The element being appended to the set
-	 *
+	 * @param {mixed} element The element being appended to the set
+	 * @returns {mixed}
 	 */
 	this.exists = function (value)
 	{
@@ -34,10 +27,7 @@ var Set = function(){
 /**
  * Method to add value to set
  *
- * @function	Set.add
- * @memberof	jatasets
- *
- * @param		{mixed} value - value being added to the set
+ * @param		{mixed} value value being added to the set
  *
  * @return		{boolean}
  *
@@ -56,10 +46,7 @@ Set.prototype.add = function(value)
 /**
  * Method to remove value from set
  *
- * @function	Set.remove
- * @memberof	jatasets
- *
- * @param		{mixed} value - value being removed from the set
+ * @param {mixed} value value being removed from the set
  *
  * @returns	{boolean}
  */
@@ -77,10 +64,7 @@ Set.prototype.remove = function(value)
 /**
  * Method to verify if a value is in the set
  *
- * @function	Set.has
- * @memberof	jatasets
- *
- * @param		{mixed} value - value to test if exists in set
+ * @param {mixed} value value to test if exists in set
  *
  * @returns	{boolean}
  */
@@ -92,9 +76,6 @@ Set.prototype.has = function(value)
 /**
  * Method to clear all values from the set
  *
- * @function	Set.clear
- * @memberof	jatasets
- *
  * @returns	{boolean}
  */
 Set.prototype.clear = function()
@@ -105,9 +86,6 @@ Set.prototype.clear = function()
 
 /**
  * Method to get current size of set
- *
- * @function	Set.size
- * @memberof	jatasets
  *
  * @returns	{integer} number of values in set
  */
@@ -129,9 +107,6 @@ Set.prototype.size = function()
 /**
  * Method to retrieve all values in the set
  *
- * @function	Set.values
- * @memberof	jatasets
- *
  * @returns	{object} values from the set
  *
  */
@@ -149,9 +124,6 @@ Set.prototype.values = function()
 
 /**
  * Method to retrieve all values in the set
- *
- * @function	Set.union
- * @memberof	jatasets
  *
  * @returns		{object} values from the set
  *
@@ -182,9 +154,6 @@ Set.prototype.union = function(compareSet)
 /**
  * Method to retrieve all values in the set
  *
- * @function	Set.intersection
- * @memberof	jatasets
- *
  * @returns		{object} values from the set
  *
  */
@@ -209,10 +178,7 @@ Set.prototype.intersection = function(compareSet)
 /**
  * Method to retrieve all values in the set
  *
- * @function	Set.difference
- * @memberof	jatasets
- *
- * @returns		{object} values from the set
+ * @returns	{object} values from the set
  *
  */
 Set.prototype.difference = function(compareSet)
@@ -235,9 +201,6 @@ Set.prototype.difference = function(compareSet)
 
 /**
  * Method to retrieve all values in the set
- *
- * @function	Set.subset
- * @memberof	jatasets
  *
  * @returns	{object} values from the set
  *

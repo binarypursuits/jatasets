@@ -48,6 +48,17 @@
 * [class: Set](#Set)
   * [new Set()](#new_Set)
   * [set.items](#Set#items)
+  * [set.exists(element)](#Set#exists)
+  * [set.add(value)](#Set#add)
+  * [set.remove(value)](#Set#remove)
+  * [set.has(value)](#Set#has)
+  * [set.clear()](#Set#clear)
+  * [set.size()](#Set#size)
+  * [set.values()](#Set#values)
+  * [set.union()](#Set#union)
+  * [set.intersection()](#Set#intersection)
+  * [set.difference()](#Set#difference)
+  * [set.subset()](#Set#subset)
 * [class: Stack](#Stack)
   * [new Stack()](#new_Stack)
   * [stack.top](#Stack#top)
@@ -58,12 +69,9 @@
 * [jatasets](#jatasets)
 * [jatasets](#jatasets)
 * [jatasets](#jatasets)
-* [jatasets](#jatasets)
-* [jatasets](#jatasets)
 
 **Functions**
 
-* [create()](#create)
 * [create()](#create)
  
 <a name="module_jatasets"></a>
@@ -345,6 +353,17 @@ Creates a new Queue
 * [class: Set](#Set)
   * [new Set()](#new_Set)
   * [set.items](#Set#items)
+  * [set.exists(element)](#Set#exists)
+  * [set.add(value)](#Set#add)
+  * [set.remove(value)](#Set#remove)
+  * [set.has(value)](#Set#has)
+  * [set.clear()](#Set#clear)
+  * [set.size()](#Set#size)
+  * [set.values()](#Set#values)
+  * [set.union()](#Set#union)
+  * [set.intersection()](#Set#intersection)
+  * [set.difference()](#Set#difference)
+  * [set.subset()](#Set#subset)
 
 <a name="new_Set"></a>
 ##new Set()
@@ -356,6 +375,77 @@ Creates a new Set
 
 - items `Array` - an object values comprising a set  
 
+<a name="Set#exists"></a>
+##set.exists(element)
+Private utility method to determine if value exists in the set
+
+**Params**
+
+- element `mixed` - The element being appended to the set  
+
+**Returns**: `mixed`  
+<a name="Set#add"></a>
+##set.add(value)
+Method to add value to set
+
+**Params**
+
+- value `mixed` - value being added to the set  
+
+**Returns**: `boolean`  
+<a name="Set#remove"></a>
+##set.remove(value)
+Method to remove value from set
+
+**Params**
+
+- value `mixed` - value being removed from the set  
+
+**Returns**: `boolean`  
+<a name="Set#has"></a>
+##set.has(value)
+Method to verify if a value is in the set
+
+**Params**
+
+- value `mixed` - value to test if exists in set  
+
+**Returns**: `boolean`  
+<a name="Set#clear"></a>
+##set.clear()
+Method to clear all values from the set
+
+**Returns**: `boolean`  
+<a name="Set#size"></a>
+##set.size()
+Method to get current size of set
+
+**Returns**: `integer` - number of values in set  
+<a name="Set#values"></a>
+##set.values()
+Method to retrieve all values in the set
+
+**Returns**: `object` - values from the set  
+<a name="Set#union"></a>
+##set.union()
+Method to retrieve all values in the set
+
+**Returns**: `object` - values from the set  
+<a name="Set#intersection"></a>
+##set.intersection()
+Method to retrieve all values in the set
+
+**Returns**: `object` - values from the set  
+<a name="Set#difference"></a>
+##set.difference()
+Method to retrieve all values in the set
+
+**Returns**: `object` - values from the set  
+<a name="Set#subset"></a>
+##set.subset()
+Method to retrieve all values in the set
+
+**Returns**: `object` - values from the set  
 <a name="Stack"></a>
 #class: Stack
 **Members**
@@ -399,23 +489,7 @@ Creates a new Stack
 
 * [jatasets](#jatasets)
 
-<a name="jatasets"></a>
-#jatasets
-**Members**
-
-* [jatasets](#jatasets)
-
-<a name="jatasets"></a>
-#jatasets
-**Members**
-
-* [jatasets](#jatasets)
-
 <a name="create"></a>
 #create()
 creates and return new Dictionary Object
-
-<a name="create"></a>
-#create()
-creates and return new List Object
 

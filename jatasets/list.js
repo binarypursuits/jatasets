@@ -1,7 +1,3 @@
-/**
- *  @namespace	jatasets
- */
-
 /*jshint unused:false */
 
 'use strict';
@@ -261,7 +257,6 @@ List.prototype.contains = function(element)
 	return false;
 };
 
-/** creates and return new List Object */
 exports.create = function() {
 	return new List();
 };
