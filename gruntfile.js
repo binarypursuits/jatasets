@@ -85,7 +85,7 @@ module.exports = function(grunt) {
 		},
 
 		mochaTest: {
-			default: {
+			"default": {
 				options: {
 					reporter: 'spec',
 					clearRequireCache: false // Optionally clear the require
@@ -130,11 +130,10 @@ module.exports = function(grunt) {
 				options: {
 					contentsEnabled: true,
 					contentsTitle: 'JataSets',
-					contentsFile: '/README.md',
-					pathFilter: /^jatasets/,
+					contentsFile: 'README.md'
 				},
 				src: ['./jatasets/**/*.js'],
-				dest: './jdox/'
+				dest: './build/jdox'
 			}
 		}
 
@@ -159,9 +158,9 @@ module.exports = function(grunt) {
 	grunt.registerTask('test', ['mochaTest', 'mocha_istanbul', 'plato']);
 	grunt.registerTask('bundle', ['browserify', 'uglify']);
 
-	grunt.registerTask('docs', ['jsdoc', 'jsdox']);
+	grunt.registerTask('documentation', ['jsdoc', 'jsdox']);
 
 	grunt.registerTask('default', ['prep', 'validate', 'test']);
-	grunt.registerTask('build', ['default', 'bundle', 'docs']);
+	grunt.registerTask('build', ['default', 'bundle', 'documentation']);
 
 };
