@@ -1,6 +1,5 @@
 /**
  *  @namespace	jatasets
- *  @class		Stack
  */
 
 /*jshint unused:false */
@@ -8,8 +7,8 @@
 'use strict';
 
 /**
- *  @namespace	jatasets
- *  @class		Stack
+ *  Creates a new Stack
+ *  @class
  */
 var Stack = function() {
 

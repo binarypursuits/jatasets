@@ -1,6 +1,5 @@
 /**
  *  @namespace	jatasets
- *  @class		Set
  */
 
 /*jshint unused:false */
@@ -8,8 +7,8 @@
 'use strict';
 
 /**
- *  @namespace	jatasets
- *  @class		Set
+ *  Creates a new Set
+ *  @class
  */
 var Set = function(){
 

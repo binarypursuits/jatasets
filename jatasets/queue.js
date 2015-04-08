@@ -1,6 +1,5 @@
 /**
  *  @namespace	jatasets
- *  @class		Queue
  */
 
 /*jshint unused:false */
@@ -8,8 +7,8 @@
 'use strict';
 
 /**
- *  @namespace	jatasets
- *  @class		Queue
+ *  Creates a new Queue
+ *  @class
  */
 var Queue = function() {
 

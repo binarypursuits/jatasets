@@ -1,6 +1,5 @@
 /**
- *  @module		jatasets
- *  @class		Dictionary
+ *  @namespace	jatasets
  */
 
 /*jshint unused:false */
@@ -8,15 +7,15 @@
 'use strict';
 
 /**
- *  @module		jatasets
- *  @class		Dictionary
+ *  Creates a new Dictionary
+ *  @class
  */
 function Dictionary()
 {
-	/** @property	{Array} dataStore - array comprising the dictionary  */
+	/** @property	{Array} [Dictionary.dataStore] array comprising the dictionary */
 	this.dataStore = [];
 
-	/** @property	{integer} total - current total number of items in the dictionary  */
+	/** @property	{integer} [Dictionary.total] current total number of items in the dictionary */
 	this.total = 0;
 }
 
@@ -29,7 +28,7 @@ function Dictionary()
  * @param   {string}  [key] index value to store value under
  * @param   {mixed}   [value] item being stored
  *
- * @return {boolean}
+ * @returns {boolean}
  */
 Dictionary.prototype.add = function(key, value)
 {

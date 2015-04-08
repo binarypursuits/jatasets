@@ -1,6 +1,5 @@
 /**
  *  @namespace	jatasets
- *  @class		List
  */
 
 /*jshint unused:false */
@@ -8,18 +7,18 @@
 'use strict';
 
 /**
- *  @namespace	jatasets
- *  @class		List
+ *  Creates a new Dictionary
+ *  @class
  */
 var List = function() {
 
-	/** @property	{integer} this.listSize - length of current list */
+	/** @property	{integer} [List.listSize] length of current list */
 	this.listSize = 0;
 
-	/** @property	{integer} this.pos - Current this.position in list */
+	/** @property	{integer} [List.pos] Current this.position in list */
 	this.pos = 0;
 
-	/** @property	{Array} this.dataStore - an array of elements comprising a list  */
+	/** @property	{Array} [List.dataStore] an array of elements comprising a list  */
 	this.dataStore = [];
 
 	/**
