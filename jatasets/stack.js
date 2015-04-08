@@ -1,21 +1,17 @@
-/**
- *  @namespace	jatasets
- */
-
 /*jshint unused:false */
 
 'use strict';
 
 /**
- *  Creates a new Stack
+ *  Creates a new Stack Object
  *  @class
  */
 var Stack = function() {
 
-	/** @property	{integer} top -  */
+	/** @property	{Integer} top last item placed in stack and current first for removal  */
 	this.top = 0;
 
-	/** @property	{Array} dataStore - an array of elements comprising a stack  */
+	/** @property	{Array} dataStore an array of elements comprising a stack  */
 	this.dataStore = [];
 
 };
@@ -23,9 +19,7 @@ var Stack = function() {
 /**
  * Method to reset stack.
  *
- * @function	clear
- * @memberof	stack
- *
+ * @returns {Boolean}
  */
 Stack.prototype.clear = function()
 {
@@ -36,10 +30,7 @@ Stack.prototype.clear = function()
 /**
  * Method to get instance of last element put on stack
  *
- * @function	peek
- * @memberof	stack
- *
- * @returns		{element}
+ * @returns	{Mixed} last item placed on stack
  */
 Stack.prototype.peek = function()
 {
@@ -49,10 +40,7 @@ Stack.prototype.peek = function()
 /**
  * Method to remove last element put on stack
  *
- * @function	pop
- * @memberof	stack
- *
- * @returns		{element}
+ * @returns	{Mixed} removed item from top of stack
  */
 Stack.prototype.pop = function()
 {
@@ -62,12 +50,9 @@ Stack.prototype.pop = function()
 /**
  * Method to push new element onto stack
  *
- * @function	push
- * @memberof	stack
+ * @param		{Mixed} element The element to push onto stack
  *
- * @param		{mixed} element - The element to push onto stack
- *
- * @returns		{boolean}
+ * @returns		{Boolean}
  */
 Stack.prototype.push = function(element)
 {
@@ -82,9 +67,6 @@ Stack.prototype.push = function(element)
 
 /**
  * Method to get current number of elements in the stack
- *
- * @function	length
- * @memberof	stack
  *
  * @returns		{integer} number of elements in the stack
  */

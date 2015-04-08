@@ -3,25 +3,24 @@
 'use strict';
 
 /**
- *  Creates a new Dictionary
+ *  Creates a new List Object
  *  @class
  */
-var List = function() {
-	/** @lends List */
+function List() {
 	
-	/** @property	{integer} [listSize] length of current list */
+	/** @property	{Integer} listSize Length of current list */
 	this.listSize = 0;
 
-	/** @property	{integer} [pos] Current this.position in list */
+	/** @property	{Integer} pos Current position in list */
 	this.pos = 0;
 
-	/** @property	{Array} [dataStore] an array of elements comprising a list  */
+	/** @property	{Array} dataStore An array of elements comprising a list  */
 	this.dataStore = [];
 
 	/**
 	 * Private method to append an element to the list
-	 * @private
-	 * @param		{mixed} [element] - The element being appended to the list
+	 * 
+	 * @param		{Mixed} element - The element being appended to the list
 	 *
 	 */
 	this.append = function (element)
@@ -33,10 +32,10 @@ var List = function() {
 	/**
 	 * Private method to find an element in the list.  Will either return
 	 * element index if found and false if not found.
-	 * @private
-	 * @param		{mixed} [element] The element being appended to the list
+	 * 
+	 * @param		{Mixed} element The element being appended to the list
 	 *
-	 * @return		{boolean}
+	 * @return		{Boolean}
 	 */
 	this.find = function (element)
 	{
@@ -56,7 +55,7 @@ var List = function() {
 /**
  * Method to reset list.
  *
- * @returns {boolean}
+ * @returns {Boolean}
  */
 List.prototype.clear = function()
 {
@@ -68,7 +67,7 @@ List.prototype.clear = function()
 /**
  * Method to retrieve list as comma seperate string
  *
- * @returns		{string} list as comma serperate string
+ * @returns	{String} list as comma serperate string
  */
 List.prototype.toString = function()
 {
@@ -78,7 +77,7 @@ List.prototype.toString = function()
 /**
  * Method to retrieve list as JSON string
  *
- * @returns		{string}
+ * @returns {String}
  */
 List.prototype.toJson = function()
 {
@@ -88,10 +87,10 @@ List.prototype.toJson = function()
 /**
  * Method to insert element after another element
  *
- * @param		{mixed} [element] The element you wish to place
- * @param		{mixed} [after] The element you wish to place after
+ * @param		{Mixed} element The element you wish to place
+ * @param		{Mixed} after The element you wish to place after
  *
- * @returns		{boolean}
+ * @returns		{Boolean}
  */
 List.prototype.insert = function(element, after)
 {
@@ -119,9 +118,9 @@ List.prototype.insert = function(element, after)
 /**
  * Method to remove element from list
  *
- * @param		{mixed} [element] The element to be removed
+ * @param		{Mixed} element The element to be removed
  *
- * @returns		{boolean}
+ * @returns		{Boolean}
  */
 List.prototype.remove = function(element)
 {
@@ -140,7 +139,7 @@ List.prototype.remove = function(element)
 /**
  * Method to move current this.position to the beginning of the list
  *
- * @returns {integer}
+ * @returns {Integer}
  */
 List.prototype.front = function()
 {
@@ -151,7 +150,7 @@ List.prototype.front = function()
 /**
  * Method to move current this.position to the end of the list
  *
- * @returns {integer}
+ * @returns {Integer}
  */
 List.prototype.end = function()
 {
@@ -162,7 +161,7 @@ List.prototype.end = function()
 /**
  * Method to move current this.position in list to previous element
  * 
- * @returns {integer|boolean}
+ * @returns {Integer|Boolean}
  */
 List.prototype.prev = function()
 {

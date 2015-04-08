@@ -126,7 +126,6 @@ Dictionary.prototype.clear = function()
 	return false;
 };
 
-/** creates and return new Dictionary Object */
 exports.create = function() {
 	return new Dictionary();
 };
