@@ -11,23 +11,21 @@
  *  @class
  */
 var List = function() {
-
-	/** @property	{integer} [List.listSize] length of current list */
+	/** @lends List */
+	
+	/** @property	{integer} [listSize] length of current list */
 	this.listSize = 0;
 
-	/** @property	{integer} [List.pos] Current this.position in list */
+	/** @property	{integer} [pos] Current this.position in list */
 	this.pos = 0;
 
-	/** @property	{Array} [List.dataStore] an array of elements comprising a list  */
+	/** @property	{Array} [dataStore] an array of elements comprising a list  */
 	this.dataStore = [];
 
 	/**
 	 * Private method to append an element to the list
-	 *
-	 * @function	List.append
-	 * @memberof	jatasets
-	 *
-	 * @param		{mixed} element - The element being appended to the list
+	 * @private
+	 * @param		{mixed} [element] - The element being appended to the list
 	 *
 	 */
 	this.append = function (element)
@@ -39,11 +37,8 @@ var List = function() {
 	/**
 	 * Private method to find an element in the list.  Will either return
 	 * element index if found and false if not found.
-	 *
-	 * @function	List.find
-	 * @memberof	jatasets
-	 *
-	 * @param		{mixed} element - The element being appended to the list
+	 * @private
+	 * @param		{mixed} [element] The element being appended to the list
 	 *
 	 * @return		{boolean}
 	 */
@@ -65,9 +60,7 @@ var List = function() {
 /**
  * Method to reset list.
  *
- * @function	List.clear
- * @memberof	jatasets
- *
+ * @returns {boolean}
  */
 List.prototype.clear = function()
 {
@@ -79,9 +72,6 @@ List.prototype.clear = function()
 /**
  * Method to retrieve list as comma seperate string
  *
- * @function	List.toString
- * @memberof	jatasets
- *
  * @returns		{string} list as comma serperate string
  */
 List.prototype.toString = function()
@@ -92,10 +82,7 @@ List.prototype.toString = function()
 /**
  * Method to retrieve list as JSON string
  *
- * @function	List.toJson
- * @memberof	jatasets
- *
- * @returns		{string} list as JSON string
+ * @returns		{string}
  */
 List.prototype.toJson = function()
 {
@@ -105,11 +92,8 @@ List.prototype.toJson = function()
 /**
  * Method to insert element after another element
  *
- * @function	List.insert
- * @memberof	jatasets	
- *
- * @param		{mixed} element - The element you wish to place
- * @param		{mixed} after - The element you wish to place after
+ * @param		{mixed} [element] The element you wish to place
+ * @param		{mixed} [after] The element you wish to place after
  *
  * @returns		{boolean}
  */
@@ -139,10 +123,7 @@ List.prototype.insert = function(element, after)
 /**
  * Method to remove element from list
  *
- * @function	List.remove
- * @memberof	jatasets
- *
- * @param		{mixed} element - The element to be removed
+ * @param		{mixed} [element] The element to be removed
  *
  * @returns		{boolean}
  */
@@ -163,9 +144,7 @@ List.prototype.remove = function(element)
 /**
  * Method to move current this.position to the beginning of the list
  *
- * @function	List.front
- * @memberof	jatasets
- *
+ * @returns {integer}
  */
 List.prototype.front = function()
 {
@@ -176,9 +155,7 @@ List.prototype.front = function()
 /**
  * Method to move current this.position to the end of the list
  *
- * @function	List.end
- * @memberof	jatasets
- *
+ * @returns {integer}
  */
 List.prototype.end = function()
 {
@@ -188,10 +165,8 @@ List.prototype.end = function()
 
 /**
  * Method to move current this.position in list to previous element
- *
- * @function	List.prev
- * @memberof	jatasets
- *
+ * 
+ * @returns {integer|boolean}
  */
 List.prototype.prev = function()
 {
@@ -207,9 +182,7 @@ List.prototype.prev = function()
 /**
  * Method to move current this.position in list to next element
  *
- * @function	List.next
- * @memberof	jatasets
- *
+ * @returns {integer|boolean}
  */
 List.prototype.next = function()
 {
@@ -225,9 +198,6 @@ List.prototype.next = function()
 /**
  * Method to get current number of elements in the list
  *
- * @function	List.length
- * @memberof	jatasets
- *
  * @returns		{integer} number of elements in the list
  */
 List.prototype.length = function()
@@ -237,9 +207,6 @@ List.prototype.length = function()
 
 /**
  * Method to get current this.position in the list
- *
- * @function	List.current
- * @memberof	jatasets.
  *
  * @returns		{integer} current this.possition in th elist
  */
@@ -251,9 +218,6 @@ List.prototype.current = function()
 /**
  * Method to move current this.position in the list to specific this.position
  * and validating the this.position provided
- *
- * @function	List.move
- * @memberof	jatasets
  *
  * @param		{integer} this.position - The this.position to move to in the list
  *
@@ -273,9 +237,6 @@ List.prototype.move = function(position)
 /**
  * Method to get element at current this.position in the list
  *
- * @function	List.getElement
- * @memberof	jatasets
- *
  * @returns		{mixed} element in the current this.position
  */
 List.prototype.getElement = function()
@@ -285,9 +246,6 @@ List.prototype.getElement = function()
 
 /**
  * Method to determine if list contains an element
- *
- * @function	List.contains
- * @memberof	jatasets
  *
  * @param		{mixed} element - The element to verify if in list
  *
@@ -303,6 +261,7 @@ List.prototype.contains = function(element)
 	return false;
 };
 
+/** creates and return new List Object */
 exports.create = function() {
 	return new List();
 };

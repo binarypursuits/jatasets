@@ -12,18 +12,15 @@
  */
 function Dictionary()
 {
-	/** @property	{Array} [Dictionary.dataStore] array comprising the dictionary */
+	/** @property	{Array} [dataStore] array comprising the dictionary */
 	this.dataStore = [];
 
-	/** @property	{integer} [Dictionary.total] current total number of items in the dictionary */
+	/** @property	{integer} [total] current total number of items in the dictionary */
 	this.total = 0;
 }
 
 /**
  * Method to get instance of last element put on stack
- *
- * @function	Dictionary.add
- * @memberof	jatasets
  *
  * @param   {string}  [key] index value to store value under
  * @param   {mixed}   [value] item being stored
@@ -45,12 +42,9 @@ Dictionary.prototype.add = function(key, value)
 /**
  * Method to remove item from the dictionary
  *
- * @function	Dictionary.remove
- * @memberof	jatasets
- *
  * @param   {string}  [key] index of item to be removed
  *
- * @return  {boolean}
+ * @returns  {boolean}
  */
 Dictionary.prototype.remove = function(key)
 {
@@ -67,12 +61,9 @@ Dictionary.prototype.remove = function(key)
 /**
  * Method to retrieve value from dictionary using the key
  *
- * @function	Dictionary.find
- * @memberof	jatasets
- *
  * @param   {string}  [key] index search for in dictionary
  *
- * @return  {mixed}   return item if successful and false if key is not valid
+ * @returns  {mixed}   return item if successful and false if key is not valid
  */
 Dictionary.prototype.find = function(key)
 {
@@ -88,10 +79,7 @@ Dictionary.prototype.find = function(key)
  * Method to get string representation of values
  * in dictionary
  *
- * @function	Dictionary.showAll
- * @memberof	jatasets
- *
- * @return		{string}
+ * @returns		{string}
  */
 Dictionary.prototype.showAll = function()
 {
@@ -115,10 +103,7 @@ Dictionary.prototype.showAll = function()
 /**
  * Method to get current number of items in dictionary
  *
- * @function	Dictionary.count
- * @memberof	jatasets
- *
- * @return		{integer}
+ * @returns		{integer}
  */
 Dictionary.prototype.count = function()
 {
@@ -127,9 +112,6 @@ Dictionary.prototype.count = function()
 
 /**
  * Method to clear all values from dictionary
- *
- * @function	Dictionary.clear
- * @memberof	jatasets
  *
  * @return		{boolean}
  */
@@ -144,7 +126,7 @@ Dictionary.prototype.clear = function()
 	return false;
 };
 
-/** @constructs Dictionary*/
+/** creates and return new Dictionary Object */
 exports.create = function() {
 	return new Dictionary();
 };

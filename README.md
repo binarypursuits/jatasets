@@ -15,14 +15,31 @@
   * [new Dictionary()](#new_Dictionary)
   * [dictionary.dataStore](#Dictionary#dataStore)
   * [dictionary.total](#Dictionary#total)
-* [class: Dictionary](#Dictionary)
-  * [dictionary.dataStore](#Dictionary#dataStore)
-  * [dictionary.total](#Dictionary#total)
+  * [dictionary.add([key], [value])](#Dictionary#add)
+  * [dictionary.remove([key])](#Dictionary#remove)
+  * [dictionary.find([key])](#Dictionary#find)
+  * [dictionary.showAll()](#Dictionary#showAll)
+  * [dictionary.count()](#Dictionary#count)
+  * [dictionary.clear()](#Dictionary#clear)
 * [class: List](#List)
   * [new List()](#new_List)
   * [list.listSize](#List#listSize)
   * [list.pos](#List#pos)
   * [list.dataStore](#List#dataStore)
+  * [list.clear()](#List#clear)
+  * [list.toString()](#List#toString)
+  * [list.toJson()](#List#toJson)
+  * [list.insert([element], [after])](#List#insert)
+  * [list.remove([element])](#List#remove)
+  * [list.front()](#List#front)
+  * [list.end()](#List#end)
+  * [list.prev()](#List#prev)
+  * [list.next()](#List#next)
+  * [list.length()](#List#length)
+  * [list.current()](#List#current)
+  * [list.move()](#List#move)
+  * [list.getElement()](#List#getElement)
+  * [list.contains(element)](#List#contains)
 * [class: Queue](#Queue)
   * [new Queue()](#new_Queue)
   * [queue.dataStore](#Queue#dataStore)
@@ -43,6 +60,11 @@
 * [jatasets](#jatasets)
 * [jatasets](#jatasets)
 * [jatasets](#jatasets)
+
+**Functions**
+
+* [create()](#create)
+* [create()](#create)
  
 <a name="module_jatasets"></a>
 #jatasets
@@ -85,6 +107,12 @@ Create new Stack dataset object and return.
   * [new Dictionary()](#new_Dictionary)
   * [dictionary.dataStore](#Dictionary#dataStore)
   * [dictionary.total](#Dictionary#total)
+  * [dictionary.add([key], [value])](#Dictionary#add)
+  * [dictionary.remove([key])](#Dictionary#remove)
+  * [dictionary.find([key])](#Dictionary#find)
+  * [dictionary.showAll()](#Dictionary#showAll)
+  * [dictionary.count()](#Dictionary#count)
+  * [dictionary.clear()](#Dictionary#clear)
 
 <a name="new_Dictionary"></a>
 ##new Dictionary()
@@ -94,34 +122,57 @@ Creates a new Dictionary
 ##dictionary.dataStore
 **Properties**
 
-  - Dictionary.dataStore `Array` - array comprising the dictionary  
+- dataStore `Array` - array comprising the dictionary  
 
 <a name="Dictionary#total"></a>
 ##dictionary.total
 **Properties**
 
-  - Dictionary.total `integer` - current total number of items in the dictionary  
+- total `integer` - current total number of items in the dictionary  
 
-<a name="Dictionary"></a>
-#class: Dictionary
-**Members**
+<a name="Dictionary#add"></a>
+##dictionary.add([key], [value])
+Method to get instance of last element put on stack
 
-* [class: Dictionary](#Dictionary)
-  * [dictionary.dataStore](#Dictionary#dataStore)
-  * [dictionary.total](#Dictionary#total)
+**Params**
 
-<a name="Dictionary#dataStore"></a>
-##dictionary.dataStore
-**Properties**
+- \[key\] `string` - index value to store value under  
+- \[value\] `mixed` - item being stored  
 
-  - Dictionary.dataStore `Array` - array comprising the dictionary  
+**Returns**: `boolean`  
+<a name="Dictionary#remove"></a>
+##dictionary.remove([key])
+Method to remove item from the dictionary
 
-<a name="Dictionary#total"></a>
-##dictionary.total
-**Properties**
+**Params**
 
-  - Dictionary.total `integer` - current total number of items in the dictionary  
+- \[key\] `string` - index of item to be removed  
 
+**Returns**: `boolean`  
+<a name="Dictionary#find"></a>
+##dictionary.find([key])
+Method to retrieve value from dictionary using the key
+
+**Params**
+
+- \[key\] `string` - index search for in dictionary  
+
+**Returns**: `mixed` - return item if successful and false if key is not valid  
+<a name="Dictionary#showAll"></a>
+##dictionary.showAll()
+Method to get string representation of valuesin dictionary
+
+**Returns**: `string`  
+<a name="Dictionary#count"></a>
+##dictionary.count()
+Method to get current number of items in dictionary
+
+**Returns**: `integer`  
+<a name="Dictionary#clear"></a>
+##dictionary.clear()
+Method to clear all values from dictionary
+
+**Returns**: `boolean`  
 <a name="List"></a>
 #class: List
 **Members**
@@ -131,6 +182,20 @@ Creates a new Dictionary
   * [list.listSize](#List#listSize)
   * [list.pos](#List#pos)
   * [list.dataStore](#List#dataStore)
+  * [list.clear()](#List#clear)
+  * [list.toString()](#List#toString)
+  * [list.toJson()](#List#toJson)
+  * [list.insert([element], [after])](#List#insert)
+  * [list.remove([element])](#List#remove)
+  * [list.front()](#List#front)
+  * [list.end()](#List#end)
+  * [list.prev()](#List#prev)
+  * [list.next()](#List#next)
+  * [list.length()](#List#length)
+  * [list.current()](#List#current)
+  * [list.move()](#List#move)
+  * [list.getElement()](#List#getElement)
+  * [list.contains(element)](#List#contains)
 
 <a name="new_List"></a>
 ##new List()
@@ -140,20 +205,107 @@ Creates a new Dictionary
 ##list.listSize
 **Properties**
 
-  - List.listSize `integer` - length of current list  
+- listSize `integer` - length of current list  
 
 <a name="List#pos"></a>
 ##list.pos
 **Properties**
 
-  - List.pos `integer` - Current this.position in list  
+- pos `integer` - Current this.position in list  
 
 <a name="List#dataStore"></a>
 ##list.dataStore
 **Properties**
 
-  - List.dataStore `Array` - an array of elements comprising a list  
+- dataStore `Array` - an array of elements comprising a list  
 
+<a name="List#clear"></a>
+##list.clear()
+Method to reset list.
+
+**Returns**: `boolean`  
+<a name="List#toString"></a>
+##list.toString()
+Method to retrieve list as comma seperate string
+
+**Returns**: `string` - list as comma serperate string  
+<a name="List#toJson"></a>
+##list.toJson()
+Method to retrieve list as JSON string
+
+**Returns**: `string`  
+<a name="List#insert"></a>
+##list.insert([element], [after])
+Method to insert element after another element
+
+**Params**
+
+- \[element\] `mixed` - The element you wish to place  
+- \[after\] `mixed` - The element you wish to place after  
+
+**Returns**: `boolean`  
+<a name="List#remove"></a>
+##list.remove([element])
+Method to remove element from list
+
+**Params**
+
+- \[element\] `mixed` - The element to be removed  
+
+**Returns**: `boolean`  
+<a name="List#front"></a>
+##list.front()
+Method to move current this.position to the beginning of the list
+
+**Returns**: `integer`  
+<a name="List#end"></a>
+##list.end()
+Method to move current this.position to the end of the list
+
+**Returns**: `integer`  
+<a name="List#prev"></a>
+##list.prev()
+Method to move current this.position in list to previous element
+
+**Returns**: `integer` | `boolean`  
+<a name="List#next"></a>
+##list.next()
+Method to move current this.position in list to next element
+
+**Returns**: `integer` | `boolean`  
+<a name="List#length"></a>
+##list.length()
+Method to get current number of elements in the list
+
+**Returns**: `integer` - number of elements in the list  
+<a name="List#current"></a>
+##list.current()
+Method to get current this.position in the list
+
+**Returns**: `integer` - current this.possition in th elist  
+<a name="List#move"></a>
+##list.move()
+Method to move current this.position in the list to specific this.positionand validating the this.position provided
+
+**Params**
+
+  - position `integer` - The this.position to move to in the list  
+
+**Returns**: `boolean`  
+<a name="List#getElement"></a>
+##list.getElement()
+Method to get element at current this.position in the list
+
+**Returns**: `mixed` - element in the current this.position  
+<a name="List#contains"></a>
+##list.contains(element)
+Method to determine if list contains an element
+
+**Params**
+
+- element `mixed` - The element to verify if in list  
+
+**Returns**: `boolean`  
 <a name="Queue"></a>
 #class: Queue
 **Members**
@@ -258,4 +410,12 @@ Creates a new Stack
 **Members**
 
 * [jatasets](#jatasets)
+
+<a name="create"></a>
+#create()
+creates and return new Dictionary Object
+
+<a name="create"></a>
+#create()
+creates and return new List Object
 
