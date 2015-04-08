@@ -3,7 +3,7 @@
 'use strict';
 
 /**
- *  Creates a new Set
+ *  Creates a new Set Object
  *  @class
  */
 var Set = function(){
@@ -14,8 +14,8 @@ var Set = function(){
 	/**
 	 * Private utility method to determine if value exists in the set
 	 *
-	 * @param {mixed} element The element being appended to the set
-	 * @returns {mixed}
+	 * @param {Mixed} element The element being appended to the set
+	 * @returns {Mixed}
 	 */
 	this.exists = function (value)
 	{
@@ -27,9 +27,9 @@ var Set = function(){
 /**
  * Method to add value to set
  *
- * @param		{mixed} value value being added to the set
+ * @param {Mixed} value value being added to the set
  *
- * @return		{boolean}
+ * @return {Boolean}
  *
  */
 Set.prototype.add = function(value)
@@ -46,9 +46,9 @@ Set.prototype.add = function(value)
 /**
  * Method to remove value from set
  *
- * @param {mixed} value value being removed from the set
+ * @param {Mixed} value Value being removed from the set
  *
- * @returns	{boolean}
+ * @returns	{Boolean}
  */
 Set.prototype.remove = function(value)
 {
@@ -64,9 +64,9 @@ Set.prototype.remove = function(value)
 /**
  * Method to verify if a value is in the set
  *
- * @param {mixed} value value to test if exists in set
+ * @param {Mixed} value value to test if exists in set
  *
- * @returns	{boolean}
+ * @returns	{Boolean}
  */
 Set.prototype.has = function(value)
 {
@@ -76,7 +76,7 @@ Set.prototype.has = function(value)
 /**
  * Method to clear all values from the set
  *
- * @returns	{boolean}
+ * @returns	{Boolean}
  */
 Set.prototype.clear = function()
 {
