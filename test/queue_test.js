@@ -8,6 +8,14 @@ describe("JataSets Queue Tests", function() {
 		assert.equal(true, queue.empty());
 	});
 	
+	it("Check if dequeue returns false when empty", function() {
+		assert.equal(false, queue.dequeue());
+	});
+	
+	it("Check if front returns false when empty", function() {
+		assert.equal(false, queue.front());
+	});
+	
 	it("Inserts an element in to the queue", function() {
 		assert.equal(1, queue.enqueue("Meredith"));
 	});

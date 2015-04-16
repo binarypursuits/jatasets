@@ -55,7 +55,7 @@ function List() {
 		return -1;
 	};
 	
-};
+}
 
 /**
  * Method to reset list.
@@ -109,15 +109,13 @@ List.prototype.insert = function(element, after)
 {
 	if (typeof element !== "undefined")
 	{
-		if (typeof after !== "undefined")
+		var position = this.find(after);
+		console.log(position);
+		if (position > -1)
 		{
-			var position = this.find(after);
-			if (position > -1)
-			{
-				this.dataStore.splice(position + 1, 0, element);
-				++this.listSize;
-				return true;
-			}
+			this.dataStore.splice(position + 1, 0, element);
+			++this.listSize;
+			return true;
 		}
 		else
 		{

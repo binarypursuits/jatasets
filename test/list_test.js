@@ -98,6 +98,10 @@ describe("JataSets List Tests", function() {
 			assert.equal(6, list.end());
 		});
 		
+		it("Iterate to next position", function() {
+			assert.equal(false, list.next());
+		});
+		
 		it("Request current start position", function() {
 			assert.equal(6, list.current());
 		});
@@ -108,6 +112,10 @@ describe("JataSets List Tests", function() {
 		
 		it("Call front method", function() {
 			assert.equal(0, list.front());
+		});
+		
+		it("Call prev method", function() {
+			assert.equal(false, list.prev());
 		});
 		
 		it("Call contains for string which exists", function() {
@@ -136,6 +144,18 @@ describe("JataSets List Tests", function() {
 		
 		it("Test new list length", function() {
 			assert.equal(7, list.length());
+		});
+		
+		it("Test insert with defined after", function() {
+			assert.equal(true, list.insert("defined", "Iamastring"));
+		});
+		
+		it("Test insert with undefined after", function() {
+			assert.equal(true, list.insert("undefined", "nope"));
+		});
+		
+		it("Test insert with undefined element and after", function() {
+			assert.equal(false, list.insert());
 		});
 		
 		it("Move to negative position which does not exist", function() {

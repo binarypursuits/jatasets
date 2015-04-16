@@ -10,6 +10,10 @@ describe('JataSets Stack Tests', function() {
 			assert.equal(0, stack.length());
 		});
 		
+		it("Test stack peek with zero items", function() {
+			assert.equal(false, stack.peek());
+		});
+		
 		it("Inserts a number to stack", function() {
 			assert.equal(true, stack.push(12));
 		});
@@ -36,6 +40,10 @@ describe('JataSets Stack Tests', function() {
 		
 		it("Inserts a number as a string to stack", function() {
 			assert.equal(true, stack.push("1"));		
+		});
+		
+		it("Test stack peek with last item inserted", function() {
+			assert.equal("1", stack.peek());
 		});
 		
 		it("Should now be 4 items in stack", function() {
