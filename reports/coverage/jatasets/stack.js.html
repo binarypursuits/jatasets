@@ -104,31 +104,7 @@
 77
 78
 79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+80</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -151,15 +127,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,15 +148,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -211,9 +176,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">14</span>
@@ -221,25 +183,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- *  @namespace	jatasets
- *  @class		Stack
- */
-&nbsp;
-/*jshint unused:false */
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*jshint unused:false */
 &nbsp;
 'use strict';
 &nbsp;
 /**
- *  @namespace	jatasets
- *  @class		Stack
+ *  Creates a new Stack Object
+ *  @class
  */
 var Stack = function() {
 &nbsp;
-	/** @property	{integer} top -  */
+	/** @property	{Integer} top last item placed in stack and current first for removal  */
 	this.top = 0;
 &nbsp;
-	/** @property	{Array} dataStore - an array of elements comprising a stack  */
+	/** @property	{Array} dataStore an array of elements comprising a stack  */
 	this.dataStore = [];
 &nbsp;
 };
@@ -247,9 +204,7 @@ var Stack = function() {
 /**
  * Method to reset stack.
  *
- * @function	clear
- * @memberof	stack
- *
+ * @returns {Boolean}
  */
 Stack.prototype.clear = function()
 {
@@ -260,10 +215,7 @@ Stack.prototype.clear = function()
 /**
  * Method to get instance of last element put on stack
  *
- * @function	peek
- * @memberof	stack
- *
- * @returns		{element}
+ * @returns	{Mixed} last item placed on stack
  */
 Stack.prototype.peek = <span class="fstat-no" title="function not covered" >function()</span>
 {
@@ -273,10 +225,7 @@ Stack.prototype.peek = <span class="fstat-no" title="function not covered" >func
 /**
  * Method to remove last element put on stack
  *
- * @function	pop
- * @memberof	stack
- *
- * @returns		{element}
+ * @returns	{Mixed} removed item from top of stack
  */
 Stack.prototype.pop = function()
 {
@@ -286,12 +235,9 @@ Stack.prototype.pop = function()
 /**
  * Method to push new element onto stack
  *
- * @function	push
- * @memberof	stack
+ * @param		{Mixed} element The element to push onto stack
  *
- * @param		{mixed} element - The element to push onto stack
- *
- * @returns		{boolean}
+ * @returns		{Boolean}
  */
 Stack.prototype.push = function(element)
 {
@@ -307,9 +253,6 @@ Stack.prototype.push = function(element)
 /**
  * Method to get current number of elements in the stack
  *
- * @function	length
- * @memberof	stack
- *
  * @returns		{integer} number of elements in the stack
  */
 Stack.prototype.length = function()
@@ -324,7 +267,7 @@ exports.create = function() {
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 07 2015 22:54:23 GMT-0500 (Central Daylight Time)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 22 2015 12:22:35 GMT-0500 (Central Daylight Time)</div>
 </div>
 <script src="../prettify.js"></script>
 <script>

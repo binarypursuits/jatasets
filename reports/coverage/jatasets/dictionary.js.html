@@ -153,36 +153,7 @@
 126
 127
 128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+129</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -197,9 +168,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -229,9 +197,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4</span>
@@ -242,9 +207,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -270,9 +232,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -297,15 +256,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -324,43 +277,34 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- *  @module		jatasets
- *  @class		Dictionary
- */
-&nbsp;
-/*jshint unused:false */
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*jshint unused:false */
 &nbsp;
 'use strict';
 &nbsp;
 /**
- *  @module		jatasets
- *  @class		Dictionary
+ *  Creates a new Dictionary
+ *  @class
  */
 function Dictionary()
 {
-	/** @property	{Array} dataStore - array comprising the dictionary  */
+	/** @property	{Array} [dataStore] array comprising the dictionary */
 	this.dataStore = [];
 &nbsp;
-	/** @property	{integer} total - current total number of items in the dictionary  */
+	/** @property	{integer} [total] current total number of items in the dictionary */
 	this.total = 0;
 }
 &nbsp;
 /**
  * Method to get instance of last element put on stack
  *
- * @function	Dictionary.add
- * @memberof	jatasets
- *
  * @param   {string}  [key] index value to store value under
  * @param   {mixed}   [value] item being stored
  *
- * @return {boolean}
+ * @returns {boolean}
  */
 Dictionary.prototype.add = function(key, value)
 {
@@ -377,12 +321,9 @@ Dictionary.prototype.add = function(key, value)
 /**
  * Method to remove item from the dictionary
  *
- * @function	Dictionary.remove
- * @memberof	jatasets
- *
  * @param   {string}  [key] index of item to be removed
  *
- * @return  {boolean}
+ * @returns  {boolean}
  */
 Dictionary.prototype.remove = function(key)
 {
@@ -399,12 +340,9 @@ Dictionary.prototype.remove = function(key)
 /**
  * Method to retrieve value from dictionary using the key
  *
- * @function	Dictionary.find
- * @memberof	jatasets
- *
  * @param   {string}  [key] index search for in dictionary
  *
- * @return  {mixed}   return item if successful and false if key is not valid
+ * @returns  {mixed}   return item if successful and false if key is not valid
  */
 Dictionary.prototype.find = function(key)
 {
@@ -420,10 +358,7 @@ Dictionary.prototype.find = function(key)
  * Method to get string representation of values
  * in dictionary
  *
- * @function	Dictionary.showAll
- * @memberof	jatasets
- *
- * @return		{string}
+ * @returns		{string}
  */
 Dictionary.prototype.showAll = <span class="fstat-no" title="function not covered" >function()</span>
 {
@@ -447,10 +382,7 @@ Dictionary.prototype.showAll = <span class="fstat-no" title="function not covere
 /**
  * Method to get current number of items in dictionary
  *
- * @function	Dictionary.count
- * @memberof	jatasets
- *
- * @return		{integer}
+ * @returns		{integer}
  */
 Dictionary.prototype.count = <span class="fstat-no" title="function not covered" >function()</span>
 {
@@ -459,9 +391,6 @@ Dictionary.prototype.count = <span class="fstat-no" title="function not covered"
 &nbsp;
 /**
  * Method to clear all values from dictionary
- *
- * @function	Dictionary.clear
- * @memberof	jatasets
  *
  * @return		{boolean}
  */
@@ -476,7 +405,6 @@ Dictionary.prototype.clear = <span class="fstat-no" title="function not covered"
 <span class="cstat-no" title="statement not covered" >	return false;</span>
 };
 &nbsp;
-/** @constructs Dictionary*/
 exports.create = function() {
 	return new Dictionary();
 };
@@ -486,7 +414,7 @@ exports.create = function() {
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 07 2015 22:54:23 GMT-0500 (Central Daylight Time)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 22 2015 12:22:35 GMT-0500 (Central Daylight Time)</div>
 </div>
 <script src="../prettify.js"></script>
 <script>

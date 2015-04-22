@@ -7,7 +7,7 @@
  *  @class
  */
 function List() {
-	
+
 	/** @property	{Integer} listSize Length of current list */
 	this.listSize = 0;
 
@@ -37,7 +37,7 @@ function List() {
 	 * element index if found and false if not found.
 	 *
 	 * @memberof List
-	 * 
+	 *
 	 * @param		{Mixed} element The element being appended to the list
 	 *
 	 * @return		{Boolean}
@@ -51,11 +51,11 @@ function List() {
 				return i;
 			}
 		}
-	
+
 		return -1;
 	};
-	
-};
+
+}
 
 /**
  * Method to reset list.
@@ -109,15 +109,12 @@ List.prototype.insert = function(element, after)
 {
 	if (typeof element !== "undefined")
 	{
-		if (typeof after !== "undefined")
+		var position = this.find(after);
+		if (position > -1)
 		{
-			var position = this.find(after);
-			if (position > -1)
-			{
-				this.dataStore.splice(position + 1, 0, element);
-				++this.listSize;
-				return true;
-			}
+			this.dataStore.splice(position + 1, 0, element);
+			++this.listSize;
+			return true;
 		}
 		else
 		{
@@ -181,7 +178,7 @@ List.prototype.end = function()
  * Method to move current this.position in list to previous element
  *
  * @memberof List
- * 
+ *
  * @returns {Integer|Boolean}
  */
 List.prototype.prev = function()
@@ -191,7 +188,7 @@ List.prototype.prev = function()
 		--this.pos;
 		return this.pos;
 	}
-	
+
 	return false;
 };
 
@@ -209,7 +206,7 @@ List.prototype.next = function()
 		++this.pos;
 		return this.pos;
 	}
-	
+
 	return false;
 };
 

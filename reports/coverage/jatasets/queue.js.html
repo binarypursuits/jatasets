@@ -15,10 +15,10 @@
 <div class="header high">
     <h1>Code coverage report for <span class="entity">jatasets\queue.js</span></h1>
     <h2>
-        Statements: <span class="metric">94.12% <small>(32 / 34)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Branches: <span class="metric">70% <small>(7 / 10)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">93.94% <small>(31 / 33)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">75% <small>(6 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Functions: <span class="metric">100% <small>(8 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Lines: <span class="metric">94.12% <small>(32 / 34)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">93.94% <small>(31 / 33)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
     <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">jatasets/</a> &#187; queue.js</div>
@@ -153,25 +153,7 @@
 126
 127
 128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+129</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -221,7 +203,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3</span>
@@ -239,7 +220,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2</span>
@@ -258,11 +238,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -279,7 +257,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -302,44 +279,36 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- *  @namespace	jatasets
- *  @class		Queue
- */
-&nbsp;
-/*jshint unused:false */
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*jshint unused:false */
 &nbsp;
 'use strict';
 &nbsp;
 /**
- *  @namespace	jatasets
- *  @class		Queue
+ *  Creates a new Queue
+ *  @class
  */
 var Queue = function() {
 &nbsp;
-	/** @property	{Array} dataStore - an array of elements comprising a Queue  */
+	/** @property	{Array} dataStore An array of elements comprising a Queue  */
 	this.dataStore = [];
 &nbsp;
-	/** @property	{integer} total - total elements comprising a Queue  */
+	/** @property	{integer} total Total elements comprising a Queue  */
 	this.total = 0;
 &nbsp;
-	/** @property	{integer} ticket - current ticket number to issue  */
+	/** @property	{integer} ticket Current ticket number to issue  */
 	this.ticket = 0;
 };
 &nbsp;
 /**
  * Method to Queue an element to the Queue
  *
- * @param {mixed} element being added to Queue
+ * @memberof Queue
  *
- * @function	Queue.enqueue
- * @memberof	jatasets
+ * @param {Mixed} element being added to Queue
  *
+ * @return {Mixed}
  */
 Queue.prototype.enqueue = function(element)
 {
@@ -358,10 +327,9 @@ Queue.prototype.enqueue = function(element)
 /**
  * Method to remove an element from the Queue
  *
- * @function	Queue.dequeue
- * @memberof	jatasets
+ * @memberof	Queue
  *
- * @returns		{boolean}
+ * @returns		{Boolean}
  */
 Queue.prototype.dequeue = function()
 {
@@ -377,8 +345,7 @@ Queue.prototype.dequeue = function()
 /**
  * Method to retrieve element in front of Queue
  *
- * @function	Queue.front
- * @memberof	jatasets
+ * @memberof	Queue
  *
  */
 Queue.prototype.front = function()
@@ -396,8 +363,7 @@ Queue.prototype.front = function()
 /**
  * Method to retrieve element in back of Queue
  *
- * @function	Queue.back
- * @memberof	jatasets
+ * @memberof	Queue
  *
  */
 Queue.prototype.back = function()
@@ -408,8 +374,7 @@ Queue.prototype.back = function()
 /**
  * Method to verify if Queue is empty
  *
- * @function	Queue.empty
- * @memberof	jatasets
+ * @memberof	Queue
  *
  */
 Queue.prototype.empty = function()
@@ -425,8 +390,7 @@ Queue.prototype.empty = function()
 /**
  * Method to retrieve Queue as string with line breaks
  *
- * @function	Queue.toString
- * @memberof	jatasets
+ * @memberof	Queue
  *
  * @returns		{string}
  */
@@ -442,18 +406,15 @@ Queue.prototype.toString = function()
 	return string;
 };
 &nbsp;
-<span class="missing-if-branch" title="else path not taken" >E</span>if (typeof exports !== "undefined")
-{
-	exports.create = function() {
-		return new Queue();
-	};
-}
+exports.create = function() {
+	return new Queue();
+};
 &nbsp;</pre></td></tr>
 </table></pre>
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 07 2015 22:54:23 GMT-0500 (Central Daylight Time)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 22 2015 12:22:35 GMT-0500 (Central Daylight Time)</div>
 </div>
 <script src="../prettify.js"></script>
 <script>
