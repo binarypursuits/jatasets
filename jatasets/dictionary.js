@@ -103,7 +103,7 @@ Dictionary.prototype.showAll = function()
  */
 Dictionary.prototype.count = function()
 {
-	return this.count;
+	return this.total;
 };
 
 /**
@@ -113,13 +113,8 @@ Dictionary.prototype.count = function()
  */
 Dictionary.prototype.clear = function()
 {
-	if (this.total > 0)
-	{
-		this.dataStore = [];
-		return true;
-	}
-
-	return false;
+	this.dataStore = [];
+	return true;
 };
 
 exports.create = function() {

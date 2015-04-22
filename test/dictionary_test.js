@@ -7,9 +7,17 @@ describe("JataSets Dictionary Tests", function() {;
 	it("Check if dictionary is empty", function() {
 		assert.equal(0, dictionary.total);
 	});
-
-	it("Add an element in to the dictionary", function() {
+	
+	it("Add element in to the dictionary", function() {
 		assert.equal(true, dictionary.add("Raymond", "123"));
+	});
+
+	it("Check count value of dictionary", function() {
+		assert.equal(1, dictionary.count());
+	});
+	
+	it("Check count value of dictionary", function() {
+		assert.equal(, dictionary.clear());
 	});
 
 	it("Add an element in to the dictionary", function() {
@@ -79,5 +87,5 @@ describe("JataSets Dictionary Tests", function() {;
 	it("Check number of elements in dictionary", function() {
 		assert.equal(0, dictionary.total);
 	});
-
+	
 });

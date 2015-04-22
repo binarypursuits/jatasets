@@ -105,7 +105,15 @@ describe("JataSets List Tests", function() {
 		it("Call end method", function() {
 			assert.equal(6, list.end());
 		});
+<<<<<<< HEAD
 
+=======
+		
+		it("Iterate to next position", function() {
+			assert.equal(false, list.next());
+		});
+		
+>>>>>>> branch 'master' of https://github.com/binarypursuits/jatasets.git
 		it("Request current start position", function() {
 			assert.equal(6, list.current());
 		});
@@ -116,6 +124,10 @@ describe("JataSets List Tests", function() {
 
 		it("Call front method", function() {
 			assert.equal(0, list.front());
+		});
+		
+		it("Call prev method", function() {
+			assert.equal(false, list.prev());
 		});
 
 		it("Call contains for string which exists", function() {
@@ -145,7 +157,23 @@ describe("JataSets List Tests", function() {
 		it("Test new list length", function() {
 			assert.equal(7, list.length());
 		});
+<<<<<<< HEAD
 
+=======
+		
+		it("Test insert with defined after", function() {
+			assert.equal(true, list.insert("defined", "Iamastring"));
+		});
+		
+		it("Test insert with undefined after", function() {
+			assert.equal(true, list.insert("undefined", "nope"));
+		});
+		
+		it("Test insert with undefined element and after", function() {
+			assert.equal(false, list.insert());
+		});
+		
+>>>>>>> branch 'master' of https://github.com/binarypursuits/jatasets.git
 		it("Move to negative position which does not exist", function() {
 			assert.equal(false, list.move(-8));
 		});

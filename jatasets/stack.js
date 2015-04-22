@@ -34,7 +34,12 @@ Stack.prototype.clear = function()
  */
 Stack.prototype.peek = function()
 {
-	return this.dataStore[this.top - 1];
+	if (this.top > 0)
+	{
+		return this.dataStore[this.top - 1];
+	}
+	
+	return false;
 };
 
 /**

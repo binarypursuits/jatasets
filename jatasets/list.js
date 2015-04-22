@@ -54,7 +54,11 @@ function List() {
 
 		return -1;
 	};
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> branch 'master' of https://github.com/binarypursuits/jatasets.git
 }
 
 /**
@@ -110,6 +114,10 @@ List.prototype.insert = function(element, after)
 	if (typeof element !== "undefined")
 	{
 		var position = this.find(after);
+<<<<<<< HEAD
+=======
+		console.log(position);
+>>>>>>> branch 'master' of https://github.com/binarypursuits/jatasets.git
 		if (position > -1)
 		{
 			this.dataStore.splice(position + 1, 0, element);
