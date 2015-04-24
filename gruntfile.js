@@ -136,7 +136,7 @@ module.exports = function(grunt) {
 				dest: './build/jdox'
 			}
 		},
-		
+
 		  yuidoc: {
 			    compile: {
 			      name: '<%= pkg.name %>',
@@ -173,7 +173,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('test', ['mochaTest', 'mocha_istanbul', 'plato']);
 	grunt.registerTask('bundle', ['browserify', 'uglify']);
 
-	grunt.registerTask('documentation', ['jsdoc', 'jsdox']);
+	grunt.registerTask('documentation', ['yuidoc', 'jsdox']);
 
 	grunt.registerTask('default', ['prep', 'validate', 'test']);
 	grunt.registerTask('build', ['default', 'bundle', 'yuidoc']);

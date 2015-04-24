@@ -2,6 +2,21 @@
 
 'use strict';
 
+if (!Object.keys)
+{
+	Object.keys = function(items)
+	{
+		var keys = [];
+
+		for (var key in items)
+		{
+			keys.push(key);
+		}
+
+		return keys;
+	};
+}
+
 /**
  *  Creates a new Set Object
  *  @class
@@ -112,14 +127,17 @@ Set.prototype.size = function()
  */
 Set.prototype.values = function()
 {
-	var keys = [];
+	return Object.keys(this.items);
+	//return JSON.stringify(this.items);
 
-	for (var key in this.items)
-	{
-		keys.push(key);
-	}
+	//var keys = [];
 
-	return keys;
+	//for (var key in this.items)
+	//{
+		//keys.push(key);
+	//}
+
+	//return keys;
 };
 
 /**
