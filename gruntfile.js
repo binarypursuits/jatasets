@@ -137,19 +137,19 @@ module.exports = function(grunt) {
 			}
 		},
 
-		  yuidoc: {
-			    compile: {
-			      name: '<%= pkg.name %>',
-			      description: '<%= pkg.description %>',
-			      version: '<%= pkg.version %>',
-			      url: '<%= pkg.homepage %>',
-			      options: {
-			        paths: 'jatasets/',
-			        //themedir: 'path/to/custom/theme/',
-			        outdir: 'docs/'
-			      }
-			    }
-			  }
+		yuidoc: {
+			compile: {
+				name: '<%= pkg.name %>',
+				description: '<%= pkg.description %>',
+				version: '<%= pkg.version %>',
+				url: '<%= pkg.homepage %>',
+				options: {
+					paths: 'jatasets/',
+					//themedir: 'path/to/custom/theme/',
+					outdir: 'docs/'
+				}
+			}
+		}
 
 	});
 
