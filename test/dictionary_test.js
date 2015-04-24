@@ -3,11 +3,11 @@ var assert = require("assert")
 var dictionary = js.dictionary();
 
 describe("JataSets Dictionary Tests", function() {;
-	
+
 	it("Check if dictionary is empty", function() {
 		assert.equal(0, dictionary.total);
 	});
-	
+
 	it("Add element in to the dictionary", function() {
 		assert.equal(true, dictionary.add("Raymond", "123"));
 	});
@@ -15,9 +15,21 @@ describe("JataSets Dictionary Tests", function() {;
 	it("Check count value of dictionary", function() {
 		assert.equal(1, dictionary.count());
 	});
-	
+
+	it("Check clear function of dictionary", function() {
+		assert.equal(true, dictionary.clear());
+	});
+
 	it("Check count value of dictionary", function() {
-		assert.equal(, dictionary.clear());
+		assert.equal(0, dictionary.count());
+	});
+
+	it("Add element in to the dictionary", function() {
+		assert.equal(true, dictionary.add("Raymond", "123"));
+	});
+
+	it("Check count value of dictionary", function() {
+		assert.equal(1, dictionary.count());
 	});
 
 	it("Add an element in to the dictionary", function() {
@@ -87,5 +99,5 @@ describe("JataSets Dictionary Tests", function() {;
 	it("Check number of elements in dictionary", function() {
 		assert.equal(0, dictionary.total);
 	});
-	
+
 });
