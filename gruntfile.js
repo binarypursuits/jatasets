@@ -135,7 +135,21 @@ module.exports = function(grunt) {
 				src: ['./jatasets/**/*.js'],
 				dest: './build/jdox'
 			}
-		}
+		},
+		
+		  yuidoc: {
+			    compile: {
+			      name: '<%= pkg.name %>',
+			      description: '<%= pkg.description %>',
+			      version: '<%= pkg.version %>',
+			      url: '<%= pkg.homepage %>',
+			      options: {
+			        paths: 'jatasets/',
+			        //themedir: 'path/to/custom/theme/',
+			        outdir: 'docs/'
+			      }
+			    }
+			  }
 
 	});
 
@@ -145,6 +159,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-yuidoc');
 	grunt.loadNpmTasks('grunt-mocha');
 	grunt.loadNpmTasks('grunt-mocha-test');
 	grunt.loadNpmTasks('grunt-mocha-istanbul')
@@ -161,6 +176,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('documentation', ['jsdoc', 'jsdox']);
 
 	grunt.registerTask('default', ['prep', 'validate', 'test']);
-	grunt.registerTask('build', ['default', 'bundle', 'documentation']);
+	grunt.registerTask('build', ['default', 'bundle', 'yuidoc']);
 
 };

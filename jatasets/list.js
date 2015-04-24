@@ -95,6 +95,26 @@ List.prototype.toJson = function()
 };
 
 /**
+ * Method to add element to list
+ *
+ * @memberof List
+ *
+ * @param		{Mixed} element The element you wish to place
+ *
+ * @returns		{Boolean}
+ */
+List.prototype.add = function(element)
+{
+	if (typeof element !== "undefined")
+	{
+		this.append(element);
+		return true;
+	}
+
+	return false;
+};
+
+/**
  * Method to insert element after another element
  *
  * @memberof List
@@ -106,20 +126,12 @@ List.prototype.toJson = function()
  */
 List.prototype.insert = function(element, after)
 {
-	if (typeof element !== "undefined")
+	var position = this.find(after);
+	if (typeof element !== "undefined" && position > -1)
 	{
-		var position = this.find(after);
-
-		if (position > -1)
-		{
-			this.dataStore.splice(position + 1, 0, element);
-			++this.listSize;
-			return true;
-		}
-		else
-		{
-			return this.append(element);
-		}
+		this.dataStore.splice(position + 1, 0, element);
+		++this.listSize;
+		return true;
 	}
 
 	return false;

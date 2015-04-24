@@ -19,7 +19,7 @@ describe("JataSets List Tests", function() {
 		});
 
 		it("Insert a number to list", function() {
-			assert.equal(true, list.insert(12));
+			assert.equal(true, list.add(12));
 		});
 
 		it("List length should equal 1", function() {
@@ -27,7 +27,7 @@ describe("JataSets List Tests", function() {
 		});
 
 		it("Insert a string to list", function() {
-			assert.equal(true, list.insert("Iamastring"));
+			assert.equal(true, list.add("Iamastring"));
 		});
 
 		it("List length should equal 2", function() {
@@ -35,7 +35,7 @@ describe("JataSets List Tests", function() {
 		});
 
 		it("Inserts a string with spaces to list", function() {
-			assert.equal(true, list.insert("I am a string"));
+			assert.equal(true, list.add("I am a string"));
 		});
 
 		it("List length should equal 3", function() {
@@ -43,7 +43,7 @@ describe("JataSets List Tests", function() {
 		});
 
 		it("Inserts a number as a string to list", function() {
-			assert.equal(true, list.insert("1"));
+			assert.equal(true, list.add("1"));
 		});
 
 		it("List length should equal 4", function() {
@@ -51,7 +51,7 @@ describe("JataSets List Tests", function() {
 		});
 
 		it("Insert a float to list", function() {
-			assert.equal(true, list.insert(4.32));
+			assert.equal(true, list.add(4.32));
 		});
 
 		it("List length should equal 5", function() {
@@ -59,14 +59,14 @@ describe("JataSets List Tests", function() {
 		});
 
 		it("Insert a array to list", function() {
-			assert.equal(true, list.insert([]));
+			assert.equal(true, list.add([]));
 		});
 		it("List length should equal 6", function() {
 			assert.equal(6, list.length());
 		});
 
 		it("Insert a object to list", function() {
-			assert.equal(true, list.insert({}));
+			assert.equal(true, list.add({}));
 		});
 
 		it("List length should equal 7", function() {
@@ -74,7 +74,7 @@ describe("JataSets List Tests", function() {
 		});
 
 		it("Return false when attempting to insert undefined element to list", function() {
-			assert.equal(false, list.insert());
+			assert.equal(false, list.add());
 		});
 
 		it("List length should equal 7", function() {
@@ -89,6 +89,21 @@ describe("JataSets List Tests", function() {
 			assert.equal('[12,"Iamastring","I am a string","1",4.32,[],{}]', list.toJson());
 		});
 
+		it("Insert elemnt after Iamstring in list", function() {
+			assert.equal(true, list.insert("test insert", "Iamastring"));
+		});
+		
+		it("List length should equal 8", function() {
+			assert.equal(8, list.length());
+		});
+		
+		it("Insert elemnt after undefined in list", function() {
+			assert.equal(false, list.insert("test insert"));
+		});
+		
+		it("Retrieve inserted element", function() {
+			assert.equal(true, list.remove("test insert"));
+		});
 
 	});
 
@@ -147,7 +162,7 @@ describe("JataSets List Tests", function() {
 		});
 
 		it("Insert new element", function() {
-			assert.equal(true, list.insert("I am new"));
+			assert.equal(true, list.add("I am new"));
 		});
 
 		it("Test new list length", function() {
@@ -155,15 +170,15 @@ describe("JataSets List Tests", function() {
 		});
 
 		it("Test insert with defined after", function() {
-			assert.equal(true, list.insert("defined", "Iamastring"));
+			assert.equal(true, list.add("defined", "Iamastring"));
 		});
 
 		it("Test insert with undefined after", function() {
-			assert.equal(true, list.insert("undefined", "nope"));
+			assert.equal(true, list.add("undefined", "nope"));
 		});
 
 		it("Test insert with undefined element and after", function() {
-			assert.equal(false, list.insert());
+			assert.equal(false, list.add());
 		});
 
 		it("Move to negative position which does not exist", function() {

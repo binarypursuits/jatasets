@@ -8,8 +8,8 @@
  */
 function Dictionary()
 {
-	/** @property	{Array} [dataStore] array comprising the dictionary */
-	this.dataStore = [];
+	/** @property	{Object} [dataStore] array comprising the dictionary */
+	this.dataStore = {};
 
 	/** @property	{integer} [total] current total number of items in the dictionary */
 	this.total = 0;
@@ -72,31 +72,6 @@ Dictionary.prototype.find = function(key)
 };
 
 /**
- * Method to get string representation of values
- * in dictionary
- *
- * @returns		{string}
- */
-Dictionary.prototype.showAll = function()
-{
-	var string = "";
-
-	if (this.total === 0)
-	{
-		string = "There are currently no items in the dictionary.";
-	}
-	else
-	{
-		for (var key in Object.keys(this.dataStore).sort())
-		{
-			string += key + " -> " + this.dataStore[key];
-		}
-	}
-
-	return string;
-};
-
-/**
  * Method to get current number of items in dictionary
  *
  * @returns		{integer}
@@ -114,6 +89,7 @@ Dictionary.prototype.count = function()
 Dictionary.prototype.clear = function()
 {
 	this.dataStore = [];
+	this.total = 0;
 	return true;
 };
 
