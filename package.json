@@ -4,13 +4,9 @@
   "description": "JavaScript Datasets",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "build": "grunt build",
     "plato": "plato -r -d reports/plato -t \"JataSets Plato Report\" test/*.js",
     "tap": "mocha -R tap \"test/*.js\" > reports/jatasets.tap"
-=======
-    "ci-test": "istanbul cover mocha -- -R tap \"test/*_test.js\" > test.tap && istanbul report clover"
->>>>>>> branch 'master' of https://binarypursuits@github.com/binarypursuits/jatasets.git
   },
   "repository": {
     "type": "git",
