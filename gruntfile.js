@@ -96,7 +96,7 @@ module.exports = function(grunt) {
 			},
 			build: {
 				options: {
-					reporter: 'html-cov',
+					reporter: 'mocha-istanbul',
 					quiet: true,
 					captureFile: 'reports/coverage.html'
 				},
@@ -106,10 +106,10 @@ module.exports = function(grunt) {
 
 		mocha: {
 			options: {
-				reporter: 'XUnit'
+				//reporter: 'tap'
 			},
 			src: ['test/**/*_test.js'],
-			dest: 'reports/xunit.out',
+			dest: 'reports/test.tap',
 		},
 
 		mocha_istanbul: {
@@ -171,6 +171,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('prep', ['clean']);
 	grunt.registerTask('validate', ['jshint']); // csslint, html
 	grunt.registerTask('test', ['mochaTest', 'mocha_istanbul', 'plato']);
+	//grunt.registerTask('test', ['mocha', 'mocha_istanbul', 'plato']);
 	grunt.registerTask('bundle', ['browserify', 'uglify']);
 
 	grunt.registerTask('documentation', ['yuidoc', 'jsdox']);

@@ -4,7 +4,7 @@
   "description": "JavaScript Datasets",
   "main": "index.js",
   "scripts": {
-    "ci-test": "istanbul cover _mocha -- -R tap \"test/*-test.js\" > test.tap && istanbul report clover"
+    "ci-test": "istanbul cover mocha -- -R tap \"test/*_test.js\" > test.tap && istanbul report clover"
   },
   "repository": {
     "type": "git",
@@ -45,6 +45,7 @@
     "mocha": "^2.2.1"
   },
   "dependencies": {
+    "mocha-istanbul": "^0.2.0",
     "requirejs": "^2.1.16"
   }
 }
