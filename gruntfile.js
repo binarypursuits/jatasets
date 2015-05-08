@@ -60,8 +60,16 @@ module.exports = function(grunt) {
 
 		plato : {
 			build : {
+				options : {
+					complexity : {
+						logicalor : true,
+						switchcase : true,
+						forin : true,
+						trycatch : true
+					}
+				},
 				files : {
-					'reports' : ['test/**/*_test.js']
+					'./reports/plato' : ['test/**/*_test.js']
 				}
 			}
 		},
@@ -96,9 +104,7 @@ module.exports = function(grunt) {
 			},
 			build: {
 				options: {
-					reporter: 'html-cov',
-					quiet: true,
-					captureFile: 'reports/coverage.html'
+					reporter: 'spec',
 				},
 				src: ['test/**/*_test.js']
 			}
@@ -116,11 +122,12 @@ module.exports = function(grunt) {
 			coverage: {
 				src: './test/**/*_test.js',
 				options: {
+					coverage: true,
 					mask: '*_test.js',
 					coverageFolder: './reports/coverage',
-					coverage: true,
+					//mochaOptions: ['-R tap "test/**/*_test.js" > test.tap'],
 					root: './jatasets',
-					reportFormats: ['cobertura','lcovonly','html']
+					reportFormats: ['cobertura','lcovonly']
 				}
 			}
 		},
@@ -136,7 +143,7 @@ module.exports = function(grunt) {
 				dest: './build/jdox'
 			}
 		},
-		
+
 		  yuidoc: {
 			    compile: {
 			      name: '<%= pkg.name %>',
@@ -170,7 +177,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('prep', ['clean']);
 	grunt.registerTask('validate', ['jshint']); // csslint, html
-	grunt.registerTask('test', ['mochaTest', 'mocha_istanbul', 'plato']);
+	grunt.registerTask('test', ['mocha_istanbul', 'plato']);
 	grunt.registerTask('bundle', ['browserify', 'uglify']);
 
 	grunt.registerTask('documentation', ['jsdoc', 'jsdox']);

@@ -1,0 +1,136 @@
+1..132
+ok 1 JataSets Dictionary Tests Check if dictionary is empty
+ok 2 JataSets Dictionary Tests Add element in to the dictionary
+ok 3 JataSets Dictionary Tests Check count value of dictionary
+ok 4 JataSets Dictionary Tests Check clear function of dictionary
+ok 5 JataSets Dictionary Tests Check count value of dictionary
+ok 6 JataSets Dictionary Tests Add element in to the dictionary
+ok 7 JataSets Dictionary Tests Check count value of dictionary
+ok 8 JataSets Dictionary Tests Add an element in to the dictionary
+ok 9 JataSets Dictionary Tests Add an element in to the dictionary
+ok 10 JataSets Dictionary Tests Attempt to add undefined element in to the dictionary
+ok 11 JataSets Dictionary Tests Check number of elements in dictionary
+ok 12 JataSets Dictionary Tests Find an element by key
+ok 13 JataSets Dictionary Tests Find an element by key
+ok 14 JataSets Dictionary Tests Find an element by key
+ok 15 JataSets Dictionary Tests Remove an element from the dictionary with incorrect key
+ok 16 JataSets Dictionary Tests Remove an element from the dictionary
+ok 17 JataSets Dictionary Tests Find an element by key
+ok 18 JataSets Dictionary Tests Find an element by key which does not exist
+ok 19 JataSets Dictionary Tests Find an element by key
+ok 20 JataSets Dictionary Tests Check number of elements in dictionary
+ok 21 JataSets Dictionary Tests Remove an element from the dictionary
+ok 22 JataSets Dictionary Tests Check number of elements in dictionary
+ok 23 JataSets Dictionary Tests Remove an element from the dictionary
+ok 24 JataSets Dictionary Tests Check number of elements in dictionary
+ok 25 JataSets List Tests Test insert function List length should equal 0
+ok 26 JataSets List Tests Test insert function Call prev method with no items in list
+ok 27 JataSets List Tests Test insert function Call next method with no items in list
+ok 28 JataSets List Tests Test insert function Insert a number to list
+ok 29 JataSets List Tests Test insert function List length should equal 1
+ok 30 JataSets List Tests Test insert function Insert a string to list
+ok 31 JataSets List Tests Test insert function List length should equal 2
+ok 32 JataSets List Tests Test insert function Inserts a string with spaces to list
+ok 33 JataSets List Tests Test insert function List length should equal 3
+ok 34 JataSets List Tests Test insert function Inserts a number as a string to list
+ok 35 JataSets List Tests Test insert function List length should equal 4
+ok 36 JataSets List Tests Test insert function Insert a float to list
+ok 37 JataSets List Tests Test insert function List length should equal 5
+ok 38 JataSets List Tests Test insert function Insert a array to list
+ok 39 JataSets List Tests Test insert function List length should equal 6
+ok 40 JataSets List Tests Test insert function Insert a object to list
+ok 41 JataSets List Tests Test insert function List length should equal 7
+ok 42 JataSets List Tests Test insert function Return false when attempting to insert undefined element to list
+ok 43 JataSets List Tests Test insert function List length should equal 7
+ok 44 JataSets List Tests Test insert function Request string
+ok 45 JataSets List Tests Test insert function Request JSON
+ok 46 JataSets List Tests Test insert function Insert elemnt after Iamstring in list
+ok 47 JataSets List Tests Test insert function List length should equal 8
+ok 48 JataSets List Tests Test insert function Insert elemnt after undefined in list
+ok 49 JataSets List Tests Test insert function Retrieve inserted element
+ok 50 JataSets List Tests Test list traversal Request current start position
+ok 51 JataSets List Tests Test list traversal Iterate to next position
+ok 52 JataSets List Tests Test list traversal Call end method
+ok 53 JataSets List Tests Test list traversal Iterate to next position
+ok 54 JataSets List Tests Test list traversal Request current start position
+ok 55 JataSets List Tests Test list traversal Call prev method
+ok 56 JataSets List Tests Test list traversal Call front method
+ok 57 JataSets List Tests Test list traversal Call prev method
+ok 58 JataSets List Tests Test list traversal Call contains for string which exists
+ok 59 JataSets List Tests Test list traversal Call contains for string which exists
+ok 60 JataSets List Tests Test list traversal Call remove with element not in list
+ok 61 JataSets List Tests Test list traversal Call remove with element in list
+ok 62 JataSets List Tests Test list traversal Test list length still the same
+ok 63 JataSets List Tests Test list traversal Insert new element
+ok 64 JataSets List Tests Test list traversal Test new list length
+ok 65 JataSets List Tests Test list traversal Test insert with defined after
+ok 66 JataSets List Tests Test list traversal Test insert with undefined after
+ok 67 JataSets List Tests Test list traversal Test insert with undefined element and after
+ok 68 JataSets List Tests Test list traversal Move to negative position which does not exist
+ok 69 JataSets List Tests Test list traversal Move to position which does not exist
+ok 70 JataSets List Tests Test list traversal Move to position which does exist
+ok 71 JataSets List Tests Test list traversal Test current element value
+ok 72 JataSets List Tests Test list traversal Test current position value
+ok 73 JataSets List Tests Test list traversal Retrieve current element
+ok 74 JataSets List Tests Test list traversal Call clear method
+ok 75 JataSets List Tests Test list traversal Test length of list
+ok 76 JataSets Queue Tests Check if queue is empty
+ok 77 JataSets Queue Tests Check if dequeue returns false when empty
+ok 78 JataSets Queue Tests Check if front returns false when empty
+ok 79 JataSets Queue Tests Inserts an element in to the queue
+ok 80 JataSets Queue Tests Inserts an element in to the queue
+ok 81 JataSets Queue Tests Inserts an element in to the queue
+ok 82 JataSets Queue Tests Return false when undefined element enqueue
+ok 83 JataSets Queue Tests Check if queue is empty
+ok 84 JataSets Queue Tests Retrieve element in front of queue
+ok 85 JataSets Queue Tests Retrieve element in back of queue
+ok 86 JataSets Queue Tests Call toString method
+ok 87 JataSets Queue Tests Call dequeue method
+ok 88 JataSets Queue Tests Call toString method
+ok 89 JataSets Queue Tests Retrieve element in front of queue
+ok 90 JataSets Queue Tests Retrieve element in back of queue
+ok 91 JataSets Queue Tests Call dequeue method
+ok 92 JataSets Queue Tests Check if queue is empty
+ok 93 JataSets Queue Tests Call dequeue method
+ok 94 JataSets Queue Tests Check if queue is empty
+ok 95 JataSets Set Tests Test basic manipulation functions Set length should equal 0
+ok 96 JataSets Set Tests Test basic manipulation functions Add a number into set
+ok 97 JataSets Set Tests Test basic manipulation functions Set length should equal 1
+ok 98 JataSets Set Tests Test basic manipulation functions Add a string to set
+ok 99 JataSets Set Tests Test basic manipulation functions Set size should equal 2
+ok 100 JataSets Set Tests Test basic manipulation functions Add a number into set which already exists, should return false
+ok 101 JataSets Set Tests Test basic manipulation functions Set size should still equal 2
+ok 102 JataSets Set Tests Test basic manipulation functions Add another number into set
+ok 103 JataSets Set Tests Test basic manipulation functions Set size should equal 3
+ok 104 JataSets Stack Tests Add items to the stack Should start with zero items in stack
+ok 105 JataSets Stack Tests Add items to the stack Test stack peek with zero items
+ok 106 JataSets Stack Tests Add items to the stack Inserts a number to stack
+ok 107 JataSets Stack Tests Add items to the stack Should now be 1 item in stack
+ok 108 JataSets Stack Tests Add items to the stack Inserts a string to stack
+ok 109 JataSets Stack Tests Add items to the stack Should now be 2 items in stack
+ok 110 JataSets Stack Tests Add items to the stack Inserts a string with spaces to stack
+ok 111 JataSets Stack Tests Add items to the stack Should now be 3 items in stack
+ok 112 JataSets Stack Tests Add items to the stack Inserts a number as a string to stack
+ok 113 JataSets Stack Tests Add items to the stack Test stack peek with last item inserted
+ok 114 JataSets Stack Tests Add items to the stack Should now be 4 items in stack
+ok 115 JataSets Stack Tests Add items to the stack Inserts a float to stack
+ok 116 JataSets Stack Tests Add items to the stack Should now be 5 items in stack
+ok 117 JataSets Stack Tests Add items to the stack Inserts a array to stack
+ok 118 JataSets Stack Tests Add items to the stack Should now be 6 items in stack
+ok 119 JataSets Stack Tests Add items to the stack Inserts a object to stack
+ok 120 JataSets Stack Tests Add items to the stack Should now be 7 items in stack
+ok 121 JataSets Stack Tests Add items to the stack Return false when attempting to push undefined element to stack
+ok 122 JataSets Stack Tests Add items to the stack Should still be 7 items in stack
+ok 123 JataSets Stack Tests Remove items and peek at top element in stack Call pop method
+ok 124 JataSets Stack Tests Remove items and peek at top element in stack Should now be 6 items in stack
+ok 125 JataSets Stack Tests Remove items and peek at top element in stack Call pop method
+ok 126 JataSets Stack Tests Remove items and peek at top element in stack Should now be 5 items in stack
+ok 127 JataSets Stack Tests Remove items and peek at top element in stack Call pop method
+ok 128 JataSets Stack Tests Remove items and peek at top element in stack Should now be 4 items in stack
+ok 129 JataSets Stack Tests Remove items and peek at top element in stack Request current start position
+ok 130 JataSets Stack Tests Remove items and peek at top element in stack Should now be 3 items in stack
+ok 131 JataSets Stack Tests Remove items and peek at top element in stack Call clear method
+ok 132 JataSets Stack Tests Remove items and peek at top element in stack Should now be zero items in stack
+# tests 132
+# pass 132
+# fail 0

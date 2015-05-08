@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - test/list_test.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>test/list_test.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">84.65</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">217</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">17.96</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">1.74</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">var js = require(&quot;../jatasets&quot;);
+var assert = require(&quot;assert&quot;)
+var list = js.list();
+
+describe(&quot;JataSets List Tests&quot;, function() {
+
+	describe(&quot;Test insert function&quot;, function() {
+
+		it(&quot;List length should equal 0&quot;, function() {
+			assert.equal(0, list.length());
+		});
+
+		it(&quot;Call prev method with no items in list&quot;, function() {
+			assert.equal(false, list.prev());
+		});
+
+		it(&quot;Call next method with no items in list&quot;, function() {
+			assert.equal(false, list.next());
+		});
+
+		it(&quot;Insert a number to list&quot;, function() {
+			assert.equal(true, list.add(12));
+		});
+
+		it(&quot;List length should equal 1&quot;, function() {
+			assert.equal(1, list.length());
+		});
+
+		it(&quot;Insert a string to list&quot;, function() {
+			assert.equal(true, list.add(&quot;Iamastring&quot;));
+		});
+
+		it(&quot;List length should equal 2&quot;, function() {
+			assert.equal(2, list.length());
+		});
+
+		it(&quot;Inserts a string with spaces to list&quot;, function() {
+			assert.equal(true, list.add(&quot;I am a string&quot;));
+		});
+
+		it(&quot;List length should equal 3&quot;, function() {
+			assert.equal(3, list.length());
+		});
+
+		it(&quot;Inserts a number as a string to list&quot;, function() {
+			assert.equal(true, list.add(&quot;1&quot;));
+		});
+
+		it(&quot;List length should equal 4&quot;, function() {
+			assert.equal(4, list.length());
+		});
+
+		it(&quot;Insert a float to list&quot;, function() {
+			assert.equal(true, list.add(4.32));
+		});
+
+		it(&quot;List length should equal 5&quot;, function() {
+			assert.equal(5, list.length());
+		});
+
+		it(&quot;Insert a array to list&quot;, function() {
+			assert.equal(true, list.add([]));
+		});
+		it(&quot;List length should equal 6&quot;, function() {
+			assert.equal(6, list.length());
+		});
+
+		it(&quot;Insert a object to list&quot;, function() {
+			assert.equal(true, list.add({}));
+		});
+
+		it(&quot;List length should equal 7&quot;, function() {
+			assert.equal(7, list.length());
+		});
+
+		it(&quot;Return false when attempting to insert undefined element to list&quot;, function() {
+			assert.equal(false, list.add());
+		});
+
+		it(&quot;List length should equal 7&quot;, function() {
+			assert.equal(7, list.length());
+		});
+
+		it(&quot;Request string&quot;, function() {
+			assert.equal(&quot;12,Iamastring,I am a string,1,4.32,,[object Object]&quot;, list.toString());
+		});
+
+		it(&quot;Request JSON&quot;, function() {
+			assert.equal(&#039;[12,&quot;Iamastring&quot;,&quot;I am a string&quot;,&quot;1&quot;,4.32,[],{}]&#039;, list.toJson());
+		});
+
+		it(&quot;Insert elemnt after Iamstring in list&quot;, function() {
+			assert.equal(true, list.insert(&quot;test insert&quot;, &quot;Iamastring&quot;));
+		});
+		
+		it(&quot;List length should equal 8&quot;, function() {
+			assert.equal(8, list.length());
+		});
+		
+		it(&quot;Insert elemnt after undefined in list&quot;, function() {
+			assert.equal(false, list.insert(&quot;test insert&quot;));
+		});
+		
+		it(&quot;Retrieve inserted element&quot;, function() {
+			assert.equal(true, list.remove(&quot;test insert&quot;));
+		});
+
+	});
+
+	describe(&quot;Test list traversal&quot;, function() {
+
+		it(&quot;Request current start position&quot;, function() {
+			assert.equal(0, list.current());
+		});
+
+		it(&quot;Iterate to next position&quot;, function() {
+			assert.equal(1, list.next());
+		});
+
+		it(&quot;Call end method&quot;, function() {
+			assert.equal(6, list.end());
+		});
+
+		it(&quot;Iterate to next position&quot;, function() {
+			assert.equal(false, list.next());
+		});
+
+		it(&quot;Request current start position&quot;, function() {
+			assert.equal(6, list.current());
+		});
+
+		it(&quot;Call prev method&quot;, function() {
+			assert.equal(5, list.prev());
+		});
+
+		it(&quot;Call front method&quot;, function() {
+			assert.equal(0, list.front());
+		});
+
+		it(&quot;Call prev method&quot;, function() {
+			assert.equal(false, list.prev());
+		});
+
+		it(&quot;Call contains for string which exists&quot;, function() {
+			assert.equal(true, list.contains(&#039;Iamastring&#039;));
+		});
+
+		it(&quot;Call contains for string which exists&quot;, function() {
+			assert.equal(false, list.contains(&#039;I don\&#039;t exist&#039;));
+		});
+
+		it(&quot;Call remove with element not in list&quot;, function() {
+			assert.equal(false, list.remove(&quot;Not in there&quot;));
+		});
+
+		it(&quot;Call remove with element in list&quot;, function() {
+			assert.equal(true, list.remove(&#039;Iamastring&#039;));
+		});
+
+		it(&quot;Test list length still the same&quot;, function() {
+			assert.equal(6, list.length());
+		});
+
+		it(&quot;Insert new element&quot;, function() {
+			assert.equal(true, list.add(&quot;I am new&quot;));
+		});
+
+		it(&quot;Test new list length&quot;, function() {
+			assert.equal(7, list.length());
+		});
+
+		it(&quot;Test insert with defined after&quot;, function() {
+			assert.equal(true, list.add(&quot;defined&quot;, &quot;Iamastring&quot;));
+		});
+
+		it(&quot;Test insert with undefined after&quot;, function() {
+			assert.equal(true, list.add(&quot;undefined&quot;, &quot;nope&quot;));
+		});
+
+		it(&quot;Test insert with undefined element and after&quot;, function() {
+			assert.equal(false, list.add());
+		});
+
+		it(&quot;Move to negative position which does not exist&quot;, function() {
+			assert.equal(false, list.move(-8));
+		});
+
+		it(&quot;Move to position which does not exist&quot;, function() {
+			assert.equal(false, list.move(18));
+		});
+
+		it(&quot;Move to position which does exist&quot;, function() {
+			assert.equal(true, list.move(3));
+		});
+
+		it(&quot;Test current element value&quot;, function() {
+			assert.equal(4.32, list.getElement());
+		});
+
+		it(&quot;Test current position value&quot;, function() {
+			assert.equal(3, list.current());
+		});
+
+		it(&quot;Retrieve current element&quot;, function() {
+			assert.equal(4.32, list.getElement());
+		});
+
+		it(&quot;Call clear method&quot;, function() {
+			assert.equal(true, list.clear());
+		});
+
+		it(&quot;Test length of list&quot;, function() {
+			assert.equal(0,  list.length());
+		});
+	});
+
+});</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

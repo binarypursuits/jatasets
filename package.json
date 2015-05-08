@@ -4,7 +4,9 @@
   "description": "JavaScript Datasets",
   "main": "index.js",
   "scripts": {
-    "test": "grunt test"
+    "build": "grunt build",
+    "plato": "plato -r -d reports/plato -t \"JataSets Plato Report\" test/*.js",
+    "tap": "mocha -R tap \"test/*.js\" > reports/jatasets.tap"
   },
   "repository": {
     "type": "git",
