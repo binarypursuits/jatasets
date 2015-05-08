@@ -108,9 +108,9 @@ List.prototype.toJson = function()
  *
  * @method	add
  *
- * @param		{Mixed} element The element you wish to place
+ * @param	{Mixed} element The element you wish to place
  *
- * @return		{Boolean}
+ * @return	{Boolean}
  */
 List.prototype.add = function(element)
 {

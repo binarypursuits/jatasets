@@ -26,6 +26,8 @@ var Stack = function() {
 /**
  * Method to reset stack.
  *
+ * @method	clear
+ *
  * @return {Boolean}
  */
 Stack.prototype.clear = function()
@@ -36,6 +38,8 @@ Stack.prototype.clear = function()
 
 /**
  * Method to get instance of last element put on stack
+ *
+ * @method	peek
  *
  * @return	{Mixed} last item placed on stack
  */
@@ -52,6 +56,8 @@ Stack.prototype.peek = function()
 /**
  * Method to remove last element put on stack
  *
+ * @method	pop
+ *
  * @return	{Mixed} removed item from top of stack
  */
 Stack.prototype.pop = function()
@@ -62,9 +68,11 @@ Stack.prototype.pop = function()
 /**
  * Method to push new element onto stack
  *
- * @param		{Mixed} element The element to push onto stack
+ * @method	push
  *
- * @return		{Boolean}
+ * @param	{Mixed} element The element to push onto stack
+ *
+ * @return	{Boolean}
  */
 Stack.prototype.push = function(element)
 {
@@ -80,7 +88,9 @@ Stack.prototype.push = function(element)
 /**
  * Method to get current number of elements in the stack
  *
- * @return		{integer} number of elements in the stack
+ * @method	length
+ *
+ * @return	{integer} number of elements in the stack
  */
 Stack.prototype.length = function()
 {

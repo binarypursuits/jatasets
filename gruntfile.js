@@ -180,9 +180,9 @@ module.exports = function(grunt) {
 	grunt.registerTask('test', ['mocha_istanbul', 'plato']);
 	grunt.registerTask('bundle', ['browserify', 'uglify']);
 
-	grunt.registerTask('documentation', ['yuidoc', 'jsdox']);
+	grunt.registerTask('documentation', ['yuidoc']);
 
 	grunt.registerTask('default', ['prep', 'validate', 'test']);
-	grunt.registerTask('build', ['default', 'bundle', 'yuidoc']);
+	grunt.registerTask('build', ['default', 'bundle', 'documentation']);
 
 };

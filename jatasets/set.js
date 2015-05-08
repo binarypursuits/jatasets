@@ -36,6 +36,9 @@ var Set = function(){
 	/**
 	 * Private utility method to determine if value exists in the set
 	 *
+	 * @private
+	 * @method	exists
+	 *
 	 * @param {Mixed} element The element being appended to the set
 	 * @return {Mixed}
 	 */
@@ -48,6 +51,8 @@ var Set = function(){
 
 /**
  * Method to add value to set
+ *
+ * @method	add
  *
  * @param {Mixed} value value being added to the set
  *
@@ -68,6 +73,8 @@ Set.prototype.add = function(value)
 /**
  * Method to remove value from set
  *
+ * @method	remove
+ *
  * @param {Mixed} value Value being removed from the set
  *
  * @return	{Boolean}
@@ -86,6 +93,8 @@ Set.prototype.remove = function(value)
 /**
  * Method to verify if a value is in the set
  *
+ * @method	has
+ *
  * @param {Mixed} value value to test if exists in set
  *
  * @return	{Boolean}
@@ -98,6 +107,8 @@ Set.prototype.has = function(value)
 /**
  * Method to clear all values from the set
  *
+ * @method	clear
+ *
  * @return	{Boolean}
  */
 Set.prototype.clear = function()
@@ -108,6 +119,8 @@ Set.prototype.clear = function()
 
 /**
  * Method to get current size of set
+ *
+ * @method	size
  *
  * @return	{integer} number of values in set
  */
@@ -128,6 +141,8 @@ Set.prototype.size = function()
 
 /**
  * Method to retrieve all values in the set
+ *
+ * @method	values
  *
  * @return	{object} values from the set
  *
@@ -150,7 +165,9 @@ Set.prototype.values = function()
 /**
  * Method to retrieve all values in the set
  *
- * @return		{object} values from the set
+ * @method	union
+ *
+ * @return	{object} values from the set
  *
  */
 Set.prototype.union = function(compareSet)
@@ -179,7 +196,9 @@ Set.prototype.union = function(compareSet)
 /**
  * Method to retrieve all values in the set
  *
- * @return		{object} values from the set
+ * @method	intersection
+ *
+ * @return	{object} values from the set
  *
  */
 Set.prototype.intersection = function(compareSet)
@@ -202,6 +221,8 @@ Set.prototype.intersection = function(compareSet)
 
 /**
  * Method to retrieve all values in the set
+ *
+ * @method	difference
  *
  * @return	{object} values from the set
  *
@@ -226,6 +247,8 @@ Set.prototype.difference = function(compareSet)
 
 /**
  * Method to retrieve all values in the set
+ *
+ * @method	subset
  *
  * @return	{object} values from the set
  *

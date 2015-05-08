@@ -688,7 +688,8 @@
             "file": "jatasets\\queue.js",
             "line": 28,
             "description": "Method to Queue an element to the Queue",
-            "memberof": "Queue",
+            "itemtype": "method",
+            "name": "enqueue",
             "params": [
                 {
                     "name": "element",
@@ -707,7 +708,8 @@
             "file": "jatasets\\queue.js",
             "line": 51,
             "description": "Method to remove an element from the Queue",
-            "memberof": "Queue",
+            "itemtype": "method",
+            "name": "dequeue",
             "return": {
                 "description": "",
                 "type": "Boolean"
@@ -719,7 +721,8 @@
             "file": "jatasets\\queue.js",
             "line": 69,
             "description": "Method to retrieve element in front of Queue",
-            "memberof": "Queue",
+            "itemtype": "method",
+            "name": "front",
             "class": "Queue",
             "module": "jatasets"
         },
@@ -727,7 +730,8 @@
             "file": "jatasets\\queue.js",
             "line": 87,
             "description": "Method to retrieve element in back of Queue",
-            "memberof": "Queue",
+            "itemtype": "method",
+            "name": "back",
             "class": "Queue",
             "module": "jatasets"
         },
@@ -735,7 +739,8 @@
             "file": "jatasets\\queue.js",
             "line": 98,
             "description": "Method to verify if Queue is empty",
-            "memberof": "Queue",
+            "itemtype": "method",
+            "name": "empty",
             "class": "Queue",
             "module": "jatasets"
         },
@@ -743,7 +748,8 @@
             "file": "jatasets\\queue.js",
             "line": 114,
             "description": "Method to retrieve Queue as string with line breaks",
-            "memberof": "Queue",
+            "itemtype": "method",
+            "name": "toString",
             "return": {
                 "description": "",
                 "type": "String"
@@ -769,6 +775,10 @@
             "file": "jatasets\\set.js",
             "line": 36,
             "description": "Private utility method to determine if value exists in the set",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "exists",
             "params": [
                 {
                     "name": "element",
@@ -785,8 +795,10 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 49,
+            "line": 52,
             "description": "Method to add value to set",
+            "itemtype": "method",
+            "name": "add",
             "params": [
                 {
                     "name": "value",
@@ -803,8 +815,10 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 68,
+            "line": 73,
             "description": "Method to remove value from set",
+            "itemtype": "method",
+            "name": "remove",
             "params": [
                 {
                     "name": "value",
@@ -821,8 +835,10 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 86,
+            "line": 93,
             "description": "Method to verify if a value is in the set",
+            "itemtype": "method",
+            "name": "has",
             "params": [
                 {
                     "name": "value",
@@ -839,8 +855,10 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 98,
+            "line": 107,
             "description": "Method to clear all values from the set",
+            "itemtype": "method",
+            "name": "clear",
             "return": {
                 "description": "",
                 "type": "Boolean"
@@ -850,8 +868,10 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 109,
+            "line": 120,
             "description": "Method to get current size of set",
+            "itemtype": "method",
+            "name": "size",
             "return": {
                 "description": "number of values in set",
                 "type": "Integer"
@@ -861,8 +881,10 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 129,
+            "line": 142,
             "description": "Method to retrieve all values in the set",
+            "itemtype": "method",
+            "name": "values",
             "return": {
                 "description": "values from the set",
                 "type": "Object"
@@ -872,8 +894,10 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 150,
+            "line": 165,
             "description": "Method to retrieve all values in the set",
+            "itemtype": "method",
+            "name": "union",
             "return": {
                 "description": "values from the set",
                 "type": "Object"
@@ -883,8 +907,10 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 179,
+            "line": 196,
             "description": "Method to retrieve all values in the set",
+            "itemtype": "method",
+            "name": "intersection",
             "return": {
                 "description": "values from the set",
                 "type": "Object"
@@ -894,8 +920,10 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 203,
+            "line": 222,
             "description": "Method to retrieve all values in the set",
+            "itemtype": "method",
+            "name": "difference",
             "return": {
                 "description": "values from the set",
                 "type": "Object"
@@ -905,8 +933,10 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 227,
+            "line": 248,
             "description": "Method to retrieve all values in the set",
+            "itemtype": "method",
+            "name": "subset",
             "return": {
                 "description": "values from the set",
                 "type": "Object"
@@ -938,6 +968,8 @@
             "file": "jatasets\\stack.js",
             "line": 26,
             "description": "Method to reset stack.",
+            "itemtype": "method",
+            "name": "clear",
             "return": {
                 "description": "",
                 "type": "Boolean"
@@ -947,8 +979,10 @@
         },
         {
             "file": "jatasets\\stack.js",
-            "line": 37,
+            "line": 39,
             "description": "Method to get instance of last element put on stack",
+            "itemtype": "method",
+            "name": "peek",
             "return": {
                 "description": "last item placed on stack",
                 "type": "Mixed"
@@ -958,8 +992,10 @@
         },
         {
             "file": "jatasets\\stack.js",
-            "line": 52,
+            "line": 56,
             "description": "Method to remove last element put on stack",
+            "itemtype": "method",
+            "name": "pop",
             "return": {
                 "description": "removed item from top of stack",
                 "type": "Mixed"
@@ -969,8 +1005,10 @@
         },
         {
             "file": "jatasets\\stack.js",
-            "line": 62,
+            "line": 68,
             "description": "Method to push new element onto stack",
+            "itemtype": "method",
+            "name": "push",
             "params": [
                 {
                     "name": "element",
@@ -987,8 +1025,10 @@
         },
         {
             "file": "jatasets\\stack.js",
-            "line": 80,
+            "line": 88,
             "description": "Method to get current number of elements in the stack",
+            "itemtype": "method",
+            "name": "length",
             "return": {
                 "description": "number of elements in the stack",
                 "type": "Integer"
@@ -1005,30 +1045,6 @@
         {
             "message": "unknown tag: memberof",
             "line": " jatasets\\list.js:279"
-        },
-        {
-            "message": "unknown tag: memberof",
-            "line": " jatasets\\queue.js:28"
-        },
-        {
-            "message": "unknown tag: memberof",
-            "line": " jatasets\\queue.js:51"
-        },
-        {
-            "message": "unknown tag: memberof",
-            "line": " jatasets\\queue.js:69"
-        },
-        {
-            "message": "unknown tag: memberof",
-            "line": " jatasets\\queue.js:87"
-        },
-        {
-            "message": "unknown tag: memberof",
-            "line": " jatasets\\queue.js:98"
-        },
-        {
-            "message": "unknown tag: memberof",
-            "line": " jatasets\\queue.js:114"
         },
         {
             "message": "Missing item type\nCreates a new Dictionary",
@@ -1079,80 +1095,12 @@
             "line": " jatasets\\queue.js:24"
         },
         {
-            "message": "Missing item type\nMethod to Queue an element to the Queue",
-            "line": " jatasets\\queue.js:28"
-        },
-        {
-            "message": "Missing item type\nMethod to remove an element from the Queue",
-            "line": " jatasets\\queue.js:51"
-        },
-        {
-            "message": "Missing item type\nMethod to retrieve element in front of Queue",
-            "line": " jatasets\\queue.js:69"
-        },
-        {
-            "message": "Missing item type\nMethod to retrieve element in back of Queue",
-            "line": " jatasets\\queue.js:87"
-        },
-        {
-            "message": "Missing item type\nMethod to verify if Queue is empty",
-            "line": " jatasets\\queue.js:98"
-        },
-        {
-            "message": "Missing item type\nMethod to retrieve Queue as string with line breaks",
-            "line": " jatasets\\queue.js:114"
-        },
-        {
             "message": "Missing item type\nCreates a new Set Object",
             "line": " jatasets\\set.js:27"
         },
         {
             "message": "Missing item type",
             "line": " jatasets\\set.js:33"
-        },
-        {
-            "message": "Missing item type\nPrivate utility method to determine if value exists in the set",
-            "line": " jatasets\\set.js:36"
-        },
-        {
-            "message": "Missing item type\nMethod to add value to set",
-            "line": " jatasets\\set.js:49"
-        },
-        {
-            "message": "Missing item type\nMethod to remove value from set",
-            "line": " jatasets\\set.js:68"
-        },
-        {
-            "message": "Missing item type\nMethod to verify if a value is in the set",
-            "line": " jatasets\\set.js:86"
-        },
-        {
-            "message": "Missing item type\nMethod to clear all values from the set",
-            "line": " jatasets\\set.js:98"
-        },
-        {
-            "message": "Missing item type\nMethod to get current size of set",
-            "line": " jatasets\\set.js:109"
-        },
-        {
-            "message": "Missing item type\nMethod to retrieve all values in the set",
-            "line": " jatasets\\set.js:129"
-        },
-        {
-            "message": "Missing item type\nMethod to retrieve all values in the set",
-            "line": " jatasets\\set.js:150"
-        },
-        {
-            "message": "Missing item type\nMethod to retrieve all values in the set",
-            "line": " jatasets\\set.js:179"
-        },
-        {
-            "message": "Missing item type\nMethod to retrieve all values in the set",
-            "line": " jatasets\\set.js:203"
-        },
-        {
-            "message": "Missing item type\nMethod to retrieve all values in the set",
-            "line": " jatasets\\set.js:227"
         },
         {
             "message": "Missing item type\nCreates a new Stack Object",
@@ -1165,26 +1113,6 @@
         {
             "message": "Missing item type",
             "line": " jatasets\\stack.js:21"
-        },
-        {
-            "message": "Missing item type\nMethod to reset stack.",
-            "line": " jatasets\\stack.js:26"
-        },
-        {
-            "message": "Missing item type\nMethod to get instance of last element put on stack",
-            "line": " jatasets\\stack.js:37"
-        },
-        {
-            "message": "Missing item type\nMethod to remove last element put on stack",
-            "line": " jatasets\\stack.js:52"
-        },
-        {
-            "message": "Missing item type\nMethod to push new element onto stack",
-            "line": " jatasets\\stack.js:62"
-        },
-        {
-            "message": "Missing item type\nMethod to get current number of elements in the stack",
-            "line": " jatasets\\stack.js:80"
         }
     ]
 }

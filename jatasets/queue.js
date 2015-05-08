@@ -28,11 +28,11 @@ var Queue = function() {
 /**
  * Method to Queue an element to the Queue
  *
- * @memberof Queue
+ * @method	enqueue
  *
- * @param {Mixed} element being added to Queue
+ * @param	{Mixed} element being added to Queue
  *
- * @return {Mixed}
+ * @return	{Mixed}
  */
 Queue.prototype.enqueue = function(element)
 {
@@ -51,9 +51,9 @@ Queue.prototype.enqueue = function(element)
 /**
  * Method to remove an element from the Queue
  *
- * @memberof	Queue
+ * @method	dequeue
  *
- * @return		{Boolean}
+ * @return	{Boolean}
  */
 Queue.prototype.dequeue = function()
 {
@@ -69,7 +69,7 @@ Queue.prototype.dequeue = function()
 /**
  * Method to retrieve element in front of Queue
  *
- * @memberof	Queue
+ * @method	front
  *
  */
 Queue.prototype.front = function()
@@ -87,7 +87,7 @@ Queue.prototype.front = function()
 /**
  * Method to retrieve element in back of Queue
  *
- * @memberof	Queue
+ * @method	back
  *
  */
 Queue.prototype.back = function()
@@ -98,7 +98,7 @@ Queue.prototype.back = function()
 /**
  * Method to verify if Queue is empty
  *
- * @memberof	Queue
+ * @method	empty
  *
  */
 Queue.prototype.empty = function()
@@ -114,9 +114,9 @@ Queue.prototype.empty = function()
 /**
  * Method to retrieve Queue as string with line breaks
  *
- * @memberof	Queue
+ * @method	toString
  *
- * @return		{string}
+ * @return	{string}
  */
 Queue.prototype.toString = function()
 {

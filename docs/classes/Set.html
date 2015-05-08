@@ -108,17 +108,628 @@
     <ul class="api-class-tabs">
         <li class="api-class-tab index"><a href="#index">Index</a></li>
 
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
     </ul>
 
     <div>
         <div id="index" class="api-class-tabpanel index">
             <h2 class="off-left">Item Index</h2>
 
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                            <li class="index-item method">
+                                <a href="#method_add">add</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_clear">clear</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_difference">difference</a>
+
+                            </li>
+                            <li class="index-item method private">
+                                <a href="#method_exists">exists</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_has">has</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_intersection">intersection</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_remove">remove</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_size">size</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_subset">subset</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_union">union</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_values">values</a>
+
+                            </li>
+                    </ul>
+                </div>
 
 
 
         </div>
 
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_add" class="method item">
+    <h3 class="name"><code>add</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>value</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/jatasets_set.js.html#l52"><code>jatasets\set.js:52</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method to add value to set</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">value</code>
+                        <span class="type">Mixed</span>
+
+
+                    <div class="param-description">
+                        <p>value being added to the set</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Boolean</span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_clear" class="method item">
+    <h3 class="name"><code>clear</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/jatasets_set.js.html#l107"><code>jatasets\set.js:107</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method to clear all values from the set</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Boolean</span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_difference" class="method item">
+    <h3 class="name"><code>difference</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/jatasets_set.js.html#l222"><code>jatasets\set.js:222</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method to retrieve all values in the set</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
+                    <p>values from the set</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_exists" class="method item private">
+    <h3 class="name"><code>exists</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>element</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Mixed</span>
+        </span>
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/jatasets_set.js.html#l36"><code>jatasets\set.js:36</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Private utility method to determine if value exists in the set</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">element</code>
+                        <span class="type">Mixed</span>
+
+
+                    <div class="param-description">
+                        <p>The element being appended to the set</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Mixed</span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_has" class="method item">
+    <h3 class="name"><code>has</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>value</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/jatasets_set.js.html#l93"><code>jatasets\set.js:93</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method to verify if a value is in the set</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">value</code>
+                        <span class="type">Mixed</span>
+
+
+                    <div class="param-description">
+                        <p>value to test if exists in set</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Boolean</span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_intersection" class="method item">
+    <h3 class="name"><code>intersection</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/jatasets_set.js.html#l196"><code>jatasets\set.js:196</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method to retrieve all values in the set</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
+                    <p>values from the set</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_remove" class="method item">
+    <h3 class="name"><code>remove</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>value</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/jatasets_set.js.html#l73"><code>jatasets\set.js:73</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method to remove value from set</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">value</code>
+                        <span class="type">Mixed</span>
+
+
+                    <div class="param-description">
+                        <p>Value being removed from the set</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Boolean</span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_size" class="method item">
+    <h3 class="name"><code>size</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Integer</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/jatasets_set.js.html#l120"><code>jatasets\set.js:120</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method to get current size of set</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Integer</span>:
+                    <p>number of values in set</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_subset" class="method item">
+    <h3 class="name"><code>subset</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/jatasets_set.js.html#l248"><code>jatasets\set.js:248</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method to retrieve all values in the set</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
+                    <p>values from the set</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_union" class="method item">
+    <h3 class="name"><code>union</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/jatasets_set.js.html#l165"><code>jatasets\set.js:165</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method to retrieve all values in the set</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
+                    <p>values from the set</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_values" class="method item">
+    <h3 class="name"><code>values</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/jatasets_set.js.html#l142"><code>jatasets\set.js:142</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method to retrieve all values in the set</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
+                    <p>values from the set</p>
+
+            </div>
+        </div>
+
+
+</div>
+            </div>
 
 
 
