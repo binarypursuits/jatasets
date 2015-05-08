@@ -4,9 +4,13 @@
   "description": "JavaScript Datasets",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "build": "grunt build",
     "plato": "plato -r -d reports/plato -t \"JataSets Plato Report\" test/*.js",
     "tap": "mocha -R tap \"test/*.js\" > reports/jatasets.tap"
+=======
+    "ci-test": "istanbul cover mocha -- -R tap \"test/*_test.js\" > test.tap && istanbul report clover"
+>>>>>>> branch 'master' of https://binarypursuits@github.com/binarypursuits/jatasets.git
   },
   "repository": {
     "type": "git",
@@ -36,7 +40,6 @@
     "grunt-contrib-jshint": "^0.11.0",
     "grunt-contrib-uglify": "^0.8.0",
     "grunt-contrib-yuidoc": "^0.7.0",
-    "grunt-istanbul": "^0.4.0",
     "grunt-jsdoc": "^0.5.8",
     "grunt-jsdox": "^0.1.7",
     "grunt-junit": "^0.1.6",
@@ -48,6 +51,7 @@
     "mocha": "^2.2.1"
   },
   "dependencies": {
+    "mocha-istanbul": "^0.2.0",
     "requirejs": "^2.1.16"
   }
 }

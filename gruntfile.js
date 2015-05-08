@@ -104,7 +104,13 @@ module.exports = function(grunt) {
 			},
 			build: {
 				options: {
+<<<<<<< HEAD
 					reporter: 'spec',
+=======
+					reporter: 'mocha-istanbul',
+					quiet: true,
+					captureFile: 'reports/coverage.html'
+>>>>>>> branch 'master' of https://binarypursuits@github.com/binarypursuits/jatasets.git
 				},
 				src: ['test/**/*_test.js']
 			}
@@ -112,10 +118,10 @@ module.exports = function(grunt) {
 
 		mocha: {
 			options: {
-				reporter: 'XUnit'
+				//reporter: 'tap'
 			},
 			src: ['test/**/*_test.js'],
-			dest: 'reports/xunit.out',
+			dest: 'reports/test.tap',
 		},
 
 		mocha_istanbul: {
@@ -144,6 +150,7 @@ module.exports = function(grunt) {
 			}
 		},
 
+<<<<<<< HEAD
 		  yuidoc: {
 			    compile: {
 			      name: '<%= pkg.name %>',
@@ -157,6 +164,21 @@ module.exports = function(grunt) {
 			      }
 			    }
 			  }
+=======
+		yuidoc: {
+			compile: {
+				name: '<%= pkg.name %>',
+				description: '<%= pkg.description %>',
+				version: '<%= pkg.version %>',
+				url: '<%= pkg.homepage %>',
+				options: {
+					paths: 'jatasets/',
+					//themedir: 'path/to/custom/theme/',
+					outdir: 'docs/'
+				}
+			}
+		}
+>>>>>>> branch 'master' of https://binarypursuits@github.com/binarypursuits/jatasets.git
 
 	});
 
@@ -177,10 +199,15 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('prep', ['clean']);
 	grunt.registerTask('validate', ['jshint']); // csslint, html
+<<<<<<< HEAD
 	grunt.registerTask('test', ['mocha_istanbul', 'plato']);
+=======
+	grunt.registerTask('test', ['mochaTest', 'mocha_istanbul', 'plato']);
+	//grunt.registerTask('test', ['mocha', 'mocha_istanbul', 'plato']);
+>>>>>>> branch 'master' of https://binarypursuits@github.com/binarypursuits/jatasets.git
 	grunt.registerTask('bundle', ['browserify', 'uglify']);
 
-	grunt.registerTask('documentation', ['jsdoc', 'jsdox']);
+	grunt.registerTask('documentation', ['yuidoc', 'jsdox']);
 
 	grunt.registerTask('default', ['prep', 'validate', 'test']);
 	grunt.registerTask('build', ['default', 'bundle', 'yuidoc']);
