@@ -1,10 +1,17 @@
+/**
+ * Creates a new Queue Data object
+ *
+ * @class Queue
+ * @main jatasets
+ */
+
 /*jshint unused:false */
 
 'use strict';
 
 /**
  *  Creates a new Queue
- *  @class
+ *  @constructor
  */
 var Queue = function() {
 
@@ -46,7 +53,7 @@ Queue.prototype.enqueue = function(element)
  *
  * @memberof	Queue
  *
- * @returns		{Boolean}
+ * @return		{Boolean}
  */
 Queue.prototype.dequeue = function()
 {
@@ -109,7 +116,7 @@ Queue.prototype.empty = function()
  *
  * @memberof	Queue
  *
- * @returns		{string}
+ * @return		{string}
  */
 Queue.prototype.toString = function()
 {

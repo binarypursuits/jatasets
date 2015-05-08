@@ -6,10 +6,6 @@ var pkgData = require('./package.json');
 
 module.exports = function(grunt) {
 
-	var dateFormat = require('dateformat');
-	var reportDir = 'build/reports/'
-			+ dateFormat(new Date(), 'yyyymmdd-HHMMss');
-
 	grunt.initConfig({
 		pkg : '<json:package.json>',
 
@@ -149,11 +145,16 @@ module.exports = function(grunt) {
 				name: '<%= pkg.name %>',
 				description: '<%= pkg.description %>',
 				version: '<%= pkg.version %>',
-				url: '<%= pkg.homepage %>',
+				url: '<%= pkg.url %>',
 				options: {
 					paths: 'jatasets/',
 					//themedir: 'path/to/custom/theme/',
-					outdir: 'docs/'
+					outdir: 'docs/',
+					markdown: {
+						"README.md" : {
+							linkify: true
+						}
+					}
 				}
 			}
 		}

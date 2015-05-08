@@ -1,10 +1,18 @@
+/**
+ * Creates a new Dictionary Data object
+ *
+ * @class Dictionary
+ * @main jatasets
+ */
+
 /*jshint unused:false */
 
 'use strict';
 
 /**
  *  Creates a new Dictionary
- *  @class
+ *
+ *  @constructor
  */
 function Dictionary()
 {
@@ -18,10 +26,12 @@ function Dictionary()
 /**
  * Method to get instance of last element put on stack
  *
+ * @method	add
+ *
  * @param   {string}  [key] index value to store value under
  * @param   {mixed}   [value] item being stored
  *
- * @returns {boolean}
+ * @return {boolean}
  */
 Dictionary.prototype.add = function(key, value)
 {
@@ -38,9 +48,11 @@ Dictionary.prototype.add = function(key, value)
 /**
  * Method to remove item from the dictionary
  *
+ * @method	remove
+ *
  * @param   {string}  [key] index of item to be removed
  *
- * @returns  {boolean}
+ * @return  {boolean}
  */
 Dictionary.prototype.remove = function(key)
 {
@@ -57,9 +69,11 @@ Dictionary.prototype.remove = function(key)
 /**
  * Method to retrieve value from dictionary using the key
  *
+ * @method	find
+ *
  * @param   {string}  [key] index search for in dictionary
  *
- * @returns  {mixed}   return item if successful and false if key is not valid
+ * @return  {mixed}   return item if successful and false if key is not valid
  */
 Dictionary.prototype.find = function(key)
 {
@@ -74,7 +88,9 @@ Dictionary.prototype.find = function(key)
 /**
  * Method to get current number of items in dictionary
  *
- * @returns		{integer}
+ * @method	count
+ *
+ * @return		{integer}
  */
 Dictionary.prototype.count = function()
 {
@@ -83,6 +99,8 @@ Dictionary.prototype.count = function()
 
 /**
  * Method to clear all values from dictionary
+ *
+ * @method	clear
  *
  * @return		{boolean}
  */

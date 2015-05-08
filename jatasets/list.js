@@ -1,10 +1,17 @@
+/**
+ * Creates a new List Data object
+ *
+ * @class List
+ * @main jatasets
+ */
+
 /*jshint unused:false */
 
 'use strict';
 
 /**
  *  Creates a new List Object
- *  @class
+ *  @constructor
  */
 function List() {
 
@@ -20,11 +27,12 @@ function List() {
 	/**
 	 * Private method to append an element to the list
 	 *
-	 * @memberof List
+	 * @private
+	 * @method	append
 	 *
 	 * @param {Mixed} element The element being appended to the list
 	 *
-	 * @returns {Boolean}
+	 * @return {Boolean}
 	 */
 	this.append = function (element)
 	{
@@ -36,7 +44,8 @@ function List() {
 	 * Private method to find an element in the list.  Will either return
 	 * element index if found and false if not found.
 	 *
-	 * @memberof List
+	 * @private
+	 * @method	find
 	 *
 	 * @param		{Mixed} element The element being appended to the list
 	 *
@@ -59,9 +68,9 @@ function List() {
 /**
  * Method to reset list.
  *
- * @memberof List
+ * @method	clear
  *
- * @returns {Boolean}
+ * @return {Boolean}
  */
 List.prototype.clear = function()
 {
@@ -73,9 +82,9 @@ List.prototype.clear = function()
 /**
  * Method to retrieve list as comma seperate string
  *
- * @memberof List
+ * @method	toString
  *
- * @returns	{String} list as comma serperate string
+ * @return	{String} list as comma serperate string
  */
 List.prototype.toString = function()
 {
@@ -85,9 +94,9 @@ List.prototype.toString = function()
 /**
  * Method to retrieve list as JSON string
  *
- * @memberof List
+ * @memberof toJson
  *
- * @returns {String}
+ * @return {String}
  */
 List.prototype.toJson = function()
 {
@@ -97,11 +106,11 @@ List.prototype.toJson = function()
 /**
  * Method to add element to list
  *
- * @memberof List
+ * @method	add
  *
  * @param		{Mixed} element The element you wish to place
  *
- * @returns		{Boolean}
+ * @return		{Boolean}
  */
 List.prototype.add = function(element)
 {
@@ -117,12 +126,12 @@ List.prototype.add = function(element)
 /**
  * Method to insert element after another element
  *
- * @memberof List
+ * @method	insert
  *
  * @param		{Mixed} element The element you wish to place
  * @param		{Mixed} after The element you wish to place after
  *
- * @returns		{Boolean}
+ * @return		{Boolean}
  */
 List.prototype.insert = function(element, after)
 {
@@ -140,11 +149,11 @@ List.prototype.insert = function(element, after)
 /**
  * Method to remove element from list
  *
- * @memberof List
+ * @method	remove
  *
  * @param		{Mixed} element The element to be removed
  *
- * @returns		{Boolean}
+ * @return		{Boolean}
  */
 List.prototype.remove = function(element)
 {
@@ -163,9 +172,9 @@ List.prototype.remove = function(element)
 /**
  * Method to move current this.position to the beginning of the list
  *
- * @memberof List
+ * @method	front
  *
- * @returns {Integer}
+ * @return {Integer}
  */
 List.prototype.front = function()
 {
@@ -176,9 +185,9 @@ List.prototype.front = function()
 /**
  * Method to move current this.position to the end of the list
  *
- * @memberof List
+ * @method	end
  *
- * @returns {Integer}
+ * @return {Integer}
  */
 List.prototype.end = function()
 {
@@ -189,9 +198,9 @@ List.prototype.end = function()
 /**
  * Method to move current this.position in list to previous element
  *
- * @memberof List
+ * @method	prev
  *
- * @returns {Integer|Boolean}
+ * @return {Integer|Boolean}
  */
 List.prototype.prev = function()
 {
@@ -207,9 +216,9 @@ List.prototype.prev = function()
 /**
  * Method to move current this.position in list to next element
  *
- * @memberof List
+ * @method	next
  *
- * @returns {integer|boolean}
+ * @return {integer|boolean}
  */
 List.prototype.next = function()
 {
@@ -225,9 +234,9 @@ List.prototype.next = function()
 /**
  * Method to get current number of elements in the list
  *
- * @memberof List
+ * @method	length
  *
- * @returns		{integer} number of elements in the list
+ * @return		{integer} number of elements in the list
  */
 List.prototype.length = function()
 {
@@ -237,9 +246,9 @@ List.prototype.length = function()
 /**
  * Method to get current this.position in the list
  *
- * @memberof List
+ * @method	current
  *
- * @returns		{integer} current this.possition in th elist
+ * @return		{integer} current this.possition in th elist
  */
 List.prototype.current = function()
 {
@@ -250,11 +259,11 @@ List.prototype.current = function()
  * Method to move current this.position in the list to specific this.position
  * and validating the this.position provided
  *
- * @memberof List
+ * @method	move
  *
  * @param		{integer} this.position - The this.position to move to in the list
  *
- * @returns		{boolean}
+ * @return		{boolean}
  */
 List.prototype.move = function(position)
 {
@@ -270,9 +279,11 @@ List.prototype.move = function(position)
 /**
  * Method to get element at current this.position in the list
  *
+ * @method	getElement
+ *
  * @memberof List
  *
- * @returns		{mixed} element in the current this.position
+ * @return		{mixed} element in the current this.position
  */
 List.prototype.getElement = function()
 {
@@ -282,11 +293,11 @@ List.prototype.getElement = function()
 /**
  * Method to determine if list contains an element
  *
- * @memberof List
+ * @method	contains
  *
  * @param		{mixed} element - The element to verify if in list
  *
- * @returns		{boolean}
+ * @return		{boolean}
  */
 List.prototype.contains = function(element)
 {
