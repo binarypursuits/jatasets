@@ -104,13 +104,7 @@ module.exports = function(grunt) {
 			},
 			build: {
 				options: {
-<<<<<<< HEAD
 					reporter: 'spec',
-=======
-					reporter: 'mocha-istanbul',
-					quiet: true,
-					captureFile: 'reports/coverage.html'
->>>>>>> branch 'master' of https://binarypursuits@github.com/binarypursuits/jatasets.git
 				},
 				src: ['test/**/*_test.js']
 			}
@@ -150,21 +144,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-<<<<<<< HEAD
-		  yuidoc: {
-			    compile: {
-			      name: '<%= pkg.name %>',
-			      description: '<%= pkg.description %>',
-			      version: '<%= pkg.version %>',
-			      url: '<%= pkg.homepage %>',
-			      options: {
-			        paths: 'jatasets/',
-			        //themedir: 'path/to/custom/theme/',
-			        outdir: 'docs/'
-			      }
-			    }
-			  }
-=======
 		yuidoc: {
 			compile: {
 				name: '<%= pkg.name %>',
@@ -178,8 +157,6 @@ module.exports = function(grunt) {
 				}
 			}
 		}
->>>>>>> branch 'master' of https://binarypursuits@github.com/binarypursuits/jatasets.git
-
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
@@ -199,12 +176,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('prep', ['clean']);
 	grunt.registerTask('validate', ['jshint']); // csslint, html
-<<<<<<< HEAD
 	grunt.registerTask('test', ['mocha_istanbul', 'plato']);
-=======
-	grunt.registerTask('test', ['mochaTest', 'mocha_istanbul', 'plato']);
-	//grunt.registerTask('test', ['mocha', 'mocha_istanbul', 'plato']);
->>>>>>> branch 'master' of https://binarypursuits@github.com/binarypursuits/jatasets.git
 	grunt.registerTask('bundle', ['browserify', 'uglify']);
 
 	grunt.registerTask('documentation', ['yuidoc', 'jsdox']);
