@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 			all : ['./jatasets/**/*.js'],
 			options : {
 				curly : true,
-				eqeqeq : true,
+				eqeqeq : false,
 				immed : true,
 				latedef : true,
 				newcap : true,
@@ -72,10 +72,10 @@ module.exports = function(grunt) {
 
 		browserify: {
 			build: {
-				src: ['jatasets'],
-				dest: './build/jatasets.js',
+				src: ['jatasets/**/*.js'],
+				dest: 'build/jatasets.js',
 				options: {
-					standalone: 'jatasets'
+					require: './jatasets'
 				}
 			}
 		},

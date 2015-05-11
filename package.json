@@ -6,7 +6,8 @@
   "scripts": {
     "build": "grunt build",
     "plato": "plato -r -d reports/plato -t \"JataSets Plato Report\" test/*.js",
-    "tap": "mocha -R tap \"test/*.js\" > reports/jatasets.tap"
+    "tap": "mocha -R tap \"test/*.js\" > reports/jatasets.tap",
+    "package": "browserify -r jatasets -o ./build/jatasets.js"
   },
   "repository": {
     "type": "git",
