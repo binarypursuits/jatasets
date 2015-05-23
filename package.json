@@ -7,7 +7,9 @@
     "build": "grunt build",
     "plato": "plato -r -d reports/plato -t \"JataSets Plato Report\" test/*.js",
     "tap": "mocha -R tap \"test/*.js\" > reports/jatasets.tap",
-    "package": "browserify -r jatasets -o ./build/jatasets.js"
+    "package": "browserify -r jatasets -o ./build/jatasets.js",
+    "shrink": "grunt uglify",
+    "document" "grunt documentation"
   },
   "repository": {
     "type": "git",

@@ -220,7 +220,7 @@
             "namespace": "",
             "file": "jatasets\\set.js",
             "line": 1,
-            "description": "Creates a new Set Data object",
+            "description": "JataSets - Set\n\nJavaScript data structure object representing a collection of unordered, unique elements.  The data structure\nis similar to the mathematical concept of finite sets, but instead applied as a JavaScript object.  A set\nshould be viewed as an array with no repeated elements and with no concept or order.\n\nThe purpose of the Set object is to provide developers a tool to manage both individual sets by adding\nand removing elements, but a means to run comparison operations against two Set objects.",
             "mainName": "jatasets",
             "tag": "main",
             "itemtype": "main",
@@ -759,7 +759,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 27,
+            "line": 19,
             "description": "Creates a new Set Object",
             "is_constructor": 1,
             "class": "Set",
@@ -767,13 +767,13 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 33,
+            "line": 25,
             "class": "Set",
             "module": "jatasets"
         },
         {
             "file": "jatasets\\set.js",
-            "line": 36,
+            "line": 28,
             "description": "Private utility method to determine if value exists in the set",
             "access": "private",
             "tagname": "",
@@ -783,7 +783,8 @@
                 {
                     "name": "element",
                     "description": "The element being appended to the set",
-                    "type": "Mixed"
+                    "type": "Mixed",
+                    "optional": true
                 }
             ],
             "return": {
@@ -795,7 +796,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 52,
+            "line": 44,
             "description": "Method to add value to set",
             "itemtype": "method",
             "name": "add",
@@ -815,7 +816,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 73,
+            "line": 65,
             "description": "Method to remove value from set",
             "itemtype": "method",
             "name": "remove",
@@ -835,7 +836,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 93,
+            "line": 85,
             "description": "Method to verify if a value is in the set",
             "itemtype": "method",
             "name": "has",
@@ -855,7 +856,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 107,
+            "line": 99,
             "description": "Method to clear all values from the set",
             "itemtype": "method",
             "name": "clear",
@@ -868,7 +869,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 120,
+            "line": 112,
             "description": "Method to get current size of set",
             "itemtype": "method",
             "name": "size",
@@ -881,7 +882,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 142,
+            "line": 134,
             "description": "Method to retrieve all values in the set",
             "itemtype": "method",
             "name": "values",
@@ -894,7 +895,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 165,
+            "line": 164,
             "description": "Method to retrieve all values in the set",
             "itemtype": "method",
             "name": "union",
@@ -907,7 +908,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 196,
+            "line": 195,
             "description": "Method to retrieve all values in the set",
             "itemtype": "method",
             "name": "intersection",
@@ -920,7 +921,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 222,
+            "line": 221,
             "description": "Method to retrieve all values in the set",
             "itemtype": "method",
             "name": "difference",
@@ -933,7 +934,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 248,
+            "line": 247,
             "description": "Method to retrieve all values in the set",
             "itemtype": "method",
             "name": "subset",
@@ -1096,11 +1097,11 @@
         },
         {
             "message": "Missing item type\nCreates a new Set Object",
-            "line": " jatasets\\set.js:27"
+            "line": " jatasets\\set.js:19"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\set.js:33"
+            "line": " jatasets\\set.js:25"
         },
         {
             "message": "Missing item type\nCreates a new Stack Object",
