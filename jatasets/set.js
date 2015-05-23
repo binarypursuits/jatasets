@@ -1,5 +1,12 @@
 /**
- * Creates a new Set Data object
+ * JataSets - Set
+ *
+ * JavaScript data structure object representing a collection of unordered, unique elements.  The data structure
+ * is similar to the mathematical concept of finite sets, but instead applied as a JavaScript object.  A set
+ * should be viewed as an array with no repeated elements and with no concept or order.
+ *
+ * The purpose of the Set object is to provide developers a tool to manage both individual sets by adding
+ * and removing elements, but a means to run comparison operations against two Set objects.
  *
  * @class Set
  * @main jatasets
@@ -8,21 +15,6 @@
 /*jshint unused:false */
 
 'use strict';
-
-if (!Object.keys)
-{
-	Object.keys = function(items)
-	{
-		var keys = [];
-
-		for (var key in items)
-		{
-			keys.push(key);
-		}
-
-		return keys;
-	};
-}
 
 /**
  *  Creates a new Set Object
@@ -39,7 +31,7 @@ var Set = function(){
 	 * @private
 	 * @method	exists
 	 *
-	 * @param {Mixed} element The element being appended to the set
+	 * @param {Mixed} [element] The element being appended to the set
 	 * @return {Mixed}
 	 */
 	this.exists = function (value)
@@ -147,19 +139,26 @@ Set.prototype.size = function()
  * @return	{object} values from the set
  *
  */
-Set.prototype.values = function()
+Set.prottype.values = function()
 {
-	return Object.keys(this.items);
-	//return JSON.stringify(this.items);
+	if (!Object.keys)
+	{
+		Object.keys = function (items)
+		{
+			var keys = [];
 
-	//var keys = [];
+			for (var key in items)
+			{
+				keys.push(key);
+			}
 
-	//for (var key in this.items)
-	//{
-		//keys.push(key);
-	//}
-
-	//return keys;
+			return keys;
+		};
+	}
+	else
+	{
+		return Object.keys(this.items);
+	}
 };
 
 /**
