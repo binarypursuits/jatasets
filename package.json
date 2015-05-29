@@ -9,7 +9,7 @@
     "tap": "mocha -R tap \"test/*.js\" > reports/jatasets.tap",
     "package": "browserify -r jatasets -o ./build/jatasets.js",
     "shrink": "grunt uglify",
-    "document" "grunt documentation"
+    "document": "grunt documentation"
   },
   "repository": {
     "type": "git",

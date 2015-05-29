@@ -1,5 +1,7 @@
 /**
- * Creates a new Dictionary Data object
+ * JavaScript data structure object use to store key, value
+ * pairs, where as the key is used to store and retrieve a
+ * particular element.
  *
  * @class Dictionary
  * @main jatasets
