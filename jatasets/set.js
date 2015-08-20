@@ -140,7 +140,7 @@ Set.prototype.size = function()
  * @return	{object} values from the set
  *
  */
-Set.prottype.values = function()
+Set.prototype.values = function()
 {
 	if (!Object.keys)
 	{

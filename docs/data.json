@@ -166,7 +166,7 @@
             "module": "jatasets",
             "file": "jatasets\\dictionary.js",
             "line": 1,
-            "description": "Creates a new Dictionary Data object",
+            "description": "JavaScript data structure object use to store key, value\npairs, where as the key is used to store and retrieve a\nparticular element.",
             "mainName": "jatasets",
             "tag": "main",
             "itemtype": "main",
@@ -220,7 +220,7 @@
             "namespace": "",
             "file": "jatasets\\set.js",
             "line": 1,
-            "description": "JataSets - Set\n\nJavaScript data structure object representing a collection of unordered, unique elements.  The data structure\nis similar to the mathematical concept of finite sets, but instead applied as a JavaScript object.  A set\nshould be viewed as an array with no repeated elements and with no concept or order.\n\nThe purpose of the Set object is to provide developers a tool to manage both individual sets by adding\nand removing elements, but a means to run comparison operations against two Set objects.",
+            "description": "JavaScript data structure object representing a collection of\nunordered, unique elements.  The data structure is similar to\nthe mathematical concept of finite sets, but instead applied\nas a JavaScript object.  A set should be viewed as an array\nwith no repeated elements and with no concept or order.\n\nThe purpose of the Set object is to provide developers a tool\nto manage both individual sets by adding and removing elements,\nbut a means to run comparison operations against two Set objects.",
             "mainName": "jatasets",
             "tag": "main",
             "itemtype": "main",
@@ -248,24 +248,24 @@
     "classitems": [
         {
             "file": "jatasets\\dictionary.js",
-            "line": 12,
+            "line": 14,
             "description": "Creates a new Dictionary",
             "is_constructor": 1,
             "class": "Dictionary"
         },
         {
             "file": "jatasets\\dictionary.js",
-            "line": 19,
+            "line": 21,
             "class": "Dictionary"
         },
         {
             "file": "jatasets\\dictionary.js",
-            "line": 22,
+            "line": 24,
             "class": "Dictionary"
         },
         {
             "file": "jatasets\\dictionary.js",
-            "line": 26,
+            "line": 28,
             "description": "Method to get instance of last element put on stack",
             "itemtype": "method",
             "name": "add",
@@ -291,7 +291,7 @@
         },
         {
             "file": "jatasets\\dictionary.js",
-            "line": 48,
+            "line": 50,
             "description": "Method to remove item from the dictionary",
             "itemtype": "method",
             "name": "remove",
@@ -311,7 +311,7 @@
         },
         {
             "file": "jatasets\\dictionary.js",
-            "line": 69,
+            "line": 71,
             "description": "Method to retrieve value from dictionary using the key",
             "itemtype": "method",
             "name": "find",
@@ -331,7 +331,7 @@
         },
         {
             "file": "jatasets\\dictionary.js",
-            "line": 88,
+            "line": 90,
             "description": "Method to get current number of items in dictionary",
             "itemtype": "method",
             "name": "count",
@@ -343,7 +343,7 @@
         },
         {
             "file": "jatasets\\dictionary.js",
-            "line": 100,
+            "line": 102,
             "description": "Method to clear all values from dictionary",
             "itemtype": "method",
             "name": "clear",
@@ -759,7 +759,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 19,
+            "line": 20,
             "description": "Creates a new Set Object",
             "is_constructor": 1,
             "class": "Set",
@@ -767,13 +767,13 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 25,
+            "line": 26,
             "class": "Set",
             "module": "jatasets"
         },
         {
             "file": "jatasets\\set.js",
-            "line": 28,
+            "line": 29,
             "description": "Private utility method to determine if value exists in the set",
             "access": "private",
             "tagname": "",
@@ -796,7 +796,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 44,
+            "line": 45,
             "description": "Method to add value to set",
             "itemtype": "method",
             "name": "add",
@@ -816,7 +816,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 65,
+            "line": 66,
             "description": "Method to remove value from set",
             "itemtype": "method",
             "name": "remove",
@@ -836,7 +836,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 85,
+            "line": 86,
             "description": "Method to verify if a value is in the set",
             "itemtype": "method",
             "name": "has",
@@ -856,7 +856,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 99,
+            "line": 100,
             "description": "Method to clear all values from the set",
             "itemtype": "method",
             "name": "clear",
@@ -869,7 +869,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 112,
+            "line": 113,
             "description": "Method to get current size of set",
             "itemtype": "method",
             "name": "size",
@@ -882,7 +882,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 134,
+            "line": 135,
             "description": "Method to retrieve all values in the set",
             "itemtype": "method",
             "name": "values",
@@ -895,7 +895,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 164,
+            "line": 165,
             "description": "Method to retrieve all values in the set",
             "itemtype": "method",
             "name": "union",
@@ -908,7 +908,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 195,
+            "line": 196,
             "description": "Method to retrieve all values in the set",
             "itemtype": "method",
             "name": "intersection",
@@ -921,7 +921,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 221,
+            "line": 222,
             "description": "Method to retrieve all values in the set",
             "itemtype": "method",
             "name": "difference",
@@ -934,7 +934,7 @@
         },
         {
             "file": "jatasets\\set.js",
-            "line": 247,
+            "line": 248,
             "description": "Method to retrieve all values in the set",
             "itemtype": "method",
             "name": "subset",
@@ -1049,15 +1049,15 @@
         },
         {
             "message": "Missing item type\nCreates a new Dictionary",
-            "line": " jatasets\\dictionary.js:12"
+            "line": " jatasets\\dictionary.js:14"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\dictionary.js:19"
+            "line": " jatasets\\dictionary.js:21"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\dictionary.js:22"
+            "line": " jatasets\\dictionary.js:24"
         },
         {
             "message": "Missing item type\nCreates a new List Object",
@@ -1097,11 +1097,11 @@
         },
         {
             "message": "Missing item type\nCreates a new Set Object",
-            "line": " jatasets\\set.js:19"
+            "line": " jatasets\\set.js:20"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\set.js:25"
+            "line": " jatasets\\set.js:26"
         },
         {
             "message": "Missing item type\nCreates a new Stack Object",
