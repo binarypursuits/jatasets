@@ -1,7 +1,7 @@
 'use strict';
 
 /* global module */
-
+var exec = require('child_process').exec;
 var pkgData = require('./package.json');
 
 module.exports = function(grunt) {
@@ -69,14 +69,14 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-
+                // browserify -r ./index.js:jatasets > bundle.js
 		browserify: {
 			build: {
-				src: ['jatasets/**/*.js'],
+				src: ['./index.js'],
 				dest: 'build/jatasets.js',
-				options: {
-					require: './jatasets'
-				}
+                                options: {
+                                    standalone: 'jatasets'
+                                }
 			}
 		},
 
@@ -129,7 +129,7 @@ module.exports = function(grunt) {
 		},
 
 		jsdox: {
-			generate: {
+			b: {
 				options: {
 					contentsEnabled: true,
 					contentsTitle: 'JataSets',
@@ -141,7 +141,7 @@ module.exports = function(grunt) {
 		},
 
 		yuidoc: {
-			compile: {
+			build: {
 				name: '<%= pkg.name %>',
 				description: '<%= pkg.description %>',
 				version: '<%= pkg.version %>',
@@ -159,6 +159,20 @@ module.exports = function(grunt) {
 			}
 		}
 	});
+        
+        grunt.registerTask('browserifyme', 'Custom task to run Browserify properly', function() {
+                var done = this.async();
+                exec('browserify -r ./index.js:jatasets > ./build/jatasets.js', { cwd: "./" }, function (error, stdout, stderr) {
+			if (error)
+			{
+				throw error;
+			}
+			else
+			{
+                            done();
+                        }
+                });
+        });
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-concat');
@@ -175,14 +189,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-jsdox');
 	grunt.loadNpmTasks('grunt-plato');
 
-	grunt.registerTask('prep', ['clean']);
-	grunt.registerTask('validate', ['jshint']); // csslint, html
-	grunt.registerTask('test', ['mocha_istanbul', 'plato']);
+
+	grunt.registerTask('test', ['jshint']);
 	grunt.registerTask('bundle', ['browserify', 'uglify']);
-
-	grunt.registerTask('documentation', ['yuidoc']);
-
-	grunt.registerTask('default', ['prep', 'validate', 'test']);
-	grunt.registerTask('build', ['default', 'bundle', 'documentation']);
+	grunt.registerTask('default', ['jshint', 'browserifyme', 'uglify']);
+	grunt.registerTask('build', ['clean','jshint','yuidoc', 'browserifyme', 'uglify', 'mocha_istanbul', 'plato']);
 
 };
