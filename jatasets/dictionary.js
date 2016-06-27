@@ -108,9 +108,28 @@ Dictionary.prototype.count = function()
  */
 Dictionary.prototype.clear = function()
 {
-	this.dataStore = [];
+	this.dataStore = {};
 	this.total = 0;
 	return true;
+};
+
+/**
+ * Method to array of indexes
+ *
+ * @method	getIndexArray
+ *
+ * @return	{array}
+ */
+Dictionary.prototype.getIndexArray = function()
+{
+	var items = [];
+	
+        for (var index in this.dataStore)
+        {
+            items.push(index);
+        }
+	
+        return items;
 };
 
 exports.create = function() {
