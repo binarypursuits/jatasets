@@ -1,5 +1,7 @@
+"use-strict";
+
 var js = require("../jatasets");
-var assert = require("assert")
+var assert = require("assert");
 var setA = js.set();
 var setB = js.set();
 

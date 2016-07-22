@@ -1,5 +1,7 @@
+"use-strict";
+
 var js = require("../jatasets");
-var assert = require("assert")
+var assert = require("assert");
 var queue = js.queue();
 
 describe("JataSets Queue Tests", function() {

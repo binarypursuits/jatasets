@@ -1,5 +1,7 @@
+"use-strict";
+
 var js = require("../jatasets");
-var assert = require("assert")
+var assert = require("assert");
 var stack = js.stack();
 
 describe('JataSets Stack Tests', function() {	

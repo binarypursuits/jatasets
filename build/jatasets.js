@@ -109,9 +109,28 @@ Dictionary.prototype.count = function()
  */
 Dictionary.prototype.clear = function()
 {
-	this.dataStore = [];
+	this.dataStore = {};
 	this.total = 0;
 	return true;
+};
+
+/**
+ * Method to array of indexes
+ *
+ * @method	getIndexArray
+ *
+ * @return	{array}
+ */
+Dictionary.prototype.getIndexArray = function()
+{
+	var items = [];
+	
+        for (var index in this.dataStore)
+        {
+            items.push(index);
+        }
+	
+        return items;
 };
 
 exports.create = function() {
@@ -120,6 +139,187 @@ exports.create = function() {
 
 
 },{}],2:[function(require,module,exports){
+/**
+ * JavaScript hash this.table object use to store key, value
+ * pairs, where as the key is hashed to store and retrieve a
+ * particular element.
+ *
+ * @class hash
+ * @main jatasets
+ */
+
+/*jshint unused:false */
+
+'use strict';
+
+/**
+* Method to get instance of last element put on stack
+*
+* @method	ValuePair
+*
+* @param   {string}  [key] index value to hash
+* @param   {mixed}   [value] item being stored
+*
+* @return {void}
+*/
+function ValuePair(key, value){
+	this.key = key;
+	this.value = value;
+
+	this.toString = function()
+	{
+		return '[' + this.key + ' - ' + this.value + ']';
+	};
+}
+
+/**
+ *  Access point to hash object
+ *
+ *  @constructor
+ */
+function Hash() {
+
+	/** @property	{Array} [this.table] array comprising the hash this.table key/value pairs */
+    this.table = [];
+
+	/**
+	 * 
+	 * @param {type} key
+	 * @return {Number/hash.djb2HashCode.hash.djb2HashCode.hash/Number.djb2HashCode.hash/key@call;charCodeAt.djb2HashCode.hash}
+	 */
+	this.hashCode = function(key)
+	{
+        return this.djb2HashCode(key);
+    };
+	
+	/**
+	 * 
+	 * @param {type} key
+	 * @return {hash.djb2HashCode.hash.djb2HashCode.hash/Number.djb2HashCode.hash/key@call;charCodeAt.djb2HashCode.hash/Number}
+	 */
+	this.djb2HashCode = function (key)
+	{ 
+	  var hash = 5381;
+	  
+		for (var i = 0; i < key.length; i++)
+	  { 
+		hash = hash * 33 + key.charCodeAt(i);
+	  } 
+	  
+	  return hash % 1013;
+	}; 
+}
+
+/**
+ * 
+ * @param {type} key
+ * @param {type} value
+ * @return {undefined}
+ */
+Hash.prototype.put = function(key, value){
+	var position = this.hashCode(key);
+
+	if (this.table[position] === "undefined")
+	{
+		this.table[position] = new ValuePair(key, value);
+	}
+	else
+	{
+		var index = ++position;
+
+		while (this.table[index] !== "undefined")
+		{
+			index++;
+		}
+
+		this.table[index] = new ValuePair(key, value);
+	}
+};
+
+/**
+ * 
+ * @param {type} key
+ * @return {hash.ValuePair.value/undefined.value}
+ */
+Hash.prototype.get = function(key)
+{
+	var position = this.hashCode(key);
+
+	if (this.table[position] !== "undefined")
+	{
+		if (this.table[position].key === key)
+		{
+			return this.table[position].value;
+		}
+		else
+		{
+			var index = ++position;
+			while (this.table[index] === "undefined" || this.table[index].key !== key)
+			{
+				index++;
+			}
+
+			if (this.table[index].key === key)
+			{
+				return this.table[index].value;
+			}
+		}
+	}
+
+	return undefined;
+};
+
+/**
+ * 
+ * @param {type} key
+ * @return {undefined}
+ */
+Hash.prototype.remove = function(key)
+{
+	var position = this.hashCode(key);
+
+	if (this.table[position] !== "undefined")
+	{
+		if (this.table[position].key === key)
+		{
+			this.table[position] = undefined;
+		}
+		else
+		{
+			var index = ++position;
+			while (this.table[index] === undefined || this.table[index].key !== key)
+			{
+				index++;
+			}
+
+			if (this.table[index].key === key)
+			{
+				this.table[index] = undefined;
+			}
+		}
+	}
+};
+
+/**
+ * 
+ * @return {undefined}
+ */
+Hash.prototype.print = function()
+{
+	for (var i = 0; i < this.table.length; ++i)
+	{
+		if (this.table[i] !== undefined)
+		{
+			console.log(i + ' -> ' + this.table[i].toString());
+		}
+	}
+};
+
+
+exports.create = function() {
+	return new Hash();
+};
+},{}],3:[function(require,module,exports){
 /**
  * JataSets module.
  * @module jatasets
@@ -132,6 +332,7 @@ var queue = require('./queue');
 var list = require('./list');
 var set = require('./set');
 var stack = require('./stack');
+var hash = require('./hash');
 
 /**
  * Create new Dictionary dataset object and return.
@@ -143,7 +344,8 @@ exports.dictionary = function() {
 	return dictionary.create();
 };
 
-/** Create new Queue dataset object and return.
+/**
+ * Create new Queue dataset object and return.
  *
  * @module jatasets
  * @submodule queue
@@ -152,7 +354,8 @@ exports.queue = function() {
 	return queue.create();
 };
 
-/** Create new List dataset object and return.
+/**
+ * Create new List dataset object and return.
  *
  * @module jatasets
  * @submodule list
@@ -161,7 +364,8 @@ exports.list = function() {
 	return list.create();
 };
 
-/** Create new Set dataset object and return.
+/**
+ * Create new Set dataset object and return.
  *
  * @module jatasets
  * @submodule set
@@ -170,7 +374,8 @@ exports.set = function() {
 	return set.create();
 };
 
-/** Create new Stack dataset object and return.
+/**
+ * Create new Stack dataset object and return.
  *
  * @module jatasets
  * @submodule stack
@@ -179,7 +384,17 @@ exports.stack = function() {
 	return stack.create();
 };
 
-},{"./dictionary":1,"./list":3,"./queue":4,"./set":5,"./stack":6}],3:[function(require,module,exports){
+/**
+ * Create new hash object and return.
+ *
+ * @module jatasets
+ * @submodule hash
+ */
+exports.hash = function() {
+	return hash.create();
+};
+
+},{"./dictionary":1,"./hash":2,"./list":4,"./queue":5,"./set":6,"./stack":7}],4:[function(require,module,exports){
 /**
  * Creates a new List Data object
  *
@@ -495,7 +710,7 @@ exports.create = function() {
 	return new List();
 };
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 /**
  * Creates a new Queue Data object
  *
@@ -632,7 +847,7 @@ exports.create = function() {
 	return new Queue();
 };
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 /**
  * JavaScript data structure object representing a collection of
  * unordered, unique elements.  The data structure is similar to
@@ -914,7 +1129,7 @@ Set.prototype.subset = function(compareSet)
 exports.create = function() {
 	return new Set();
 };
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 /**
  * Creates a new Stack Data object
  *
@@ -1019,4 +1234,4 @@ exports.create = function() {
 };
 },{}],"jatasets":[function(require,module,exports){
 module.exports = require('./jatasets');
-},{"./jatasets":2}]},{},[]);
+},{"./jatasets":3}]},{},[]);

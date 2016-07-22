@@ -15,6 +15,15 @@
             "fors": {},
             "namespaces": {}
         },
+        "jatasets\\hash.js": {
+            "name": "jatasets\\hash.js",
+            "modules": {},
+            "classes": {
+                "hash": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "jatasets\\index.js": {
             "name": "jatasets\\index.js",
             "modules": {
@@ -22,7 +31,8 @@
                 "queue": 1,
                 "list": 1,
                 "set": 1,
-                "stack": 1
+                "stack": 1,
+                "hash": 1
             },
             "classes": {},
             "fors": {},
@@ -75,10 +85,12 @@
                 "queue": 1,
                 "list": 1,
                 "set": 1,
-                "stack": 1
+                "stack": 1,
+                "hash": 1
             },
             "classes": {
                 "Dictionary": 1,
+                "hash": 1,
                 "List": 1,
                 "Queue": 1,
                 "Set": 1,
@@ -102,7 +114,7 @@
             "module": "jatasets",
             "namespace": "",
             "file": "jatasets\\index.js",
-            "line": 14,
+            "line": 15,
             "description": "Create new Dictionary dataset object and return."
         },
         "queue": {
@@ -115,7 +127,8 @@
             "module": "jatasets",
             "namespace": "",
             "file": "jatasets\\index.js",
-            "line": 24
+            "line": 25,
+            "description": "Create new Queue dataset object and return."
         },
         "list": {
             "name": "list",
@@ -127,7 +140,8 @@
             "module": "jatasets",
             "namespace": "",
             "file": "jatasets\\index.js",
-            "line": 33
+            "line": 35,
+            "description": "Create new List dataset object and return."
         },
         "set": {
             "name": "set",
@@ -139,7 +153,8 @@
             "module": "jatasets",
             "namespace": "",
             "file": "jatasets\\index.js",
-            "line": 42
+            "line": 45,
+            "description": "Create new Set dataset object and return."
         },
         "stack": {
             "name": "stack",
@@ -151,7 +166,21 @@
             "module": "jatasets",
             "namespace": "",
             "file": "jatasets\\index.js",
-            "line": 51
+            "line": 55,
+            "description": "Create new Stack dataset object and return."
+        },
+        "hash": {
+            "name": "hash",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "jatasets",
+            "namespace": "",
+            "file": "jatasets\\index.js",
+            "line": 65,
+            "description": "Create new hash object and return."
         }
     },
     "classes": {
@@ -167,6 +196,23 @@
             "file": "jatasets\\dictionary.js",
             "line": 1,
             "description": "JavaScript data structure object use to store key, value\npairs, where as the key is used to store and retrieve a\nparticular element.",
+            "mainName": "jatasets",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true
+        },
+        "hash": {
+            "name": "hash",
+            "shortname": "hash",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "jatasets",
+            "file": "jatasets\\hash.js",
+            "line": 1,
+            "description": "JavaScript hash this.table object use to store key, value\npairs, where as the key is hashed to store and retrieve a\nparticular element.",
             "mainName": "jatasets",
             "tag": "main",
             "itemtype": "main",
@@ -352,6 +398,150 @@
                 "type": "Boolean"
             },
             "class": "Dictionary"
+        },
+        {
+            "file": "jatasets\\dictionary.js",
+            "line": 116,
+            "description": "Method to array of indexes",
+            "itemtype": "method",
+            "name": "getIndexArray",
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "Dictionary"
+        },
+        {
+            "file": "jatasets\\hash.js",
+            "line": 14,
+            "description": "Method to get instance of last element put on stack",
+            "itemtype": "method",
+            "name": "ValuePair",
+            "params": [
+                {
+                    "name": "key",
+                    "description": "index value to hash",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "value",
+                    "description": "item being stored",
+                    "type": "Mixed",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "hash"
+        },
+        {
+            "file": "jatasets\\hash.js",
+            "line": 34,
+            "description": "Access point to hash object",
+            "is_constructor": 1,
+            "class": "hash"
+        },
+        {
+            "file": "jatasets\\hash.js",
+            "line": 41,
+            "class": "hash"
+        },
+        {
+            "file": "jatasets\\hash.js",
+            "line": 44,
+            "params": [
+                {
+                    "name": "key",
+                    "description": "",
+                    "type": "Type"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Number/hash.djb2HashCode.hash.djb2HashCode.hash/Number.djb2HashCode.hash/key@call;charCodeAt.djb2HashCode.hash"
+            },
+            "class": "hash"
+        },
+        {
+            "file": "jatasets\\hash.js",
+            "line": 54,
+            "params": [
+                {
+                    "name": "key",
+                    "description": "",
+                    "type": "Type"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "hash.djb2HashCode.hash.djb2HashCode.hash/Number.djb2HashCode.hash/key@call;charCodeAt.djb2HashCode.hash/Number"
+            },
+            "class": "hash"
+        },
+        {
+            "file": "jatasets\\hash.js",
+            "line": 72,
+            "params": [
+                {
+                    "name": "key",
+                    "description": "",
+                    "type": "Type"
+                },
+                {
+                    "name": "value",
+                    "description": "",
+                    "type": "Type"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Undefined"
+            },
+            "class": "hash"
+        },
+        {
+            "file": "jatasets\\hash.js",
+            "line": 98,
+            "params": [
+                {
+                    "name": "key",
+                    "description": "",
+                    "type": "Type"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "hash.ValuePair.value/undefined.value"
+            },
+            "class": "hash"
+        },
+        {
+            "file": "jatasets\\hash.js",
+            "line": 131,
+            "params": [
+                {
+                    "name": "key",
+                    "description": "",
+                    "type": "Type"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Undefined"
+            },
+            "class": "hash"
+        },
+        {
+            "file": "jatasets\\hash.js",
+            "line": 162,
+            "return": {
+                "description": "",
+                "type": "Undefined"
+            },
+            "class": "hash"
         },
         {
             "file": "jatasets\\list.js",
@@ -1058,6 +1248,38 @@
         {
             "message": "Missing item type",
             "line": " jatasets\\dictionary.js:24"
+        },
+        {
+            "message": "Missing item type\nAccess point to hash object",
+            "line": " jatasets\\hash.js:34"
+        },
+        {
+            "message": "Missing item type",
+            "line": " jatasets\\hash.js:41"
+        },
+        {
+            "message": "Missing item type",
+            "line": " jatasets\\hash.js:44"
+        },
+        {
+            "message": "Missing item type",
+            "line": " jatasets\\hash.js:54"
+        },
+        {
+            "message": "Missing item type",
+            "line": " jatasets\\hash.js:72"
+        },
+        {
+            "message": "Missing item type",
+            "line": " jatasets\\hash.js:98"
+        },
+        {
+            "message": "Missing item type",
+            "line": " jatasets\\hash.js:131"
+        },
+        {
+            "message": "Missing item type",
+            "line": " jatasets\\hash.js:162"
         },
         {
             "message": "Missing item type\nCreates a new List Object",

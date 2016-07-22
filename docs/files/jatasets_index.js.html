@@ -39,6 +39,7 @@
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
                                 <li><a href="../classes/Dictionary.html">Dictionary</a></li>
+                                <li><a href="../classes/hash.html">hash</a></li>
                                 <li><a href="../classes/List.html">List</a></li>
                                 <li><a href="../classes/Queue.html">Queue</a></li>
                                 <li><a href="../classes/Set.html">Set</a></li>
@@ -47,6 +48,7 @@
                 
                             <ul id="api-modules" class="apis modules">
                                 <li><a href="../modules/dictionary.html">dictionary</a></li>
+                                <li><a href="../modules/hash.html">hash</a></li>
                                 <li><a href="../modules/jatasets.html">jatasets</a></li>
                                 <li><a href="../modules/list.html">list</a></li>
                                 <li><a href="../modules/queue.html">queue</a></li>
@@ -101,6 +103,7 @@ var queue = require(&#x27;./queue&#x27;);
 var list = require(&#x27;./list&#x27;);
 var set = require(&#x27;./set&#x27;);
 var stack = require(&#x27;./stack&#x27;);
+var hash = require(&#x27;./hash&#x27;);
 
 /**
  * Create new Dictionary dataset object and return.
@@ -112,7 +115,8 @@ exports.dictionary = function() {
 	return dictionary.create();
 };
 
-/** Create new Queue dataset object and return.
+/**
+ * Create new Queue dataset object and return.
  *
  * @module jatasets
  * @submodule queue
@@ -121,7 +125,8 @@ exports.queue = function() {
 	return queue.create();
 };
 
-/** Create new List dataset object and return.
+/**
+ * Create new List dataset object and return.
  *
  * @module jatasets
  * @submodule list
@@ -130,7 +135,8 @@ exports.list = function() {
 	return list.create();
 };
 
-/** Create new Set dataset object and return.
+/**
+ * Create new Set dataset object and return.
  *
  * @module jatasets
  * @submodule set
@@ -139,13 +145,24 @@ exports.set = function() {
 	return set.create();
 };
 
-/** Create new Stack dataset object and return.
+/**
+ * Create new Stack dataset object and return.
  *
  * @module jatasets
  * @submodule stack
  */
 exports.stack = function() {
 	return stack.create();
+};
+
+/**
+ * Create new hash object and return.
+ *
+ * @module jatasets
+ * @submodule hash
+ */
+exports.hash = function() {
+	return hash.create();
 };
 
     </pre>

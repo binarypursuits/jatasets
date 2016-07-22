@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="239"  lines-covered="233"  line-rate="0.9749"  branches-valid="54"  branches-covered="52"  branch-rate="0.963"  timestamp="1440132753548" complexity="0" version="0.1">
+<coverage lines-valid="296"  lines-covered="248"  line-rate="0.8378"  branches-valid="74"  branches-covered="52"  branch-rate="0.7027"  timestamp="1469222508710" complexity="0" version="0.1">
 <sources>
-	<source>C:\Users\Brian\git\jatasets</source>
+	<source>C:\Users\brian\git\jatasets</source>
 </sources>
 <packages>
-	<package name="jatasets"  line-rate="0.9749"  branch-rate="0.963" >
+	<package name="jatasets"  line-rate="0.8378"  branch-rate="0.7027" >
 	<classes>
-		<class name="dictionary.js"  filename="jatasets\dictionary.js"  line-rate="1"  branch-rate="1" >
+		<class name="dictionary.js"  filename="jatasets\dictionary.js"  line-rate="0.875"  branch-rate="1" >
 		<methods>
 			<method name="Dictionary"  hits="1"  signature="()V" >
 				<lines><line number="19"  hits="1" /></lines>
@@ -27,8 +27,11 @@
 			<method name="(anonymous_6)"  hits="1"  signature="()V" >
 				<lines><line number="109"  hits="1" /></lines>
 			</method>
-			<method name="(anonymous_7)"  hits="1"  signature="()V" >
-				<lines><line number="116"  hits="1" /></lines>
+			<method name="(anonymous_7)"  hits="0"  signature="()V" >
+				<lines><line number="123"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_8)"  hits="1"  signature="()V" >
+				<lines><line number="135"  hits="1" /></lines>
 			</method>
 		</methods>
 		<lines>
@@ -57,26 +60,119 @@
 			<line number="111"  hits="1"  branch="false" />
 			<line number="112"  hits="1"  branch="false" />
 			<line number="113"  hits="1"  branch="false" />
-			<line number="116"  hits="1"  branch="false" />
-			<line number="117"  hits="1"  branch="false" />
+			<line number="123"  hits="1"  branch="false" />
+			<line number="125"  hits="0"  branch="false" />
+			<line number="127"  hits="0"  branch="false" />
+			<line number="129"  hits="0"  branch="false" />
+			<line number="132"  hits="0"  branch="false" />
+			<line number="135"  hits="1"  branch="false" />
+			<line number="136"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="hash.js"  filename="jatasets\hash.js"  line-rate="0.2245"  branch-rate="0" >
+		<methods>
+			<method name="ValuePair"  hits="0"  signature="()V" >
+				<lines><line number="24"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_2)"  hits="0"  signature="()V" >
+				<lines><line number="28"  hits="0" /></lines>
+			</method>
+			<method name="Hash"  hits="1"  signature="()V" >
+				<lines><line number="39"  hits="1" /></lines>
+			</method>
+			<method name="(anonymous_4)"  hits="0"  signature="()V" >
+				<lines><line number="49"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_5)"  hits="0"  signature="()V" >
+				<lines><line number="59"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_6)"  hits="0"  signature="()V" >
+				<lines><line number="78"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_7)"  hits="0"  signature="()V" >
+				<lines><line number="103"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_8)"  hits="0"  signature="()V" >
+				<lines><line number="136"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_9)"  hits="0"  signature="()V" >
+				<lines><line number="166"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_10)"  hits="1"  signature="()V" >
+				<lines><line number="178"  hits="1" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="24"  hits="1"  branch="false" />
+			<line number="25"  hits="0"  branch="false" />
+			<line number="26"  hits="0"  branch="false" />
+			<line number="28"  hits="0"  branch="false" />
+			<line number="30"  hits="0"  branch="false" />
+			<line number="39"  hits="1"  branch="false" />
+			<line number="42"  hits="1"  branch="false" />
+			<line number="49"  hits="1"  branch="false" />
+			<line number="51"  hits="0"  branch="false" />
+			<line number="59"  hits="1"  branch="false" />
+			<line number="61"  hits="0"  branch="false" />
+			<line number="63"  hits="0"  branch="false" />
+			<line number="65"  hits="0"  branch="false" />
+			<line number="68"  hits="0"  branch="false" />
+			<line number="78"  hits="1"  branch="false" />
+			<line number="79"  hits="0"  branch="false" />
+			<line number="81"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="83"  hits="0"  branch="false" />
+			<line number="87"  hits="0"  branch="false" />
+			<line number="89"  hits="0"  branch="false" />
+			<line number="91"  hits="0"  branch="false" />
+			<line number="94"  hits="0"  branch="false" />
+			<line number="103"  hits="1"  branch="false" />
+			<line number="105"  hits="0"  branch="false" />
+			<line number="107"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="109"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="111"  hits="0"  branch="false" />
+			<line number="115"  hits="0"  branch="false" />
+			<line number="116"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="118"  hits="0"  branch="false" />
+			<line number="121"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="123"  hits="0"  branch="false" />
+			<line number="128"  hits="0"  branch="false" />
+			<line number="136"  hits="1"  branch="false" />
+			<line number="138"  hits="0"  branch="false" />
+			<line number="140"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="142"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="144"  hits="0"  branch="false" />
+			<line number="148"  hits="0"  branch="false" />
+			<line number="149"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="151"  hits="0"  branch="false" />
+			<line number="154"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="156"  hits="0"  branch="false" />
+			<line number="166"  hits="1"  branch="false" />
+			<line number="168"  hits="0"  branch="false" />
+			<line number="170"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="172"  hits="0"  branch="false" />
+			<line number="178"  hits="1"  branch="false" />
+			<line number="179"  hits="1"  branch="false" />
 		</lines>
 		</class>
 		<class name="index.js"  filename="jatasets\index.js"  line-rate="1"  branch-rate="1" >
 		<methods>
 			<method name="(anonymous_1)"  hits="1"  signature="()V" >
-				<lines><line number="20"  hits="1" /></lines>
+				<lines><line number="21"  hits="1" /></lines>
 			</method>
 			<method name="(anonymous_2)"  hits="1"  signature="()V" >
-				<lines><line number="29"  hits="1" /></lines>
+				<lines><line number="31"  hits="1" /></lines>
 			</method>
 			<method name="(anonymous_3)"  hits="1"  signature="()V" >
-				<lines><line number="38"  hits="1" /></lines>
+				<lines><line number="41"  hits="1" /></lines>
 			</method>
 			<method name="(anonymous_4)"  hits="2"  signature="()V" >
-				<lines><line number="47"  hits="2" /></lines>
+				<lines><line number="51"  hits="2" /></lines>
 			</method>
 			<method name="(anonymous_5)"  hits="1"  signature="()V" >
-				<lines><line number="56"  hits="1" /></lines>
+				<lines><line number="61"  hits="1" /></lines>
+			</method>
+			<method name="(anonymous_6)"  hits="1"  signature="()V" >
+				<lines><line number="71"  hits="1" /></lines>
 			</method>
 		</methods>
 		<lines>
@@ -85,16 +181,19 @@
 			<line number="10"  hits="1"  branch="false" />
 			<line number="11"  hits="1"  branch="false" />
 			<line number="12"  hits="1"  branch="false" />
-			<line number="20"  hits="1"  branch="false" />
+			<line number="13"  hits="1"  branch="false" />
 			<line number="21"  hits="1"  branch="false" />
-			<line number="29"  hits="1"  branch="false" />
-			<line number="30"  hits="1"  branch="false" />
-			<line number="38"  hits="1"  branch="false" />
-			<line number="39"  hits="1"  branch="false" />
-			<line number="47"  hits="1"  branch="false" />
-			<line number="48"  hits="2"  branch="false" />
-			<line number="56"  hits="1"  branch="false" />
-			<line number="57"  hits="1"  branch="false" />
+			<line number="22"  hits="1"  branch="false" />
+			<line number="31"  hits="1"  branch="false" />
+			<line number="32"  hits="1"  branch="false" />
+			<line number="41"  hits="1"  branch="false" />
+			<line number="42"  hits="1"  branch="false" />
+			<line number="51"  hits="1"  branch="false" />
+			<line number="52"  hits="2"  branch="false" />
+			<line number="61"  hits="1"  branch="false" />
+			<line number="62"  hits="1"  branch="false" />
+			<line number="71"  hits="1"  branch="false" />
+			<line number="72"  hits="1"  branch="false" />
 		</lines>
 		</class>
 		<class name="list.js"  filename="jatasets\list.js"  line-rate="1"  branch-rate="1" >
