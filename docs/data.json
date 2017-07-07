@@ -6,8 +6,8 @@
         "url": "<json:package.json>"
     },
     "files": {
-        "jatasets\\dictionary.js": {
-            "name": "jatasets\\dictionary.js",
+        "src\\dictionary.js": {
+            "name": "src\\dictionary.js",
             "modules": {},
             "classes": {
                 "Dictionary": 1
@@ -15,8 +15,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "jatasets\\hash.js": {
-            "name": "jatasets\\hash.js",
+        "src\\hash.js": {
+            "name": "src\\hash.js",
             "modules": {},
             "classes": {
                 "hash": 1
@@ -24,33 +24,26 @@
             "fors": {},
             "namespaces": {}
         },
-        "jatasets\\index.js": {
-            "name": "jatasets\\index.js",
-            "modules": {
-                "dictionary": 1,
-                "queue": 1,
-                "list": 1,
-                "set": 1,
-                "stack": 1,
-                "hash": 1
+        "src\\jataset.js": {
+            "name": "src\\jataset.js",
+            "modules": {},
+            "classes": {
+                "JataSet": 1
             },
-            "classes": {},
             "fors": {},
             "namespaces": {}
         },
-        "jatasets\\list.js": {
-            "name": "jatasets\\list.js",
-            "modules": {
-                "jatasets": 1
-            },
+        "src\\list.js": {
+            "name": "src\\list.js",
+            "modules": {},
             "classes": {
                 "List": 1
             },
             "fors": {},
             "namespaces": {}
         },
-        "jatasets\\queue.js": {
-            "name": "jatasets\\queue.js",
+        "src\\queue.js": {
+            "name": "src\\queue.js",
             "modules": {},
             "classes": {
                 "Queue": 1
@@ -58,17 +51,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "jatasets\\set.js": {
-            "name": "jatasets\\set.js",
-            "modules": {},
-            "classes": {
-                "Set": 1
-            },
-            "fors": {},
-            "namespaces": {}
-        },
-        "jatasets\\stack.js": {
-            "name": "jatasets\\stack.js",
+        "src\\stack.js": {
+            "name": "src\\stack.js",
             "modules": {},
             "classes": {
                 "Stack": 1
@@ -77,112 +61,7 @@
             "namespaces": {}
         }
     },
-    "modules": {
-        "jatasets": {
-            "name": "jatasets",
-            "submodules": {
-                "dictionary": 1,
-                "queue": 1,
-                "list": 1,
-                "set": 1,
-                "stack": 1,
-                "hash": 1
-            },
-            "classes": {
-                "Dictionary": 1,
-                "hash": 1,
-                "List": 1,
-                "Queue": 1,
-                "Set": 1,
-                "Stack": 1
-            },
-            "fors": {},
-            "namespaces": {},
-            "tag": "main",
-            "file": "jatasets\\stack.js",
-            "line": 1,
-            "description": "Creates a new List Data object",
-            "itemtype": "main"
-        },
-        "dictionary": {
-            "name": "dictionary",
-            "submodules": {},
-            "classes": {},
-            "fors": {},
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "jatasets",
-            "namespace": "",
-            "file": "jatasets\\index.js",
-            "line": 15,
-            "description": "Create new Dictionary dataset object and return."
-        },
-        "queue": {
-            "name": "queue",
-            "submodules": {},
-            "classes": {},
-            "fors": {},
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "jatasets",
-            "namespace": "",
-            "file": "jatasets\\index.js",
-            "line": 25,
-            "description": "Create new Queue dataset object and return."
-        },
-        "list": {
-            "name": "list",
-            "submodules": {},
-            "classes": {},
-            "fors": {},
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "jatasets",
-            "namespace": "",
-            "file": "jatasets\\index.js",
-            "line": 35,
-            "description": "Create new List dataset object and return."
-        },
-        "set": {
-            "name": "set",
-            "submodules": {},
-            "classes": {},
-            "fors": {},
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "jatasets",
-            "namespace": "",
-            "file": "jatasets\\index.js",
-            "line": 45,
-            "description": "Create new Set dataset object and return."
-        },
-        "stack": {
-            "name": "stack",
-            "submodules": {},
-            "classes": {},
-            "fors": {},
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "jatasets",
-            "namespace": "",
-            "file": "jatasets\\index.js",
-            "line": 55,
-            "description": "Create new Stack dataset object and return."
-        },
-        "hash": {
-            "name": "hash",
-            "submodules": {},
-            "classes": {},
-            "fors": {},
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "jatasets",
-            "namespace": "",
-            "file": "jatasets\\index.js",
-            "line": 65,
-            "description": "Create new hash object and return."
-        }
-    },
+    "modules": {},
     "classes": {
         "Dictionary": {
             "name": "Dictionary",
@@ -192,8 +71,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "jatasets",
-            "file": "jatasets\\dictionary.js",
+            "file": "src\\dictionary.js",
             "line": 1,
             "description": "JavaScript data structure object use to store key, value\npairs, where as the key is used to store and retrieve a\nparticular element.",
             "mainName": "jatasets",
@@ -209,10 +87,25 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "jatasets",
-            "file": "jatasets\\hash.js",
+            "file": "src\\hash.js",
             "line": 1,
             "description": "JavaScript hash this.table object use to store key, value\npairs, where as the key is hashed to store and retrieve a\nparticular element.",
+            "mainName": "jatasets",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true
+        },
+        "JataSet": {
+            "name": "JataSet",
+            "shortname": "JataSet",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src\\jataset.js",
+            "line": 1,
+            "description": "JavaScript data structure object representing a collection of\nunordered, unique elements.  The data structure is similar to\nthe mathematical concept of finite sets, but instead applied\nas a JavaScript object.  A set should be viewed as an array\nwith no repeated elements and with no concept or order.\n\nThe purpose of the Set object is to provide developers a tool\nto manage both individual sets by adding and removing elements,\nbut a means to run comparison operations against two Set objects.",
             "mainName": "jatasets",
             "tag": "main",
             "itemtype": "main",
@@ -226,9 +119,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "jatasets",
-            "namespace": "",
-            "file": "jatasets\\list.js",
+            "file": "src\\list.js",
             "line": 1,
             "description": "Creates a new List Data object",
             "mainName": "jatasets",
@@ -244,29 +135,9 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "jatasets",
-            "namespace": "",
-            "file": "jatasets\\queue.js",
+            "file": "src\\queue.js",
             "line": 1,
             "description": "Creates a new Queue Data object",
-            "mainName": "jatasets",
-            "tag": "main",
-            "itemtype": "main",
-            "_main": true
-        },
-        "Set": {
-            "name": "Set",
-            "shortname": "Set",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "jatasets",
-            "namespace": "",
-            "file": "jatasets\\set.js",
-            "line": 1,
-            "description": "JavaScript data structure object representing a collection of\nunordered, unique elements.  The data structure is similar to\nthe mathematical concept of finite sets, but instead applied\nas a JavaScript object.  A set should be viewed as an array\nwith no repeated elements and with no concept or order.\n\nThe purpose of the Set object is to provide developers a tool\nto manage both individual sets by adding and removing elements,\nbut a means to run comparison operations against two Set objects.",
             "mainName": "jatasets",
             "tag": "main",
             "itemtype": "main",
@@ -280,9 +151,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "jatasets",
-            "namespace": "",
-            "file": "jatasets\\stack.js",
+            "file": "src\\stack.js",
             "line": 1,
             "description": "Creates a new Stack Data object",
             "mainName": "jatasets",
@@ -291,27 +160,28 @@
             "_main": true
         }
     },
+    "elements": {},
     "classitems": [
         {
-            "file": "jatasets\\dictionary.js",
-            "line": 14,
+            "file": "src\\dictionary.js",
+            "line": 12,
             "description": "Creates a new Dictionary",
             "is_constructor": 1,
             "class": "Dictionary"
         },
         {
-            "file": "jatasets\\dictionary.js",
-            "line": 21,
+            "file": "src\\dictionary.js",
+            "line": 19,
             "class": "Dictionary"
         },
         {
-            "file": "jatasets\\dictionary.js",
-            "line": 24,
+            "file": "src\\dictionary.js",
+            "line": 22,
             "class": "Dictionary"
         },
         {
-            "file": "jatasets\\dictionary.js",
-            "line": 28,
+            "file": "src\\dictionary.js",
+            "line": 25,
             "description": "Method to get instance of last element put on stack",
             "itemtype": "method",
             "name": "add",
@@ -336,8 +206,8 @@
             "class": "Dictionary"
         },
         {
-            "file": "jatasets\\dictionary.js",
-            "line": 50,
+            "file": "src\\dictionary.js",
+            "line": 47,
             "description": "Method to remove item from the dictionary",
             "itemtype": "method",
             "name": "remove",
@@ -356,8 +226,8 @@
             "class": "Dictionary"
         },
         {
-            "file": "jatasets\\dictionary.js",
-            "line": 71,
+            "file": "src\\dictionary.js",
+            "line": 68,
             "description": "Method to retrieve value from dictionary using the key",
             "itemtype": "method",
             "name": "find",
@@ -376,8 +246,8 @@
             "class": "Dictionary"
         },
         {
-            "file": "jatasets\\dictionary.js",
-            "line": 90,
+            "file": "src\\dictionary.js",
+            "line": 87,
             "description": "Method to get current number of items in dictionary",
             "itemtype": "method",
             "name": "count",
@@ -388,8 +258,8 @@
             "class": "Dictionary"
         },
         {
-            "file": "jatasets\\dictionary.js",
-            "line": 102,
+            "file": "src\\dictionary.js",
+            "line": 99,
             "description": "Method to clear all values from dictionary",
             "itemtype": "method",
             "name": "clear",
@@ -400,8 +270,8 @@
             "class": "Dictionary"
         },
         {
-            "file": "jatasets\\dictionary.js",
-            "line": 116,
+            "file": "src\\dictionary.js",
+            "line": 113,
             "description": "Method to array of indexes",
             "itemtype": "method",
             "name": "getIndexArray",
@@ -412,8 +282,8 @@
             "class": "Dictionary"
         },
         {
-            "file": "jatasets\\hash.js",
-            "line": 14,
+            "file": "src\\hash.js",
+            "line": 12,
             "description": "Method to get instance of last element put on stack",
             "itemtype": "method",
             "name": "ValuePair",
@@ -438,20 +308,20 @@
             "class": "hash"
         },
         {
-            "file": "jatasets\\hash.js",
-            "line": 34,
+            "file": "src\\hash.js",
+            "line": 32,
             "description": "Access point to hash object",
             "is_constructor": 1,
             "class": "hash"
         },
         {
-            "file": "jatasets\\hash.js",
-            "line": 41,
+            "file": "src\\hash.js",
+            "line": 39,
             "class": "hash"
         },
         {
-            "file": "jatasets\\hash.js",
-            "line": 44,
+            "file": "src\\hash.js",
+            "line": 42,
             "params": [
                 {
                     "name": "key",
@@ -466,8 +336,8 @@
             "class": "hash"
         },
         {
-            "file": "jatasets\\hash.js",
-            "line": 54,
+            "file": "src\\hash.js",
+            "line": 52,
             "params": [
                 {
                     "name": "key",
@@ -482,8 +352,8 @@
             "class": "hash"
         },
         {
-            "file": "jatasets\\hash.js",
-            "line": 72,
+            "file": "src\\hash.js",
+            "line": 70,
             "params": [
                 {
                     "name": "key",
@@ -503,8 +373,8 @@
             "class": "hash"
         },
         {
-            "file": "jatasets\\hash.js",
-            "line": 98,
+            "file": "src\\hash.js",
+            "line": 96,
             "params": [
                 {
                     "name": "key",
@@ -519,8 +389,8 @@
             "class": "hash"
         },
         {
-            "file": "jatasets\\hash.js",
-            "line": 131,
+            "file": "src\\hash.js",
+            "line": 129,
             "params": [
                 {
                     "name": "key",
@@ -535,8 +405,8 @@
             "class": "hash"
         },
         {
-            "file": "jatasets\\hash.js",
-            "line": 162,
+            "file": "src\\hash.js",
+            "line": 160,
             "return": {
                 "description": "",
                 "type": "Undefined"
@@ -544,34 +414,205 @@
             "class": "hash"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 12,
+            "file": "src\\jataset.js",
+            "line": 18,
+            "description": "Creates a new Set Object",
+            "is_constructor": 1,
+            "class": "JataSet"
+        },
+        {
+            "file": "src\\jataset.js",
+            "line": 24,
+            "class": "JataSet"
+        },
+        {
+            "file": "src\\jataset.js",
+            "line": 27,
+            "description": "Private utility method to determine if value exists in the set",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "exists",
+            "params": [
+                {
+                    "name": "element",
+                    "description": "The element being appended to the set",
+                    "type": "Mixed",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Mixed"
+            },
+            "class": "JataSet"
+        },
+        {
+            "file": "src\\jataset.js",
+            "line": 41,
+            "description": "Method to add value to set",
+            "itemtype": "method",
+            "name": "add",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "value being added to the set",
+                    "type": "Mixed"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "JataSet"
+        },
+        {
+            "file": "src\\jataset.js",
+            "line": 62,
+            "description": "Method to remove value from set",
+            "itemtype": "method",
+            "name": "remove",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "Value being removed from the set",
+                    "type": "Mixed"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "JataSet"
+        },
+        {
+            "file": "src\\jataset.js",
+            "line": 82,
+            "description": "Method to verify if a value is in the set",
+            "itemtype": "method",
+            "name": "has",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "value to test if exists in set",
+                    "type": "Mixed"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "JataSet"
+        },
+        {
+            "file": "src\\jataset.js",
+            "line": 96,
+            "description": "Method to clear all values from the set",
+            "itemtype": "method",
+            "name": "clear",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "JataSet"
+        },
+        {
+            "file": "src\\jataset.js",
+            "line": 109,
+            "description": "Method to get current size of set",
+            "itemtype": "method",
+            "name": "size",
+            "return": {
+                "description": "number of values in set",
+                "type": "Integer"
+            },
+            "class": "JataSet"
+        },
+        {
+            "file": "src\\jataset.js",
+            "line": 131,
+            "description": "Method to retrieve all values in the set",
+            "itemtype": "method",
+            "name": "values",
+            "return": {
+                "description": "values from the set",
+                "type": "Object"
+            },
+            "class": "JataSet"
+        },
+        {
+            "file": "src\\jataset.js",
+            "line": 160,
+            "description": "Method to retrieve all values in the set",
+            "itemtype": "method",
+            "name": "union",
+            "return": {
+                "description": "values from the set",
+                "type": "Object"
+            },
+            "class": "JataSet"
+        },
+        {
+            "file": "src\\jataset.js",
+            "line": 191,
+            "description": "Method to retrieve all values in the set",
+            "itemtype": "method",
+            "name": "intersection",
+            "return": {
+                "description": "values from the set",
+                "type": "Object"
+            },
+            "class": "JataSet"
+        },
+        {
+            "file": "src\\jataset.js",
+            "line": 217,
+            "description": "Method to retrieve all values in the set",
+            "itemtype": "method",
+            "name": "difference",
+            "return": {
+                "description": "values from the set",
+                "type": "Object"
+            },
+            "class": "JataSet"
+        },
+        {
+            "file": "src\\jataset.js",
+            "line": 243,
+            "description": "Method to retrieve all values in the set",
+            "itemtype": "method",
+            "name": "subset",
+            "return": {
+                "description": "values from the set",
+                "type": "Object"
+            },
+            "class": "JataSet"
+        },
+        {
+            "file": "src\\list.js",
+            "line": 10,
             "description": "Creates a new List Object",
             "is_constructor": 1,
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 18,
-            "class": "List",
-            "module": "jatasets"
+            "file": "src\\list.js",
+            "line": 16,
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 21,
-            "class": "List",
-            "module": "jatasets"
+            "file": "src\\list.js",
+            "line": 19,
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 24,
-            "class": "List",
-            "module": "jatasets"
+            "file": "src\\list.js",
+            "line": 22,
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 27,
+            "file": "src\\list.js",
+            "line": 25,
             "description": "Private method to append an element to the list",
             "access": "private",
             "tagname": "",
@@ -588,12 +629,11 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 43,
+            "file": "src\\list.js",
+            "line": 41,
             "description": "Private method to find an element in the list.  Will either return\nelement index if found and false if not found.",
             "access": "private",
             "tagname": "",
@@ -610,12 +650,11 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 68,
+            "file": "src\\list.js",
+            "line": 66,
             "description": "Method to reset list.",
             "itemtype": "method",
             "name": "clear",
@@ -623,12 +662,11 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 82,
+            "file": "src\\list.js",
+            "line": 80,
             "description": "Method to retrieve list as comma seperate string",
             "itemtype": "method",
             "name": "toString",
@@ -636,24 +674,22 @@
                 "description": "list as comma serperate string",
                 "type": "String"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 94,
+            "file": "src\\list.js",
+            "line": 92,
             "description": "Method to retrieve list as JSON string",
             "memberof": "toJson",
             "return": {
                 "description": "",
                 "type": "String"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 106,
+            "file": "src\\list.js",
+            "line": 104,
             "description": "Method to add element to list",
             "itemtype": "method",
             "name": "add",
@@ -668,12 +704,11 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 126,
+            "file": "src\\list.js",
+            "line": 124,
             "description": "Method to insert element after another element",
             "itemtype": "method",
             "name": "insert",
@@ -693,12 +728,11 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 149,
+            "file": "src\\list.js",
+            "line": 147,
             "description": "Method to remove element from list",
             "itemtype": "method",
             "name": "remove",
@@ -713,64 +747,59 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 172,
-            "description": "Method to move current this.position to the beginning of the list",
+            "file": "src\\list.js",
+            "line": 170,
+            "description": "Method to move current position to the beginning of the list",
             "itemtype": "method",
             "name": "front",
             "return": {
                 "description": "",
                 "type": "Integer"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 185,
-            "description": "Method to move current this.position to the end of the list",
+            "file": "src\\list.js",
+            "line": 183,
+            "description": "Method to move current position to the end of the list",
             "itemtype": "method",
             "name": "end",
             "return": {
                 "description": "",
                 "type": "Integer"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 198,
-            "description": "Method to move current this.position in list to previous element",
+            "file": "src\\list.js",
+            "line": 196,
+            "description": "Method to move current position in list to previous element",
             "itemtype": "method",
             "name": "prev",
             "return": {
                 "description": "",
                 "type": "Integer|Boolean"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 216,
-            "description": "Method to move current this.position in list to next element",
+            "file": "src\\list.js",
+            "line": 214,
+            "description": "Method to move current position in list to next element",
             "itemtype": "method",
             "name": "next",
             "return": {
                 "description": "",
                 "type": "Integer|boolean"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 234,
+            "file": "src\\list.js",
+            "line": 232,
             "description": "Method to get current number of elements in the list",
             "itemtype": "method",
             "name": "length",
@@ -778,32 +807,30 @@
                 "description": "number of elements in the list",
                 "type": "Integer"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 246,
-            "description": "Method to get current this.position in the list",
+            "file": "src\\list.js",
+            "line": 244,
+            "description": "Method to get current position in the list",
             "itemtype": "method",
             "name": "current",
             "return": {
-                "description": "current this.possition in th elist",
+                "description": "current possition in th elist",
                 "type": "Integer"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 258,
-            "description": "Method to move current this.position in the list to specific this.position\nand validating the this.position provided",
+            "file": "src\\list.js",
+            "line": 256,
+            "description": "Method to move current position in the list to specific position\nand validating the position provided",
             "itemtype": "method",
             "name": "move",
             "params": [
                 {
-                    "name": "this.position",
-                    "description": "- The this.position to move to in the list",
+                    "name": "position",
+                    "description": "- The position to move to in the list",
                     "type": "Integer"
                 }
             ],
@@ -811,26 +838,23 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 279,
-            "description": "Method to get element at current this.position in the list",
+            "file": "src\\list.js",
+            "line": 277,
+            "description": "Method to get element at current position in the list",
             "itemtype": "method",
             "name": "getElement",
-            "memberof": "List",
             "return": {
-                "description": "element in the current this.position",
+                "description": "element in the current position",
                 "type": "Mixed"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\list.js",
-            "line": 293,
+            "file": "src\\list.js",
+            "line": 289,
             "description": "Method to determine if list contains an element",
             "itemtype": "method",
             "name": "contains",
@@ -845,38 +869,33 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "List",
-            "module": "jatasets"
+            "class": "List"
         },
         {
-            "file": "jatasets\\queue.js",
-            "line": 12,
+            "file": "src\\queue.js",
+            "line": 10,
             "description": "Creates a new Queue",
             "is_constructor": 1,
-            "class": "Queue",
-            "module": "jatasets"
+            "class": "Queue"
         },
         {
-            "file": "jatasets\\queue.js",
-            "line": 18,
-            "class": "Queue",
-            "module": "jatasets"
+            "file": "src\\queue.js",
+            "line": 16,
+            "class": "Queue"
         },
         {
-            "file": "jatasets\\queue.js",
-            "line": 21,
-            "class": "Queue",
-            "module": "jatasets"
+            "file": "src\\queue.js",
+            "line": 19,
+            "class": "Queue"
         },
         {
-            "file": "jatasets\\queue.js",
-            "line": 24,
-            "class": "Queue",
-            "module": "jatasets"
+            "file": "src\\queue.js",
+            "line": 22,
+            "class": "Queue"
         },
         {
-            "file": "jatasets\\queue.js",
-            "line": 28,
+            "file": "src\\queue.js",
+            "line": 25,
             "description": "Method to Queue an element to the Queue",
             "itemtype": "method",
             "name": "enqueue",
@@ -891,12 +910,11 @@
                 "description": "",
                 "type": "Mixed"
             },
-            "class": "Queue",
-            "module": "jatasets"
+            "class": "Queue"
         },
         {
-            "file": "jatasets\\queue.js",
-            "line": 51,
+            "file": "src\\queue.js",
+            "line": 48,
             "description": "Method to remove an element from the Queue",
             "itemtype": "method",
             "name": "dequeue",
@@ -904,39 +922,35 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Queue",
-            "module": "jatasets"
+            "class": "Queue"
         },
         {
-            "file": "jatasets\\queue.js",
-            "line": 69,
+            "file": "src\\queue.js",
+            "line": 66,
             "description": "Method to retrieve element in front of Queue",
             "itemtype": "method",
             "name": "front",
-            "class": "Queue",
-            "module": "jatasets"
+            "class": "Queue"
         },
         {
-            "file": "jatasets\\queue.js",
-            "line": 87,
+            "file": "src\\queue.js",
+            "line": 83,
             "description": "Method to retrieve element in back of Queue",
             "itemtype": "method",
             "name": "back",
-            "class": "Queue",
-            "module": "jatasets"
+            "class": "Queue"
         },
         {
-            "file": "jatasets\\queue.js",
-            "line": 98,
+            "file": "src\\queue.js",
+            "line": 94,
             "description": "Method to verify if Queue is empty",
             "itemtype": "method",
             "name": "empty",
-            "class": "Queue",
-            "module": "jatasets"
+            "class": "Queue"
         },
         {
-            "file": "jatasets\\queue.js",
-            "line": 114,
+            "file": "src\\queue.js",
+            "line": 110,
             "description": "Method to retrieve Queue as string with line breaks",
             "itemtype": "method",
             "name": "toString",
@@ -944,220 +958,28 @@
                 "description": "",
                 "type": "String"
             },
-            "class": "Queue",
-            "module": "jatasets"
+            "class": "Queue"
         },
         {
-            "file": "jatasets\\set.js",
-            "line": 20,
-            "description": "Creates a new Set Object",
-            "is_constructor": 1,
-            "class": "Set",
-            "module": "jatasets"
-        },
-        {
-            "file": "jatasets\\set.js",
-            "line": 26,
-            "class": "Set",
-            "module": "jatasets"
-        },
-        {
-            "file": "jatasets\\set.js",
-            "line": 29,
-            "description": "Private utility method to determine if value exists in the set",
-            "access": "private",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "exists",
-            "params": [
-                {
-                    "name": "element",
-                    "description": "The element being appended to the set",
-                    "type": "Mixed",
-                    "optional": true
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Mixed"
-            },
-            "class": "Set",
-            "module": "jatasets"
-        },
-        {
-            "file": "jatasets\\set.js",
-            "line": 45,
-            "description": "Method to add value to set",
-            "itemtype": "method",
-            "name": "add",
-            "params": [
-                {
-                    "name": "value",
-                    "description": "value being added to the set",
-                    "type": "Mixed"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Boolean"
-            },
-            "class": "Set",
-            "module": "jatasets"
-        },
-        {
-            "file": "jatasets\\set.js",
-            "line": 66,
-            "description": "Method to remove value from set",
-            "itemtype": "method",
-            "name": "remove",
-            "params": [
-                {
-                    "name": "value",
-                    "description": "Value being removed from the set",
-                    "type": "Mixed"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Boolean"
-            },
-            "class": "Set",
-            "module": "jatasets"
-        },
-        {
-            "file": "jatasets\\set.js",
-            "line": 86,
-            "description": "Method to verify if a value is in the set",
-            "itemtype": "method",
-            "name": "has",
-            "params": [
-                {
-                    "name": "value",
-                    "description": "value to test if exists in set",
-                    "type": "Mixed"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Boolean"
-            },
-            "class": "Set",
-            "module": "jatasets"
-        },
-        {
-            "file": "jatasets\\set.js",
-            "line": 100,
-            "description": "Method to clear all values from the set",
-            "itemtype": "method",
-            "name": "clear",
-            "return": {
-                "description": "",
-                "type": "Boolean"
-            },
-            "class": "Set",
-            "module": "jatasets"
-        },
-        {
-            "file": "jatasets\\set.js",
-            "line": 113,
-            "description": "Method to get current size of set",
-            "itemtype": "method",
-            "name": "size",
-            "return": {
-                "description": "number of values in set",
-                "type": "Integer"
-            },
-            "class": "Set",
-            "module": "jatasets"
-        },
-        {
-            "file": "jatasets\\set.js",
-            "line": 135,
-            "description": "Method to retrieve all values in the set",
-            "itemtype": "method",
-            "name": "values",
-            "return": {
-                "description": "values from the set",
-                "type": "Object"
-            },
-            "class": "Set",
-            "module": "jatasets"
-        },
-        {
-            "file": "jatasets\\set.js",
-            "line": 165,
-            "description": "Method to retrieve all values in the set",
-            "itemtype": "method",
-            "name": "union",
-            "return": {
-                "description": "values from the set",
-                "type": "Object"
-            },
-            "class": "Set",
-            "module": "jatasets"
-        },
-        {
-            "file": "jatasets\\set.js",
-            "line": 196,
-            "description": "Method to retrieve all values in the set",
-            "itemtype": "method",
-            "name": "intersection",
-            "return": {
-                "description": "values from the set",
-                "type": "Object"
-            },
-            "class": "Set",
-            "module": "jatasets"
-        },
-        {
-            "file": "jatasets\\set.js",
-            "line": 222,
-            "description": "Method to retrieve all values in the set",
-            "itemtype": "method",
-            "name": "difference",
-            "return": {
-                "description": "values from the set",
-                "type": "Object"
-            },
-            "class": "Set",
-            "module": "jatasets"
-        },
-        {
-            "file": "jatasets\\set.js",
-            "line": 248,
-            "description": "Method to retrieve all values in the set",
-            "itemtype": "method",
-            "name": "subset",
-            "return": {
-                "description": "values from the set",
-                "type": "Object"
-            },
-            "class": "Set",
-            "module": "jatasets"
-        },
-        {
-            "file": "jatasets\\stack.js",
-            "line": 12,
+            "file": "src\\stack.js",
+            "line": 10,
             "description": "Creates a new Stack Object",
             "is_constructor": 1,
-            "class": "Stack",
-            "module": "jatasets"
+            "class": "Stack"
         },
         {
-            "file": "jatasets\\stack.js",
-            "line": 18,
-            "class": "Stack",
-            "module": "jatasets"
+            "file": "src\\stack.js",
+            "line": 16,
+            "class": "Stack"
         },
         {
-            "file": "jatasets\\stack.js",
-            "line": 21,
-            "class": "Stack",
-            "module": "jatasets"
+            "file": "src\\stack.js",
+            "line": 19,
+            "class": "Stack"
         },
         {
-            "file": "jatasets\\stack.js",
-            "line": 26,
+            "file": "src\\stack.js",
+            "line": 22,
             "description": "Method to reset stack.",
             "itemtype": "method",
             "name": "clear",
@@ -1165,12 +987,11 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Stack",
-            "module": "jatasets"
+            "class": "Stack"
         },
         {
-            "file": "jatasets\\stack.js",
-            "line": 39,
+            "file": "src\\stack.js",
+            "line": 35,
             "description": "Method to get instance of last element put on stack",
             "itemtype": "method",
             "name": "peek",
@@ -1178,12 +999,11 @@
                 "description": "last item placed on stack",
                 "type": "Mixed"
             },
-            "class": "Stack",
-            "module": "jatasets"
+            "class": "Stack"
         },
         {
-            "file": "jatasets\\stack.js",
-            "line": 56,
+            "file": "src\\stack.js",
+            "line": 52,
             "description": "Method to remove last element put on stack",
             "itemtype": "method",
             "name": "pop",
@@ -1191,12 +1011,11 @@
                 "description": "removed item from top of stack",
                 "type": "Mixed"
             },
-            "class": "Stack",
-            "module": "jatasets"
+            "class": "Stack"
         },
         {
-            "file": "jatasets\\stack.js",
-            "line": 68,
+            "file": "src\\stack.js",
+            "line": 64,
             "description": "Method to push new element onto stack",
             "itemtype": "method",
             "name": "push",
@@ -1211,12 +1030,11 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Stack",
-            "module": "jatasets"
+            "class": "Stack"
         },
         {
-            "file": "jatasets\\stack.js",
-            "line": 88,
+            "file": "src\\stack.js",
+            "line": 84,
             "description": "Method to get current number of elements in the stack",
             "itemtype": "method",
             "name": "length",
@@ -1224,118 +1042,113 @@
                 "description": "number of elements in the stack",
                 "type": "Integer"
             },
-            "class": "Stack",
-            "module": "jatasets"
+            "class": "Stack"
         }
     ],
     "warnings": [
         {
             "message": "unknown tag: memberof",
-            "line": " jatasets\\list.js:94"
-        },
-        {
-            "message": "unknown tag: memberof",
-            "line": " jatasets\\list.js:279"
+            "line": " src\\list.js:92"
         },
         {
             "message": "Missing item type\nCreates a new Dictionary",
-            "line": " jatasets\\dictionary.js:14"
+            "line": " src\\dictionary.js:12"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\dictionary.js:21"
+            "line": " src\\dictionary.js:19"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\dictionary.js:24"
+            "line": " src\\dictionary.js:22"
         },
         {
             "message": "Missing item type\nAccess point to hash object",
-            "line": " jatasets\\hash.js:34"
+            "line": " src\\hash.js:32"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\hash.js:41"
+            "line": " src\\hash.js:39"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\hash.js:44"
+            "line": " src\\hash.js:42"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\hash.js:54"
+            "line": " src\\hash.js:52"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\hash.js:72"
+            "line": " src\\hash.js:70"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\hash.js:98"
+            "line": " src\\hash.js:96"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\hash.js:131"
+            "line": " src\\hash.js:129"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\hash.js:162"
-        },
-        {
-            "message": "Missing item type\nCreates a new List Object",
-            "line": " jatasets\\list.js:12"
-        },
-        {
-            "message": "Missing item type",
-            "line": " jatasets\\list.js:18"
-        },
-        {
-            "message": "Missing item type",
-            "line": " jatasets\\list.js:21"
-        },
-        {
-            "message": "Missing item type",
-            "line": " jatasets\\list.js:24"
-        },
-        {
-            "message": "Missing item type\nMethod to retrieve list as JSON string",
-            "line": " jatasets\\list.js:94"
-        },
-        {
-            "message": "Missing item type\nCreates a new Queue",
-            "line": " jatasets\\queue.js:12"
-        },
-        {
-            "message": "Missing item type",
-            "line": " jatasets\\queue.js:18"
-        },
-        {
-            "message": "Missing item type",
-            "line": " jatasets\\queue.js:21"
-        },
-        {
-            "message": "Missing item type",
-            "line": " jatasets\\queue.js:24"
+            "line": " src\\hash.js:160"
         },
         {
             "message": "Missing item type\nCreates a new Set Object",
-            "line": " jatasets\\set.js:20"
+            "line": " src\\jataset.js:18"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\set.js:26"
+            "line": " src\\jataset.js:24"
+        },
+        {
+            "message": "Missing item type\nCreates a new List Object",
+            "line": " src\\list.js:10"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src\\list.js:16"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src\\list.js:19"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src\\list.js:22"
+        },
+        {
+            "message": "Missing item type\nMethod to retrieve list as JSON string",
+            "line": " src\\list.js:92"
+        },
+        {
+            "message": "Missing item type\nCreates a new Queue",
+            "line": " src\\queue.js:10"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src\\queue.js:16"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src\\queue.js:19"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src\\queue.js:22"
         },
         {
             "message": "Missing item type\nCreates a new Stack Object",
-            "line": " jatasets\\stack.js:12"
+            "line": " src\\stack.js:10"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\stack.js:18"
+            "line": " src\\stack.js:16"
         },
         {
             "message": "Missing item type",
-            "line": " jatasets\\stack.js:21"
+            "line": " src\\stack.js:19"
         }
     ]
 }
