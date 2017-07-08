@@ -2,7 +2,7 @@
 
 module.exports = function (grunt) {
 
-    grunt.config('clean', ['reports']);
+    grunt.config('clean', ['reports', 'docs', 'dist']);
 
 };
 
