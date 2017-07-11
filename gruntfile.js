@@ -19,7 +19,7 @@ module.exports = function (grunt) {
 
     grunt.loadTasks('tasks');
 
-    grunt.registerTask('test', ['clean', 'jshint', 'mocha_istanbul', 'plato']);
+    grunt.registerTask('test', ['clean', 'jshint', 'mocha', 'mocha_istanbul', 'plato']);
     grunt.registerTask('package', ['yuidoc', 'browserify', 'uglify']);
     grunt.registerTask('default', ['test', 'package']);
 

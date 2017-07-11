@@ -9,7 +9,6 @@ module.exports = function (grunt) {
                 coverage: true,
                 mask: '*_test.js',
                 coverageFolder: './reports/coverage',
-                //mochaOptions: ['-R tap "test/*_test.js" > test.tap'],
                 root: 'src',
                 reportFormats: ['cobertura', 'lcovonly']
             }
