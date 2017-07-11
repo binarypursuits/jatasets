@@ -3,5 +3,7 @@
 /.buildpath
 /.settings/
 /.idea/
-/nbproject/private/
-/nbproject
+/nbproject/
+/docs/
+/reports/
+/dist/
