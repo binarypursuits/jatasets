@@ -1,9 +1,9 @@
 'use-strict';
 
 import test from 'ava';
-import { Stack } from '../dist/jatasets';
+import jatasets from '../dist/jatasets';
 
-let stack = new Stack();
+let stack = new jatasets.Stack();
 
 console.log(stack);
 

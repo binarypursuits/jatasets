@@ -1,6 +1,6 @@
 'use strict';
 
-export class Stack {
+export default class Stack {
 
     private sKey: any = {};
     private items: WeakMap<any, Array<any>> = new WeakMap();
