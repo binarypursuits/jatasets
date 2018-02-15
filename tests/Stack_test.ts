@@ -1,14 +1,15 @@
 'use-strict';
 
-import test from 'ava';
-import jatasets from '../dist/jatasets';
+import { expect } from 'chai';
+import Stack from '../src/Stack';
+import 'mocha';
 
-let stack = new jatasets.Stack();
+let stack = new Stack();
 
-console.log(stack);
-
-test('Should start with zero items in stack', (t) => {	
-	t.equal(stack.length, 0);
+describe('Jatasets - Stack', () => {
+	it('Should start with zero items in stack', () => {	
+		expect(stack.size()).to.equal(0);
+	});	
 });
 
 /*
