@@ -4,7 +4,7 @@
   "description": "JavaScript Datasets",
   "main": "main/jatasets.js",
   "scripts": {
-    "test": "mocha -r ts-node/register tests/*_test.ts",
+    "test": "mocha --stack-trace-limit=100 -r ts-node/register test/**/*.spec.ts",
     "build": "webpack --progress"
   },
   "repository": {

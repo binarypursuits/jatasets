@@ -1,15 +1,19 @@
 'use-strict';
 
+import { Stack } from '../src';
 import { expect } from 'chai';
-import Stack from '../src/Stack';
 import 'mocha';
 
 let stack = new Stack();
 
 describe('Jatasets - Stack', () => {
+
 	it('Should start with zero items in stack', () => {	
+
 		expect(stack.size()).to.equal(0);
+		
 	});	
+
 });
 
 /*
