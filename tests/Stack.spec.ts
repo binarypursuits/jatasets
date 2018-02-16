@@ -1,132 +1,128 @@
 'use-strict';
 
-import { Stack } from '../src';
+import * as js from '../src';
 import { expect } from 'chai';
 import 'mocha';
 
-let stack = new Stack();
+let stack = new js.Stack();
 
 describe('Jatasets - Stack', () => {
 
 	it('Should start with zero items in stack', () => {	
-
 		expect(stack.size()).to.equal(0);
-		
 	});	
 
-});
-
-/*
-test('Attempt to peek empty stack should return false', (t) => {
-	t.equal(stack.peek(), false);
-});
-
-test('Able to Insert a number into the stack', (t) => {
-	t.equal(stack.push(12), true); 
-});
-
-test('Should now be 1 item in stack', (t) => {
-	t.equal(stack.length(), 1);  
-});
-
-test('Inserts a string to stack', (t) => {
-	t.equal(stack.push('Iamastri ng'), true);	
-});
-
-test('Should now be 2 items in stack', (t) => {
-	t.equal(stack.length(), 2);  
-});
-
-test('Inserts a string with spaces to stack', (t) => {
-	t.equal(stack.push('I am a string'), true);	 
-});
-
-test('Should now be 3 items in stack', (t) => {
-	t.equal(stack.length(), 3);  
-});
-
-test('Inserts a number as a string to stack', (t) => {
-	t.equal(stack.push('1'), true);		  
-});
-
-test('Test stack peek with last item inserted', (t) => {
-	t.equal(stack.peek(), '1');  
-});
-
-test('Should now be 4 items in stack', (t) => {
-	t.equal(stack.length(), 4);  
-});
-
-test('Inserts a float to stack', (t) => {
-	t.equal(stack.push(4.32), true); 
-});
-
-test('Should now be 5 items in stack', (t) => {
-	t.equal(stack.length(), 5);  
-});
-
-test('Inserts a array to stack', (t) => {
-	t.equal(stack.push([]), true); 
-});
-
-test('Should now be 6 items in stack', (t) => {
-	t.equal(stack.length(), 6);  
-});
-
-test('Inserts a object to stack', (t) => {
-	t.equal(stack.push({}), true); 
-});
-
-test('Should now be 7 items in stack', (t) => {
-	t.equal(stack.length(), 7);  
-});
-
-test('Return false when attempting to push undefined element to stack', (t) => {
-	t.equal(stack.push(), false);  
-});
-
-test('Should still be 7 items in stack', (t) => {
-	t.equal(stack.length(), 7);  
-});
-   
-test('Call pop method', (t) => {
-	t.equal(Object.prototype.toString.call(stack.pop()), '[object Object] ');
-});
+	it('Attempt to peek empty stack should return false', () => {
+		expect(stack.peek()).to.equal(false);
+	});
 	
-test('Should now be 6 items in stack', (t) => {
-	t.equal(stack.length(), 6);  
-});
+	it('Able to Insert a number into the stack', () => {
+		expect(stack.push(12)).to.equal(true); 
+	});
 	
-test('Call pop method', (t) => {
-	t.equal(Object.prototype.toString.call(stack.pop()), '[object Array]');
-});
+	it('Should now be 1 item in stack', () => {
+		expect(stack.size()).to.equal(1);  
+	});
 	
-test('Should now be 5 items in stack', (t) => {
-	t.equal(stack.length(), 5);  
-});
+	it('Inserts a string to stack', () => {
+		expect(stack.push('Iamastri ng')).to.equal(true);	
+	});
 	
-test('Call pop method', (t) => {
-	t.equal(stack.pop(), 4.32);
-});
+	it('Should now be 2 items in stack', () => {
+		expect(stack.size()).to.equal(2);  
+	});
 	
-test('Should now be 4 items in stack', (t) => {
-	t.equal(stack.length(), 4);  
-});
-
-test('Request current start position', (t) => {
-	t.equal(stack.pop(), '1');  
-});
+	it('Inserts a string with spaces to stack', () => {
+		expect(stack.push('I am a string')).to.equal(true);	 
+	});
 	
-test('Should now be 3 items in stack', (t) => {
-	t.equal(stack.length(), 3);  
-});
+	it('Should now be 3 items in stack', () => {
+		expect(stack.size()).to.equal(3);  
+	});
+	
+	it('Inserts a number as a string to stack', () => {
+		expect(stack.push('1')).to.equal(true);		  
+	});
+	
+	it('Test stack peek with last item inserted', () => {
+		expect(stack.peek()).to.equal('1');  
+	});
+	
+	it('Should now be 4 items in stack', () => {
+		expect(stack.size()).to.equal(4);  
+	});
+	
+	it('Inserts a float to stack', () => {
+		expect(stack.push(4.32)).to.equal(true); 
+	});
+	
+	it('Should now be 5 items in stack', () => {
+		expect(stack.size()).to.equal(5);  
+	});
+	
+	it('Inserts a array to stack', () => {
+		expect(stack.push([])).to.equal(true); 
+	});
+	
+	it('Should now be 6 items in stack', () => {
+		expect(stack.size()).to.equal(6);  
+	});
+	
+	it('Inserts a object to stack', () => {
+		expect(stack.push({})).to.equal(true); 
+	});
+	
+	it('Should now be 7 items in stack', () => {
+		expect(stack.size()).to.equal(7);  
+	});
+	
+	it('Return false when attempting to push undefined element to stack', () => {
+		expect(stack.push()).to.equal(false);  
+	});
+	
+	it('Should still be 7 items in stack', () => {
+		expect(stack.size()).to.equal(7);  
+	});
+	   
+	it('Call pop method', () => {
+		expect(stack.pop()).to.equal({});
+	});
 		
-test('Call clear method', (t) => {
-	t.equal(stack.clear(), true);
+	it('Should now be 6 items in stack', () => {
+		expect(stack.size()).to.equal(6);  
+	});
+		
+	it('Call pop method', () => {
+		expect(Object.prototype.toString.call(stack.pop())).to.equal('[object Array]');
+	});
+		
+	it('Should now be 5 items in stack', () => {
+		expect(stack.size()).to.equal(5);  
+	});
+		
+	it('Call pop method', () => {
+		expect(stack.pop()).to.equal(4.32);
+	});
+		
+	it('Should now be 4 items in stack', () => {
+		expect(stack.size()).to.equal(4);  
+	});
+	
+	it('Request current start position', () => {
+		expect(stack.pop()).to.equal('1');  
+	});
+		
+	it('Should now be 3 items in stack', () => {
+		expect(stack.size()).to.equal(3);  
+	});
+			
+	it('Call clear method should return true', () => {
+		expect(stack.clear()).to.equal(true);
+	});
+		
+	it('Should now be zero items in stack', () => {
+		expect(stack.size()).to.equal(0);  
+	});		
+	
+
 });
-	
-test('Should now be zero items in stack', (t) => {
-	t.equal(stack.length(), 0);  
-});		
-	
-*/

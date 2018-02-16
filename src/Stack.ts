@@ -12,7 +12,7 @@ export class Stack {
     public push(element: any): boolean {
         let stack = this.items.get(this.sKey);
 
-        if (!stack) {
+        if (!stack || !element) {
             return false;
         }
 
@@ -31,18 +31,24 @@ export class Stack {
         return stack.pop();
     }
 
-    public peek(): any | undefined {
+    public peek(): any | false {
+
+        if (this.size() === 0) {
+            return false;
+        }
+
         let stack = this.items.get(this.sKey);
 
         if (!stack) {
-            return stack;
+            return false;
         }
 
         return stack[stack.length - 1];
     }
 
-    public clear(): void {
+    public clear(): boolean {
         this.items.set(this.sKey, []);
+        return true;
     }
 
     public size(): number {
@@ -56,3 +62,7 @@ export class Stack {
     }
 
 }
+
+export const hello = () => {
+    return 'Hello World';
+};
