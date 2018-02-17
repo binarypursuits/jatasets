@@ -1,9 +1,9 @@
-declare class Queue<T> {
+declare class Queue {
     private qKey: any;
-    private items: WeakMap<any, Array<T>>;
-    public add(element: T): void;
-    public remove(): T | undefined;
-    public front(): T | undefined;
+    private items: WeakMap<any, Array<any>>;
+    public add(element: any): void;
+    public remove(): any;
+    public front(): any;
     public clear(): void;
     public size(): number;
 }

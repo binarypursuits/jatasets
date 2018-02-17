@@ -1,15 +1,19 @@
 'use strict';
 
-export class Queue<T> {
+export class Queue {
 
     private qKey: any = {};
-    private items: WeakMap<any, Array<T>> = new WeakMap();
+    private items: WeakMap<any, Array<any>> = new WeakMap();
 
     constructor() {
         this.clear();
     }
 
-    public add(element: T): boolean {
+    public add(element: any): boolean {
+        if (!element) {
+            return false;
+        }
+        
         let queue = this.items.get(this.qKey);
 
         if (!queue) {
@@ -21,17 +25,17 @@ export class Queue<T> {
         return true;
     }
 
-    public remove(): T | undefined {
+    public remove(): any {
         let queue = this.items.get(this.qKey);
 
-        if (!queue) {
-            return queue;
+        if (!queue || this.size() === 0) {
+            return false;
         }
 
         return queue.shift();
     }
 
-    public peek(): T | undefined {
+    public peek(): any {
         let queue = this.items.get(this.qKey);
 
         if (!queue) {
@@ -41,14 +45,24 @@ export class Queue<T> {
         return queue[queue.length - 1];
     }
 
-    public front():  T | undefined {
+    public front():  any {
+        let queue = this.items.get(this.qKey);
+
+        if (!queue || this.size() === 0) {
+            return false;
+        }
+
+        return queue[0];
+    }
+
+    public back():  any {
         let queue = this.items.get(this.qKey);
 
         if (!queue) {
             return queue;
         }
 
-        return queue[0];
+        return queue[queue.length - 1];
     }
 
     clear(): void {

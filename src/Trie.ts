@@ -12,28 +12,24 @@ export class Trie {
 
         // set to root of tree
         let currentNode = this.tree;
-
-        // init value
         let nextNode = null;
 
         // take 1st char and trim input
-        let curChar = input.slice(0, 1);
+        let currentChar = input.slice(0, 1);
         input = input.slice(1);
 
         // find first new character, until then keep triming input
-        while(currentNode[curChar] && curChar){
-            currentNode = currentNode[curChar];
+        while(currentNode[currentChar] && currentChar){
+            currentNode = currentNode[currentChar];
 
             // update remainder array, this will exist as we added the node earlier
             currentNode.remainder.push(input);
-
-            // trim input
-            curChar = input.slice(0,1);
+            currentChar = input.slice(0,1);
             input = input.slice(1);
         }
 
         // while next character is available keep adding new branches and prune till end
-        while (curChar) {
+        while (currentChar) {
             // new reference in each loop
             // create remainder array starting with current input
             // so when adding the node `a` we add to the remainder `dam` and so on
@@ -42,13 +38,13 @@ export class Trie {
             };
 
             // assign to current tree node
-            currentNode[curChar] = nextNode;
+            currentNode[currentChar] = nextNode;
 
             // hold reference for next loop
             currentNode = nextNode;
 
             // prepare for next iteration
-            curChar = input.slice(0, 1);
+            currentChar = input.slice(0, 1);
             input = input.slice(1);
         }
     }
