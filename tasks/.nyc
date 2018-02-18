@@ -1,0 +1,10 @@
+{
+  "nyc": {
+    "exclude": [
+      "tests/**/*.spec.js",
+      "dist",
+      "tasks",
+      "node_modules"
+    ]
+  }
+}

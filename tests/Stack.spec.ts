@@ -1,7 +1,7 @@
 'use-strict';
 
 import * as js from '../src';
-import { expect } from 'chai';
+import { expect, assert } from 'chai';
 import 'mocha';
 
 let stack = new js.Stack();
@@ -84,8 +84,8 @@ describe('Jatasets - Stack', () => {
 		expect(stack.size()).to.equal(7);  
 	});
 	   
-	it('Call pop method', () => {
-		expect(stack.pop()).to.equal({});
+	it('Call pop method and returned item should be an empty <object>', () => {
+		assert.typeOf(stack.pop(), 'object');
 	});
 		
 	it('Should now be 6 items in stack', () => {

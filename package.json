@@ -4,7 +4,7 @@
   "description": "JavaScript Datasets",
   "main": "main/jatasets.js",
   "scripts": {
-    "test": "mocha -r ts-node/register tests/*.spec.ts",
+    "test": "nyc --reporter=lcov --reporter=cobertura mocha -r ts-node/register tests/*.spec.ts",
     "build": "webpack --progress"
   },
   "repository": {
@@ -30,6 +30,7 @@
     "@types/webpack": "^3.8.7",
     "chai": "^4.1.2",
     "mocha": "^5.0.1",
+    "nyc": "^11.4.1",
     "ts-loader": "^3.5.0",
     "ts-node": "^4.1.0",
     "tslint": "^5.9.1",
