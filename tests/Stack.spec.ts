@@ -1,10 +1,11 @@
 'use-strict';
-
-import * as js from '../src';
+import '../dist/jatasets';
+// import * as js from '../src';
 import { expect, assert } from 'chai';
 import 'mocha';
 
-let stack = new js.Stack();
+// let stack = new js.Stack();
+let stack = new Stack();
 
 describe('Jatasets - Stack', () => {
 
