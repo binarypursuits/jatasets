@@ -13,5 +13,10 @@
 	"defaultSeverity": "error",
 	"compilerOptions": {
 		"sourceMap": true
+	},
+	"linterOptions": {
+		"exlude": [
+			"tests/*.spec.ts"
+		]
 	}
 }

@@ -4,7 +4,6 @@
 const path = require('path');
 
 module.exports = {
-    target: 'node',
     entry: './src/index.ts',
     devtool: 'inline-source-map',
     module: {
@@ -21,6 +20,8 @@ module.exports = {
     },
     output: {
         filename: 'jatasets.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        library: 'jatasets',
+        libraryTarget: 'umd'
     }
 };
