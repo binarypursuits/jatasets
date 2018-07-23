@@ -1,11 +1,9 @@
 'use-strict';
-import '../dist/jatasets';
-// import * as js from '../src';
-import { expect, assert } from 'chai';
-import 'mocha';
 
-// let stack = new js.Stack();
-let stack = new jatasets.Stack();
+import { Stack } from '../src/Stack';
+import { expect, assert } from 'chai';
+
+let stack = new Stack();
 
 describe('Jatasets - Stack', () => {
 
@@ -77,10 +75,10 @@ describe('Jatasets - Stack', () => {
 		expect(stack.size()).to.equal(7);  
 	});
 	
-	// it('Return false when attempting to push undefined element to stack', () => {
+	it('Return false when attempting to push undefined element to stack', () => {
 		// tslint:disable-next-line
-		// expect(stack.push()).to.equal(false);  
-	// });
+		expect(stack.push()).to.equal(false);  
+	});
 	
 	it('Should still be 7 items in stack', () => {
 		expect(stack.size()).to.equal(7);  

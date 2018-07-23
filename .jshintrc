@@ -11,6 +11,8 @@
     "undef": true,
     "unused": true,
     "globals": {
-      "describe": true      
+      "describe": true,
+      "it": true,
+      "require": true  
     }
   }

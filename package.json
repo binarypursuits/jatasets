@@ -4,7 +4,7 @@
   "description": "JavaScript Datasets",
   "main": "main/jatasets.js",
   "scripts": {
-    "test": "nyc --reporter=lcov --reporter=cobertura mocha -r ts-node/register tests/*.spec.ts",
+    "test": "mocha -r ts-node/register ./tests/*.spec.ts",
     "build": "webpack --progress"
   },
   "repository": {

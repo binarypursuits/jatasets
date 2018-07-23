@@ -1,10 +1,9 @@
 'use-strict';
 
-import * as js from '../src';
+import { Queue } from '../src/Queue';
 import { expect } from 'chai';
-import 'mocha';
 
-let queue = new js.Queue();
+let queue = new Queue();
 
 describe('JataSets Queue Tests', () => {
 		
