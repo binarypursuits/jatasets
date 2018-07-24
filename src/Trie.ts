@@ -4,8 +4,12 @@ export class Trie {
 
     private tree: any = {};
 
-    constructor() {
-
+    constructor(dataSet?: string[]) {
+        if (dataSet) {
+            dataSet.forEach(data => {
+                this.add(data);
+            });
+        }
     }
 
     public add(input: string): void {
