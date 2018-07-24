@@ -4,9 +4,9 @@
   "description": "JavaScript Datasets",
   "main": "main/jatasets.js",
   "scripts": {
-    "test": "mocha -r ts-node/register ./spec/*.spec.ts",
+    "test": "mocha -r ts-node/register ./test/*.spec.ts",
     "test:coverage": "nyc yarn test",
-    "lint": "tslint ./src/**/*.ts ./spec/**/*.ts",
+    "lint": "tslint ./src/**/*.ts ./test/**/*.ts",
     "prebuild": "yarn lint",
     "build": "webpack --progress"
   },
