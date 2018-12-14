@@ -2,7 +2,7 @@
   "name": "jatasets",
   "version": "1.0.0",
   "description": "JavaScript Datasets",
-  "main": "main/jatasets.js",
+  "main": "dist/jatasets.js",
   "scripts": {
     "test": "mocha -r ts-node/register ./test/*.spec.ts",
     "test:coverage": "nyc yarn test",
@@ -16,12 +16,10 @@
   },
   "keywords": [
     "JavaScript",
-    "Data Stack",
-    "List",
+	"Data Stack",
+	"Data Set",
     "Queue",
-    "Set",
-    "Stack",
-    "Dictionary"
+    "Stack"
   ],
   "author": "Binary Pursuits",
   "url": "www.binarypursuits.com",
