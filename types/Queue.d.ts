@@ -1,6 +1,4 @@
-declare class Queue {
-    private qKey: any;
-    private items: WeakMap<any, Array<any>>;
+declare class Queue {    
     public add(element: any): void;
     public remove(): any;
     public front(): any;

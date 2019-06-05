@@ -1,14 +1,14 @@
 {
-    "extends": [
-        "tslint:recommended",
-        "tslint-config-prettier"
+	"extends": [
+		"tslint:recommended"
 	],
 	"rules": {
 		"object-literal-sort-keys": false,
 		"member-ordering": false,
 		"ordered-imports": false,
 		"quotemark": [true, "single"],
-		"no-unused-expression": false
+		"no-unused-expression": false,
+		"indent": [true, "tabs", 4]
 	},
 	"defaultSeverity": "error",
 	"compilerOptions": {
@@ -16,7 +16,7 @@
 	},
 	"linterOptions": {
 		"exlude": [
-			"tests/*.spec.ts"
+			"test/*.spec.ts"
 		]
 	}
 }

@@ -5,6 +5,7 @@
   "main": "dist/jatasets.js",
   "scripts": {
     "test": "mocha -r ts-node/register ./test/*.spec.ts",
+    "posttest": "yarn test:coverage",
     "test:coverage": "nyc yarn test",
     "lint": "tslint ./src/**/*.ts ./test/**/*.ts",
     "prebuild": "yarn lint",
@@ -15,14 +16,12 @@
     "url": "git@github.com:binarypursuits/jatasets.git"
   },
   "keywords": [
-    "JavaScript",
-	"Data Stack",
-	"Data Set",
+	  "Dataset",
     "Queue",
     "Stack"
   ],
-  "author": "Binary Pursuits",
-  "url": "www.binarypursuits.com",
+  "author": "Brian Bolli",
+  "url": "https://github.com/brian-bolli/jatasets",
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.1.4",
