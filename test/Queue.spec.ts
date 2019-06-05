@@ -1,9 +1,9 @@
 'use-strict';
 
-import { Queue } from '../src/Queue';
+import * as JataSets from '../src';
 import { expect } from 'chai';
 
-const queue = new Queue();
+const queue = new JataSets.Queue();
 
 describe('JataSets Queue Tests', () => {
 
@@ -77,4 +77,3 @@ describe('JataSets Queue Tests', () => {
 	});
 
 });
-

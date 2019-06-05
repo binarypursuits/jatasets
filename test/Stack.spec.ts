@@ -1,9 +1,9 @@
 'use-strict';
 
-import { Stack } from '../src/Stack';
+import * as JataSets from '../src';
 import { expect, assert } from 'chai';
 
-const stack = new Stack();
+const stack = new JataSets.Stack();
 
 describe('Jatasets - Stack', () => {
 

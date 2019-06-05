@@ -1,6 +1,8 @@
-/node_modules/
-/.project
-/.buildpath
-/.settings/
-/.idea/
-/nbproject/
+node_modules/
+.project
+.buildpath
+.settings/
+.idea/
+.nyc_output/
+coverage/
+nbproject/

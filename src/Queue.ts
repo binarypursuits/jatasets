@@ -2,81 +2,81 @@
 
 export class Queue {
 
-    private qKey: any = {};
-    private items: WeakMap<any, Array<any>> = new WeakMap();
+	private qKey: any = {};
+	private items: WeakMap<any, any[]> = new WeakMap();
 
-    constructor() {
-        this.clear();
-    }
+	constructor() {
+		this.clear();
+	}
 
-    public add(element: any): boolean {
-        if (!element) {
-            return false;
-        }
-        
-        let queue = this.items.get(this.qKey);
+	public add(element: any): boolean {
+		if (!element) {
+			return false;
+		}
 
-        if (!queue) {
-            return false;
-        }
+		const queue = this.items.get(this.qKey);
 
-        queue.push(element);
+		if (!queue) {
+			return false;
+		}
 
-        return true;
-    }
+		queue.push(element);
 
-    public remove(): any {
-        let queue = this.items.get(this.qKey);
+		return true;
+	}
 
-        if (!queue || this.size() === 0) {
-            return false;
-        }
+	public remove(): any {
+		const queue = this.items.get(this.qKey);
 
-        return queue.shift();
-    }
+		if (!queue || this.size() === 0) {
+			return false;
+		}
 
-    public peek(): any {
-        let queue = this.items.get(this.qKey);
+		return queue.shift();
+	}
 
-        if (!queue) {
-            return queue;
-        }
+	public peek(): any {
+		const queue = this.items.get(this.qKey);
 
-        return queue[queue.length - 1];
-    }
+		if (!queue) {
+			return queue;
+		}
 
-    public front():  any {
-        let queue = this.items.get(this.qKey);
+		return queue[queue.length - 1];
+	}
 
-        if (!queue || this.size() === 0) {
-            return false;
-        }
+	public front(): any {
+		const queue = this.items.get(this.qKey);
 
-        return queue[0];
-    }
+		if (!queue || this.size() === 0) {
+			return false;
+		}
 
-    public back():  any {
-        let queue = this.items.get(this.qKey);
+		return queue[0];
+	}
 
-        if (!queue) {
-            return queue;
-        }
+	public back(): any {
+		const queue = this.items.get(this.qKey);
 
-        return queue[queue.length - 1];
-    }
+		if (!queue) {
+			return queue;
+		}
 
-    clear(): void {
-        this.items.set(this.qKey, []);
-    }
+		return queue[queue.length - 1];
+	}
 
-    size(): number {
-        let queue = this.items.get(this.qKey);
+	public clear(): void {
+		this.items.set(this.qKey, []);
+	}
 
-        if (!queue) {
-            return 0;
-        }
+	public size(): number {
+		const queue = this.items.get(this.qKey);
 
-        return queue.length;
-    }
+		if (!queue) {
+			return 0;
+		}
+
+		return queue.length;
+	}
 
 }
